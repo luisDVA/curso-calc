@@ -1,0 +1,293 @@
+---
+title: "R para el tratamiento de Hojas de Cálculo"
+subtitle: "Segundo encuentro: Listas, iteración y exportación"
+date: "18 de Noviembre, 2025"
+author: "Luis D. Verde Arregoitia"
+format:
+  revealjs:
+    slide-number: true
+    theme: css/slides.scss
+editor: visual
+---
+
+## Resumen del encuentro anterior
+
+- Buenas prácticas para organizar datos
+- Fundamentos de hojas de cálculo
+- Importación básica de archivos Excel y CSV
+
+## Listas en R
+
+Las listas son estructuras de datos versátiles que pueden contener diferentes tipos de objetos:
+
+```{r}
+#| eval: false
+#| echo: true
+# Crear una lista con diferentes tipos de datos
+mi_lista <- list(
+  numeros = 1:5,
+  texto = "Hoja de cálculo",
+  logico = TRUE,
+  data = data.frame(x = 1:3, y = c("a", "b", "c"))
+)
+
+# Acceder a elementos de la lista
+mi_lista$numeros
+mi_lista[["texto"]]
+mi_lista[[3]]  # Elemento logico
+```
+
+## ¿Por qué usar listas con hojas de cálculo?
+
+- Almacenar múltiples dataframes (pestañas de Excel)
+- Mantener metadatos junto con los datos
+- Organizar resultados de operaciones sobre múltiples archivos
+- Preservar la estructura de archivos Excel con múltiples hojas
+
+## Iteración: Aplicando funciones a múltiples elementos
+
+```{r}
+#| eval: false
+#| echo: true
+# Usando lapply para aplicar una función a cada elemento de una lista
+archivos_csv <- list.files(pattern = "*.csv")
+datos_lista <- lapply(archivos_csv, read.csv)
+
+# Usando un bucle for
+datos_lista2 <- list()
+for (archivo in archivos_csv) {
+  datos_lista2[[archivo]] <- read.csv(archivo)
+}
+```
+
+## Trabajo con el sistema de archivos desde R
+
+```{r}
+#| eval: false
+#| echo: true
+# Listar archivos
+archivos <- list.files()
+archivos_excel <- list.files(pattern = "*.xlsx")
+
+# Comprobar si un archivo existe
+file.exists("datos.xlsx")
+
+# Obtener información de un archivo
+file.info("datos.xlsx")
+
+# Crear un directorio
+dir.create("resultados")
+```
+
+## Importación de múltiples archivos o pestañas
+
+### Múltiples archivos CSV
+
+```{r}
+#| eval: false
+#| echo: true
+# Obtener lista de archivos CSV en un directorio
+archivos_csv <- list.files(path = "datos", 
+                          pattern = "*.csv", 
+                          full.names = TRUE)
+
+# Leer todos los archivos y combinarlos
+library(tidyverse)
+datos_combinados <- archivos_csv %>%
+  map_df(read_csv, .id = "archivo")
+```
+
+## Importación de múltiples pestañas de Excel
+
+```{r}
+#| eval: false
+#| echo: true
+# Leer todas las pestañas de un archivo Excel
+library(readxl)
+pestanas <- excel_sheets("archivo.xlsx")
+
+# Método 1: Usar lapply
+datos_pestanas <- lapply(pestanas, function(sheet) {
+  read_excel("archivo.xlsx", sheet = sheet)
+})
+names(datos_pestanas) <- pestanas
+
+# Método 2: Usando purrr
+library(purrr)
+datos_pestanas2 <- pestanas %>%
+  set_names() %>%
+  map(~read_excel("archivo.xlsx", sheet = .x))
+```
+
+## Dividir datos en pestañas o archivos separados
+
+```{r}
+#| eval: false
+#| echo: true
+# Dividir un dataframe por una variable categórica
+library(dplyr)
+datos_divididos <- split(datos, datos$categoria)
+
+# Guardar cada grupo como un archivo CSV separado
+for (nombre in names(datos_divididos)) {
+  write.csv(datos_divididos[[nombre]], 
+            paste0("grupo_", nombre, ".csv"),
+            row.names = FALSE)
+}
+```
+
+## Operaciones comunes con dataframes
+
+:::: columns
+::: {.column width="50%"}
+### Ordenar filas
+```{r}
+#| eval: false
+#| echo: true
+# Base R
+datos[order(datos$fecha), ]
+
+# dplyr
+datos %>% arrange(fecha)
+datos %>% arrange(desc(ventas))
+```
+:::
+
+::: {.column width="50%"}
+### Reacomodar columnas
+```{r}
+#| eval: false
+#| echo: true
+# Seleccionar columnas específicas
+datos %>% select(id, nombre, valor)
+
+# Reordenar todas las columnas
+datos %>% select(fecha, id, everything())
+```
+:::
+::::
+
+## Operaciones comunes (continuación)
+
+:::: columns
+::: {.column width="50%"}
+### Subconjuntos de datos
+```{r}
+#| eval: false
+#| echo: true
+# Base R
+datos[datos$ventas > 1000, ]
+
+# dplyr
+datos %>% filter(ventas > 1000)
+datos %>% filter(region == "Norte", 
+                año == 2025)
+```
+:::
+
+::: {.column width="50%"}
+### Filtros
+```{r}
+#| eval: false
+#| echo: true
+# Filtrar datos faltantes
+datos %>% filter(!is.na(ventas))
+
+# Filtrar por patrón en texto
+datos %>% 
+  filter(str_detect(producto, "Excel"))
+```
+:::
+::::
+
+## Exportando objetos de R a hojas de cálculo
+
+### Archivos CSV
+
+```{r}
+#| eval: false
+#| echo: true
+# Base R
+write.csv(datos, "resultados.csv", row.names = FALSE)
+
+# readr (tidyverse)
+write_csv(datos, "resultados.csv")
+```
+
+### Archivos Excel (con openxlsx)
+
+```{r}
+#| eval: false
+#| echo: true
+library(openxlsx)
+
+# Crear un libro de trabajo
+wb <- createWorkbook()
+
+# Agregar una hoja
+addWorksheet(wb, "Datos")
+writeData(wb, "Datos", datos)
+
+# Guardar el libro
+saveWorkbook(wb, "resultados.xlsx", overwrite = TRUE)
+```
+
+## Exportando múltiples dataframes a Excel
+
+```{r}
+#| eval: false
+#| echo: true
+# Lista de dataframes
+lista_datos <- list(
+  Ventas = datos_ventas,
+  Clientes = datos_clientes,
+  Productos = datos_productos
+)
+
+# Crear un libro con múltiples hojas
+wb <- createWorkbook()
+
+# Agregar cada dataframe como una hoja
+for (nombre in names(lista_datos)) {
+  addWorksheet(wb, nombre)
+  writeData(wb, nombre, lista_datos[[nombre]])
+}
+
+# Guardar el libro
+saveWorkbook(wb, "informe_completo.xlsx")
+```
+
+## Añadiendo formato a las hojas exportadas
+
+```{r}
+#| eval: false
+#| echo: true
+# Crear estilos
+estilo_encabezado <- createStyle(
+  fontSize = 12, textDecoration = "bold",
+  fgFill = "#8BC34A", fontColour = "white"
+)
+
+estilo_numero <- createStyle(numFmt = "#,##0.00")
+
+# Aplicar estilos
+addWorksheet(wb, "Datos")
+writeData(wb, "Datos", datos)
+
+# Aplicar estilo a encabezados
+addStyle(wb, "Datos", estilo_encabezado, 
+         rows = 1, cols = 1:ncol(datos))
+
+# Aplicar estilo a columnas numéricas
+addStyle(wb, "Datos", estilo_numero, 
+         cols = c(3, 5), rows = 2:(nrow(datos) + 1))
+```
+
+## Para el próximo encuentro...
+
+- Trabajaremos con archivos en la nube (Google Sheets)
+- Aprenderemos a conectarnos con la API de Google
+- Veremos cómo trabajar con formato en celdas o texto
+
+### Ejercicio sugerido
+Practiquen importar múltiples hojas de Excel y exportar los resultados con formato básico.

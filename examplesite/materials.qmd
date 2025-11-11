@@ -1,0 +1,18 @@
+---
+title: "Course Materials"
+---
+
+## Data and scripts
+
+[[gander demo script](ganderDemo.R)]{style="font-size: 1.6rem; background-color: #ff835a; 	padding: 3px;	border-radius: 6px; text-align: center;"}
+
+## Slide decks
+
+### Day 1
+
+[Setup and Intros](setup.qmd){.external target="_blank"}
+
+[More about LLMs](background.qmd){.external target="_blank"}
+
+[Hands-on](hands-on.qmd){.external target="_blank"}
+

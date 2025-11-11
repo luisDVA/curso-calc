@@ -1,0 +1,15 @@
+---
+title: "Sitio del Curso"
+toc: false
+---
+
+# R para el tratamiento de Hojas de Cálculo
+
+Bienvenid@s al sitio web del curso. Aquí encontrarán todas las presentaciones y materiales.
+
+Este sitio será actualizado después de cada encuentro para añadir materiales adicionales y cualquier recurso relevante que se discuta durante las sesiones.
+
+Instructor: Luis D. Verde Arregoitia  
+
+<span class='code'>📆 &ensp; 11, 18, 25 de Noviembre y 2 de Diciembre, 2025</span>  
+<span class='code'>⏰ &ensp; 17:00 - 19:30 hora CDMX </span>

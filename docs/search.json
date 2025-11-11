@@ -1,0 +1,1269 @@
+[
+  {
+    "objectID": "encuentro1.html#presentaciones-e-introducción",
+    "href": "encuentro1.html#presentaciones-e-introducción",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Presentaciones e Introducción",
+    "text": "Presentaciones e Introducción\n\nBienvenida al curso\nObjetivos y estructura del curso\nPresentación del instructor y participantes"
+  },
+  {
+    "objectID": "encuentro1.html#qué-veremos-en-este-curso",
+    "href": "encuentro1.html#qué-veremos-en-este-curso",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "¿Qué veremos en este curso?",
+    "text": "¿Qué veremos en este curso?\n\nTécnicas eficientes para trabajar con hojas de cálculo en R\nImportación y exportación de diferentes formatos\nManipulación de datos de múltiples hojas o archivos\nTrabajo con archivos en la nube (Google Sheets)\nSoluciones a problemas comunes"
+  },
+  {
+    "objectID": "encuentro1.html#antecedentes-sobre-hojas-de-cálculo",
+    "href": "encuentro1.html#antecedentes-sobre-hojas-de-cálculo",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Antecedentes sobre hojas de cálculo",
+    "text": "Antecedentes sobre hojas de cálculo\nHistoria y evolución\n\nVisiCalc (1979) - La primera hoja de cálculo para computadoras personales\nLotus 1-2-3 (1983) - Popularizó las hojas de cálculo\nMicrosoft Excel (1985) - El estándar de facto\nGoogle Sheets (2006) - Colaboración en la nube"
+  },
+  {
+    "objectID": "encuentro1.html#limitaciones-de-las-hojas-de-cálculo-tradicionales",
+    "href": "encuentro1.html#limitaciones-de-las-hojas-de-cálculo-tradicionales",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Limitaciones de las hojas de cálculo tradicionales",
+    "text": "Limitaciones de las hojas de cálculo tradicionales\n\n\n\nCapacidad limitada (filas, columnas)\nProceso manual y repetitivo\nDificultad para automatizar tareas\nProblemas de reproducibilidad\nErrores difíciles de detectar\n\n\n\nMezcla de datos y análisis\nFormatos inconsistentes\nFalta de control de versiones\nIncompatibilidad entre plataformas"
+  },
+  {
+    "objectID": "encuentro1.html#buenas-prácticas-para-la-organización-de-datos",
+    "href": "encuentro1.html#buenas-prácticas-para-la-organización-de-datos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Buenas prácticas para la organización de datos",
+    "text": "Buenas prácticas para la organización de datos\n\n\n\nBroman & Woo (2018)\nData Organization in Spreadsheets"
+  },
+  {
+    "objectID": "encuentro1.html#estructura-recomendada-para-datos-en-hojas-de-cálculo",
+    "href": "encuentro1.html#estructura-recomendada-para-datos-en-hojas-de-cálculo",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Estructura recomendada para datos en hojas de cálculo",
+    "text": "Estructura recomendada para datos en hojas de cálculo\n\nUna fila para encabezados\nSin celdas combinadas\nEvitar espacios en blanco como separadores\nUna observación por fila\nEvitar notas en celdas de datos\nConsistencia en formatos y unidades"
+  },
+  {
+    "objectID": "encuentro1.html#errores-comunes-en-hojas-de-cálculo",
+    "href": "encuentro1.html#errores-comunes-en-hojas-de-cálculo",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Errores comunes en hojas de cálculo",
+    "text": "Errores comunes en hojas de cálculo\n\nCeldas en blanco con significado implícito\nVarias tablas en una misma hoja\nValores codificados con colores sin columna explicativa\nDatos y metadatos mezclados"
+  },
+  {
+    "objectID": "encuentro1.html#importando-hojas-de-cálculo-a-r",
+    "href": "encuentro1.html#importando-hojas-de-cálculo-a-r",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Importando hojas de cálculo a R",
+    "text": "Importando hojas de cálculo a R"
+  },
+  {
+    "objectID": "encuentro1.html#paquetes-para-importar-datos",
+    "href": "encuentro1.html#paquetes-para-importar-datos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Paquetes para importar datos",
+    "text": "Paquetes para importar datos\nreadxl y readODS\n\nlibrary(readxl)\nlibrary(readODS)\n\nread_excel(\"archivo.xlsx\")\nread_ods(\"archivo.ods\")"
+  },
+  {
+    "objectID": "encuentro1.html#comparación-libros-de-trabajo-vs-dataframes",
+    "href": "encuentro1.html#comparación-libros-de-trabajo-vs-dataframes",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Comparación: Libros de trabajo vs dataframes",
+    "text": "Comparación: Libros de trabajo vs dataframes\n\n\nLibro de trabajo (Excel)\n\nMúltiples hojas\nCeldas con fórmulas\nFormato visual (colores, bordes)\nRelaciones implícitas entre hojas\nMezcla de datos y análisis\n\n\n\n\nDataframe (R)\n\nEstructura tabular simple\nTipos de datos consistentes\nMetadatos explícitos\nOperaciones programáticas\nSeparación de datos y análisis"
+  },
+  {
+    "objectID": "encuentro1.html#section",
+    "href": "encuentro1.html#section",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "VisiCalc (1979) \n\nRegistro de préstamos (1593)"
+  },
+  {
+    "objectID": "encuentro1.html#para-el-próximo-encuentro",
+    "href": "encuentro1.html#para-el-próximo-encuentro",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Para el próximo encuentro…",
+    "text": "Para el próximo encuentro…\n\nExploraremos listas e iteración para trabajar con múltiples archivos\nAprenderemos operaciones comunes de manipulación\nVeremos cómo exportar objetos de R a hojas de cálculo\n\n\nRecomendación\nTraigan ejemplos de hojas de cálculo con las que trabajen habitualmente"
+  },
+  {
+    "objectID": "materiales.html",
+    "href": "materiales.html",
+    "title": "Materiales del Curso",
+    "section": "",
+    "text": "Introducción y fundamentos\nEjemplos 1er encuentro"
+  },
+  {
+    "objectID": "materiales.html#presentaciones",
+    "href": "materiales.html#presentaciones",
+    "title": "Materiales del Curso",
+    "section": "",
+    "text": "Introducción y fundamentos\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\n\n\n\nProblemas comunes y ejemplos prácticos"
+  },
+  {
+    "objectID": "materiales.html#datos-y-scripts",
+    "href": "materiales.html#datos-y-scripts",
+    "title": "Materiales del Curso",
+    "section": "Datos y scripts",
+    "text": "Datos y scripts\nLos recursos adicionales se añadirán durante el curso."
+  },
+  {
+    "objectID": "examplesite/course.html",
+    "href": "examplesite/course.html",
+    "title": "Outline and schedule",
+    "section": "",
+    "text": "Course description at Physalia Courses"
+  },
+  {
+    "objectID": "examplesite/course.html#day-1",
+    "href": "examplesite/course.html#day-1",
+    "title": "Outline and schedule",
+    "section": "Day 1",
+    "text": "Day 1\nSetup and background\nFirst steps"
+  },
+  {
+    "objectID": "examplesite/course.html#day-2",
+    "href": "examplesite/course.html#day-2",
+    "title": "Outline and schedule",
+    "section": "Day 2",
+    "text": "Day 2\nAssistants, examples, exercises"
+  },
+  {
+    "objectID": "examplesite/background.html#background",
+    "href": "examplesite/background.html#background",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Background",
+    "text": "Background\nLanguage Models? \n\nLarge Language Models? \n\n\nGenerative AI?"
+  },
+  {
+    "objectID": "examplesite/background.html#section",
+    "href": "examplesite/background.html#section",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "AI-generated image created with DALL·E via ChatGPT\n\n\n\n\nAfter drinking some water, the dog went back to the bed to feed her ___________."
+  },
+  {
+    "objectID": "examplesite/background.html#token-probabilities",
+    "href": "examplesite/background.html#token-probabilities",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Token probabilities",
+    "text": "Token probabilities\nLet’s use promptr to explore the probabilistic nature of LLMs (and check if our OpenAI key is set up correctly)\n\n\nlibrary(promptr)\npromptr::complete_prompt(\"After drinking some water, the dog went to bed feed her\")\n\n - Let’s change the prompt and the max_tokens argument"
+  },
+  {
+    "objectID": "examplesite/background.html#demo",
+    "href": "examplesite/background.html#demo",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Demo",
+    "text": "Demo\nToken Possibilities app by Garrick Aiden Buie\nCode to run the app locally on your machine can be found here"
+  },
+  {
+    "objectID": "examplesite/background.html#section-1",
+    "href": "examplesite/background.html#section-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "Language models\nPredict and generate text by estimating the probability of tokens occurring in a given sequence.\n\nLarge language models\nAdd more parameters and massive datasets, enabling more complex tasks\n\nTokens\nBasic units of text that LLMs use to process language. May be words, character sets, combinations of words, and punctuation."
+  },
+  {
+    "objectID": "examplesite/background.html#section-2",
+    "href": "examplesite/background.html#section-2",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "Jim Amos on linkedin:\n\nLLMs are language calculators: they use Natural Language Processing algorithms to intepret prompts then generate statistically plausible answers rendered from algebraic vectors – afterimages of training data compressed into non-euclidian space…\n\n\n\nstatistically plausible can be good enough for what we need"
+  },
+  {
+    "objectID": "examplesite/background.html#llms-can-help-us-with",
+    "href": "examplesite/background.html#llms-can-help-us-with",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "LLMs can help us with:",
+    "text": "LLMs can help us with:\n\nText generation, translation, sentiment analysis, writing and debugging code, generating images and videos, etc."
+  },
+  {
+    "objectID": "examplesite/background.html#lets-consider",
+    "href": "examplesite/background.html#lets-consider",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Let’s consider:",
+    "text": "Let’s consider:\n\nGrowing evidence of negative effects on learning\nBiases\nHype\nValid anti-AI sentiment\nIssues with training material\nProvider intentions\nLax security"
+  },
+  {
+    "objectID": "examplesite/background.html#hype",
+    "href": "examplesite/background.html#hype",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "🚫 Hype 🚫",
+    "text": "🚫 Hype 🚫\n\n\n\n\n“If you don’t become an AI/prompt engineer by tomorrow you’re a loser with no future”\n “Your product needs AI or it will be worthless”\n “All your training in data and coding was a waste of time”"
+  },
+  {
+    "objectID": "examplesite/background.html#still",
+    "href": "examplesite/background.html#still",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Still…",
+    "text": "Still…\n\nI believe everyone deserves the ability to automate tedious tasks in their lives with computers - Simon Willison\n\n\n..providing a way for people to talk with machines in plain language constitutes a dramatic step forward in making computing accessible to everyone - Carl Bergstrom (paraphrased)"
+  },
+  {
+    "objectID": "examplesite/background.html#where-are-the-models-who-makes-them",
+    "href": "examplesite/background.html#where-are-the-models-who-makes-them",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Where are the models? Who makes them?",
+    "text": "Where are the models? Who makes them?\nMany popular models live on the cloud\n\nOpenAI (Known for GPT series including ChatGPT)\nGoogle AI (Gemini models)\nAnthropic (Claude models)\nDeepSeek (DeepSeek R1)\nGitHub Copilot (multiple models)"
+  },
+  {
+    "objectID": "examplesite/background.html#models-providers",
+    "href": "examplesite/background.html#models-providers",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Models != Providers",
+    "text": "Models != Providers\nCompanies train and release models for different use cases\n\nGeneral purpose, lightweight models, coding, etc.\nModels may be open or proprietary\nCloud providers may host multiple models from different makers\nWeb-based chats include models + various tools (which are not necessarily evident)"
+  },
+  {
+    "objectID": "examplesite/background.html#lets-explore",
+    "href": "examplesite/background.html#lets-explore",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Let’s explore",
+    "text": "Let’s explore\n\n\nModels supported by Continue\nLLM leaderboard"
+  },
+  {
+    "objectID": "examplesite/background.html#cloud-hosted-models",
+    "href": "examplesite/background.html#cloud-hosted-models",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Cloud-Hosted models",
+    "text": "Cloud-Hosted models\n\n\n\nRelatively easy setup\nCreate account, set up billing if applicable, get an API key\nAccess to new and in-development models and massive computing power\n\n\n\n\n\nCan be costly\nNeed internet access\nWe send our data to the API"
+  },
+  {
+    "objectID": "examplesite/background.html#local-models",
+    "href": "examplesite/background.html#local-models",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Local models",
+    "text": "Local models\nDownload smaller models on our own hardware\n\n\n\nData not shared with a provider\nNo ongoing costs\nWork offline\n\n\n\n\n\nSteep learning curve\nLarge memory requirements\nSlower performance\n\n\n\nExamples:\nOllama (Simplifies running open-source LLMs locally)\nHugging Face transformers (lots of open-source models)"
+  },
+  {
+    "objectID": "examplesite/background.html#which-model-do-i-use",
+    "href": "examplesite/background.html#which-model-do-i-use",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Which model do I use?",
+    "text": "Which model do I use?\nConsiderations\n\n\n\nPricing\nFree tiers, token pricing, billing policies\nContext Windows\nCompatibility with our chosen tools\nSpeed\n\n\n\nPerformance\nPrivacy\nHardware"
+  },
+  {
+    "objectID": "examplesite/background.html#on-pricing",
+    "href": "examplesite/background.html#on-pricing",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "On pricing",
+    "text": "On pricing\n\nNothing is more costly than something given free of charge\n- Japanese proverb.\n\n\n\nnothing is offered for free unless there is something to be gained for the party involved\nif we are not paying for the product, then we are the product"
+  },
+  {
+    "objectID": "examplesite/background.html#decent-enough-outputs",
+    "href": "examplesite/background.html#decent-enough-outputs",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Decent enough outputs",
+    "text": "Decent enough outputs\n\nWorking code -&gt; actual problems solved & time saved\nUpdated and more recent knowledge cut-offs"
+  },
+  {
+    "objectID": "examplesite/background.html#explosion-of-programs-packages-and-features-since-late-2024",
+    "href": "examplesite/background.html#explosion-of-programs-packages-and-features-since-late-2024",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Explosion of programs, packages and features since late 2024",
+    "text": "Explosion of programs, packages and features since late 2024\n\nRelevant keynotes, blog posts, demos, workshops\n💡R + AI conference happening next week!"
+  },
+  {
+    "objectID": "examplesite/background.html#cut-down-on-context-switching",
+    "href": "examplesite/background.html#cut-down-on-context-switching",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Cut down on context switching",
+    "text": "Cut down on context switching\n\nGrowing support in R for AI tools\n\nShifting our attention between different tasks or programs can be tiring and make us less productive and efficient.\n\nAsk the chatbot in the browser\nCopy the response and paste it in R\nShare the errors or output with the chat\nRepeat (and potentially introduce errors)"
+  },
+  {
+    "objectID": "examplesite/background.html#coding-with-llms",
+    "href": "examplesite/background.html#coding-with-llms",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Coding with LLMs",
+    "text": "Coding with LLMs\n\nAutocomplete\n\n\nModels suggest ‘ghost text’ as we type\n\nVery distracting during teaching\n\nSuggestions may be unhelpful but mostly harmless"
+  },
+  {
+    "objectID": "examplesite/background.html#coding-with-llms-1",
+    "href": "examplesite/background.html#coding-with-llms-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Coding with LLMs",
+    "text": "Coding with LLMs\n\nChats\n\n\nSend prompts, get answers\nOften let us provide context and upload files\nResults can be copied or inserted directly to a script\nIn the browser or through APIs"
+  },
+  {
+    "objectID": "examplesite/background.html#coding-with-llms-2",
+    "href": "examplesite/background.html#coding-with-llms-2",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Coding with LLMs",
+    "text": "Coding with LLMs\n\nAgents/Agentic\n\nCan run code and change files\nFollow a general plan and iterates\nWorks on a task ‘autonomously’\nToken-hungry and potentially slow\nMakes us assume that results are correct\nGame-changing potential"
+  },
+  {
+    "objectID": "examplesite/background.html#questions-we-might-put-in-an-llm-chat-window",
+    "href": "examplesite/background.html#questions-we-might-put-in-an-llm-chat-window",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Questions we might put in an LLM chat window?",
+    "text": "Questions we might put in an LLM chat window?\n\n\n&gt; How do I add a subtitle to my ggplot figure?\n&gt; What are the arguments for pivot_wider()?\n&gt; I can’t join my table_1 object with my dat3 data frame, help!\n\n\n\nNote the difference in the type of question. This will be important soon."
+  },
+  {
+    "objectID": "examplesite/background.html#request-response-cycle",
+    "href": "examplesite/background.html#request-response-cycle",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Request-response cycle",
+    "text": "Request-response cycle\nDifferent parts of the internet communicate through HTTP requests. This includes interacting with LLMs.\n\nWeb searches\nFile downloads\nPosting a status on social media"
+  },
+  {
+    "objectID": "examplesite/background.html#section-3",
+    "href": "examplesite/background.html#section-3",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "Role\nDescription\n\n\n\n\nsystem_prompt\nOverarching instructions from the user that define the behavior of the assistant\n\n\nuser\nMessages from the user interactingwith the model\n\n\nassistant\nThe model’s responses to the user"
+  },
+  {
+    "objectID": "examplesite/background.html#conversation-with-a-chatbot",
+    "href": "examplesite/background.html#conversation-with-a-chatbot",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Conversation with a chatbot",
+    "text": "Conversation with a chatbot\n 🧍: name three mammals  🤖: dog, cat, mouse \n\n🧍: name three mammals  🤖: perro, gato, ratón\n\n  What happened?"
+  },
+  {
+    "objectID": "examplesite/background.html#system-prompts",
+    "href": "examplesite/background.html#system-prompts",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "System Prompts",
+    "text": "System Prompts\nDefine specific instructions on role, tone, or constraints\n\nNo system prompt?\n\nModels default to base programming, leads to general and less predictable responses"
+  },
+  {
+    "objectID": "examplesite/background.html#system-prompts-1",
+    "href": "examplesite/background.html#system-prompts-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "System Prompts",
+    "text": "System Prompts\nRepeatable, consistent results suited to what we need to do.\n\n“you are an expert R programmer that only uses base R”\n“you are an expert R programmer that only uses base R. Do not add any comments. Do not explain the output”\n“you are an expert R programmer. Comment the code in French”\n\n\n\nellmer prompt design Vignette"
+  },
+  {
+    "objectID": "examplesite/background.html#llms-are-stateless",
+    "href": "examplesite/background.html#llms-are-stateless",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "LLMs are stateless",
+    "text": "LLMs are stateless"
+  },
+  {
+    "objectID": "examplesite/background.html#llms-are-stateless-1",
+    "href": "examplesite/background.html#llms-are-stateless-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "LLMs are stateless",
+    "text": "LLMs are stateless\n\nLLMs don’t retain memory of prior interactions\nContext happens by sending all previous messages with each new request\nBecause of limitations on tokens and context size, there are truncation and optimization strategies at work"
+  },
+  {
+    "objectID": "examplesite/background.html#llms-are-stateless-2",
+    "href": "examplesite/background.html#llms-are-stateless-2",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "LLMs are stateless",
+    "text": "LLMs are stateless\n\n\nStart new chats often\nSplit up tasks across chats\nUse detailed system prompts"
+  },
+  {
+    "objectID": "examplesite/materials.html",
+    "href": "examplesite/materials.html",
+    "title": "Course Materials",
+    "section": "",
+    "text": "gander demo script"
+  },
+  {
+    "objectID": "examplesite/materials.html#data-and-scripts",
+    "href": "examplesite/materials.html#data-and-scripts",
+    "title": "Course Materials",
+    "section": "",
+    "text": "gander demo script"
+  },
+  {
+    "objectID": "examplesite/materials.html#slide-decks",
+    "href": "examplesite/materials.html#slide-decks",
+    "title": "Course Materials",
+    "section": "Slide decks",
+    "text": "Slide decks\n\nDay 1\nSetup and Intros\nMore about LLMs\nHands-on"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sitio del Curso",
+    "section": "",
+    "text": "R para el tratamiento de Hojas de Cálculo\nBienvenid@s al sitio web del curso. Aquí encontrarán todas las presentaciones y materiales.\nEste sitio será actualizado después de cada encuentro para añadir materiales adicionales y cualquier recurso relevante que se discuta durante las sesiones.\nInstructor: Luis D. Verde Arregoitia\n📆   11, 18, 25 de Noviembre y 2 de Diciembre, 2025\n⏰   17:00 - 19:30 hora CDMX"
+  },
+  {
+    "objectID": "curso.html",
+    "href": "curso.html",
+    "title": "Contenido y horario",
+    "section": "",
+    "text": "Presentaciones e Introducción\nAntecedentes sobre hojas de cálculo\nBuenas prácticas para la organización de datos\nImportando hojas de cálculo a R\n\nFormatos y paquetes\nLibros de trabajo vs dataframes"
+  },
+  {
+    "objectID": "curso.html#primer-encuentro-11-de-noviembre-2025",
+    "href": "curso.html#primer-encuentro-11-de-noviembre-2025",
+    "title": "Contenido y horario",
+    "section": "",
+    "text": "Presentaciones e Introducción\nAntecedentes sobre hojas de cálculo\nBuenas prácticas para la organización de datos\nImportando hojas de cálculo a R\n\nFormatos y paquetes\nLibros de trabajo vs dataframes"
+  },
+  {
+    "objectID": "curso.html#segundo-encuentro-18-de-noviembre-2025",
+    "href": "curso.html#segundo-encuentro-18-de-noviembre-2025",
+    "title": "Contenido y horario",
+    "section": "Segundo encuentro (18 de Noviembre, 2025)",
+    "text": "Segundo encuentro (18 de Noviembre, 2025)\n\nListas e iteración aplicadas a archivos y pestañas\n\nTrabajo con el sistema de archivos desde R\nImportar multiples archivos o pestañas\nDividir datos agrupados en pestañas o archivos separados\nOperaciones comunes (ordenar filas, reacomodar columnas, subconjuntos de datos, filtros, etc.)\n\nExportando objetos de R a hojas de cálculo"
+  },
+  {
+    "objectID": "curso.html#tercer-encuentro-25-de-noviembre-2025",
+    "href": "curso.html#tercer-encuentro-25-de-noviembre-2025",
+    "title": "Contenido y horario",
+    "section": "Tercer encuentro (25 de Noviembre, 2025)",
+    "text": "Tercer encuentro (25 de Noviembre, 2025)\n\nTrabajo con archivos en la nube (Google Sheets)\n\nInicio de sesión y conexión con la API de Google\nArchivos en Sheets y Drive\n\nTrabajando con formato en celdas o texto\n\nImportando hojas con formato"
+  },
+  {
+    "objectID": "curso.html#cuarto-encuentro-2-de-diciembre-2025",
+    "href": "curso.html#cuarto-encuentro-2-de-diciembre-2025",
+    "title": "Contenido y horario",
+    "section": "Cuarto encuentro (2 de Diciembre, 2025)",
+    "text": "Cuarto encuentro (2 de Diciembre, 2025)\n\nResolviendo problemas comunes\n\nFechas\nEncabezados problemáticos\nDisposiciones irregulares de los datos\n\nEjemplos reales\nRecursos útiles\nDiscusión"
+  },
+  {
+    "objectID": "encuentro4.html#resumen-del-curso-hasta-ahora",
+    "href": "encuentro4.html#resumen-del-curso-hasta-ahora",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Resumen del curso hasta ahora",
+    "text": "Resumen del curso hasta ahora\n\nIntroducción a hojas de cálculo y buenas prácticas\nListas e iteración para trabajar con múltiples archivos\nImportación y exportación de datos\nTrabajo con archivos en la nube y formato"
+  },
+  {
+    "objectID": "encuentro4.html#objetivos-de-hoy",
+    "href": "encuentro4.html#objetivos-de-hoy",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Objetivos de hoy",
+    "text": "Objetivos de hoy\n\nResolver problemas comunes con hojas de cálculo\nAnalizar ejemplos reales\nExplorar recursos útiles\nDiscutir estrategias avanzadas"
+  },
+  {
+    "objectID": "encuentro4.html#resolviendo-problemas-comunes",
+    "href": "encuentro4.html#resolviendo-problemas-comunes",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Resolviendo problemas comunes",
+    "text": "Resolviendo problemas comunes\nLos desafíos más frecuentes al trabajar con hojas de cálculo incluyen:\n\nFormatos de fecha inconsistentes\nEncabezados problemáticos\nDisposiciones irregulares de datos\nValores faltantes o inconsistentes\nCombinación de múltiples fuentes"
+  },
+  {
+    "objectID": "encuentro4.html#trabajando-con-fechas",
+    "href": "encuentro4.html#trabajando-con-fechas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Trabajando con fechas",
+    "text": "Trabajando con fechas\nLas fechas son notoriamente difíciles de manejar en hojas de cálculo:\n\n# Importar datos con fechas\nlibrary(readxl)\ndatos &lt;- read_excel(\"datos_fechas.xlsx\", \n                    col_types = c(\"date\", \"text\", \"numeric\"))\n\n# Formateo de fechas con lubridate\nlibrary(lubridate)\nfechas_arregladas &lt;- mdy(datos$fecha_texto)  # Mes-día-año\nfechas_arregladas2 &lt;- dmy(datos$fecha_texto) # Día-mes-año\nfechas_arregladas3 &lt;- ymd(datos$fecha_texto) # Año-mes-día"
+  },
+  {
+    "objectID": "encuentro4.html#problemas-comunes-con-fechas",
+    "href": "encuentro4.html#problemas-comunes-con-fechas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Problemas comunes con fechas",
+    "text": "Problemas comunes con fechas\n\n# Conversión de números de Excel a fechas R\nfechas_excel &lt;- as.Date(datos$numero_excel, origin = \"1899-12-30\")\n\n# Extracción de componentes de fecha\nlibrary(dplyr)\ndatos &lt;- datos %&gt;% \n  mutate(\n    año = year(fecha),\n    mes = month(fecha),\n    dia = day(fecha),\n    dia_semana = wday(fecha, label = TRUE)\n  )"
+  },
+  {
+    "objectID": "encuentro4.html#encabezados-problemáticos",
+    "href": "encuentro4.html#encabezados-problemáticos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Encabezados problemáticos",
+    "text": "Encabezados problemáticos\nProblemas comunes: - Espacios o caracteres especiales - Múltiples filas de encabezados - Nombres duplicados - Celdas combinadas\n\n# Limpiar nombres de columnas\nlibrary(janitor)\ndatos_limpios &lt;- clean_names(datos)\n\n# Especificar manualmente los nombres\ncolnames(datos) &lt;- c(\"id\", \"nombre\", \"valor\", \"fecha\")\n\n# Saltar filas iniciales y especificar nombres\ndatos &lt;- read_excel(\"archivo.xlsx\", \n                    skip = 3, \n                    col_names = c(\"id\", \"nombre\", \"valor\", \"fecha\"))"
+  },
+  {
+    "objectID": "encuentro4.html#manejo-de-múltiples-filas-de-encabezados",
+    "href": "encuentro4.html#manejo-de-múltiples-filas-de-encabezados",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Manejo de múltiples filas de encabezados",
+    "text": "Manejo de múltiples filas de encabezados\n\n# Leer encabezados compuestos\nencabezados &lt;- read_excel(\"datos_complejos.xlsx\", \n                         n_max = 2)\n\n# Combinar encabezados\nnombres_combinados &lt;- paste(\n  encabezados[1, ], \n  encabezados[2, ], \n  sep = \"_\"\n)\n\n# Leer el archivo con encabezados combinados\ndatos &lt;- read_excel(\"datos_complejos.xlsx\", \n                    skip = 2, \n                    col_names = nombres_combinados)"
+  },
+  {
+    "objectID": "encuentro4.html#disposiciones-irregulares-de-los-datos",
+    "href": "encuentro4.html#disposiciones-irregulares-de-los-datos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Disposiciones irregulares de los datos",
+    "text": "Disposiciones irregulares de los datos\nProblemas comunes: - Tablas con filas de subtotales o resúmenes - Múltiples tablas en una hoja - Filas en blanco con significado - Estructuras pivotadas incorrectamente"
+  },
+  {
+    "objectID": "encuentro4.html#manejo-de-datos-con-estructuras-irregulares",
+    "href": "encuentro4.html#manejo-de-datos-con-estructuras-irregulares",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Manejo de datos con estructuras irregulares",
+    "text": "Manejo de datos con estructuras irregulares\n\n# Eliminar filas de subtotales\ndatos &lt;- datos %&gt;% \n  filter(!str_detect(descripcion, \"Total|Subtotal\"))\n\n# Extraer una tabla específica de una hoja\ntabla1 &lt;- read_excel(\"archivo.xlsx\", \n                     range = \"A5:F20\")\n\ntabla2 &lt;- read_excel(\"archivo.xlsx\", \n                     range = \"A25:F40\")"
+  },
+  {
+    "objectID": "encuentro4.html#tratamiento-de-datos-pivotados-incorrectamente",
+    "href": "encuentro4.html#tratamiento-de-datos-pivotados-incorrectamente",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Tratamiento de datos pivotados incorrectamente",
+    "text": "Tratamiento de datos pivotados incorrectamente\n\n# Convertir datos de formato ancho a largo\nlibrary(tidyr)\ndatos_largos &lt;- datos %&gt;%\n  pivot_longer(\n    cols = -c(id, categoria),\n    names_to = \"mes\",\n    values_to = \"valor\"\n  )\n\n# Convertir datos de formato largo a ancho\ndatos_anchos &lt;- datos_largos %&gt;%\n  pivot_wider(\n    names_from = mes,\n    values_from = valor\n  )"
+  },
+  {
+    "objectID": "encuentro4.html#manejo-de-valores-faltantes",
+    "href": "encuentro4.html#manejo-de-valores-faltantes",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Manejo de valores faltantes",
+    "text": "Manejo de valores faltantes\n\n# Identificar valores faltantes\nlibrary(naniar)\nmiss_var_summary(datos)\n\n# Filtrar o reemplazar valores faltantes\ndatos %&gt;% filter(!is.na(valor))\n\n# Imputación de valores faltantes\ndatos &lt;- datos %&gt;%\n  mutate(valor = if_else(is.na(valor), \n                         mean(valor, na.rm = TRUE), \n                         valor))"
+  },
+  {
+    "objectID": "encuentro4.html#ejemplos-reales-caso-1---datos-de-ventas",
+    "href": "encuentro4.html#ejemplos-reales-caso-1---datos-de-ventas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Ejemplos reales: Caso 1 - Datos de ventas",
+    "text": "Ejemplos reales: Caso 1 - Datos de ventas\n\n# Problema: Archivo de ventas con múltiples pestañas mensuales\n# y formatos inconsistentes\n\n# Solución:\nlibrary(tidyverse)\nlibrary(readxl)\n\n# 1. Identificar todas las pestañas\npestanas &lt;- excel_sheets(\"ventas_anuales.xlsx\")\n\n# 2. Función para procesar cada pestaña\nprocesar_pestana &lt;- function(sheet_name) {\n  # Leer los datos saltando encabezados irrelevantes\n  datos_crudos &lt;- read_excel(\"ventas_anuales.xlsx\", \n                             sheet = sheet_name, \n                             skip = 3)\n  \n  # Limpiar nombres de columnas\n  datos_limpios &lt;- clean_names(datos_crudos)\n  \n  # Eliminar filas de resumen\n  datos_filtrados &lt;- datos_limpios %&gt;%\n    filter(!is.na(codigo_producto), \n           !str_detect(producto, \"Total\"))\n  \n  # Agregar columna de mes\n  datos_filtrados %&gt;%\n    mutate(mes = sheet_name)\n}\n\n# 3. Aplicar la función a todas las pestañas y combinar\ndatos_combinados &lt;- pestanas %&gt;%\n  map_dfr(procesar_pestana)"
+  },
+  {
+    "objectID": "encuentro4.html#ejemplos-reales-caso-2---datos-gubernamentales",
+    "href": "encuentro4.html#ejemplos-reales-caso-2---datos-gubernamentales",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Ejemplos reales: Caso 2 - Datos gubernamentales",
+    "text": "Ejemplos reales: Caso 2 - Datos gubernamentales\n\n# Problema: Reportes de presupuesto con encabezados\n# compuestos y múltiples niveles jerárquicos\n\n# Solución:\n# 1. Leer encabezados\nencabezados &lt;- read_excel(\"presupuesto.xlsx\", n_max = 2)\nencabezados_combinados &lt;- paste(encabezados[1, ], encabezados[2, ], sep = \"_\")\nencabezados_combinados &lt;- make.names(encabezados_combinados)\n\n# 2. Leer datos con nuevos encabezados\ndatos &lt;- read_excel(\"presupuesto.xlsx\", \n                    skip = 2, \n                    col_names = encabezados_combinados)\n\n# 3. Extraer información jerárquica\ndatos_procesados &lt;- datos %&gt;%\n  # Identificar niveles jerárquicos\n  mutate(\n    nivel = case_when(\n      !is.na(codigo_nivel_1) & is.na(codigo_nivel_2) ~ 1,\n      !is.na(codigo_nivel_2) & is.na(codigo_nivel_3) ~ 2,\n      !is.na(codigo_nivel_3) ~ 3,\n      TRUE ~ NA_real_\n    )\n  ) %&gt;%\n  # Llenado hacia abajo para categorías jerárquicas\n  fill(categoria_nivel_1) %&gt;%\n  # Filtrar solo registros de nivel 3 (detalle)\n  filter(nivel == 3)"
+  },
+  {
+    "objectID": "encuentro4.html#ejemplos-reales-caso-3---informes-médicos",
+    "href": "encuentro4.html#ejemplos-reales-caso-3---informes-médicos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Ejemplos reales: Caso 3 - Informes médicos",
+    "text": "Ejemplos reales: Caso 3 - Informes médicos\n\n# Problema: Datos de pacientes con fechas en formatos \n# inconsistentes y valores faltantes\n\n# Solución:\n# 1. Leer los datos y estandarizar formatos de fecha\ndatos_pacientes &lt;- read_excel(\"pacientes.xlsx\")\n\ndatos_estandarizados &lt;- datos_pacientes %&gt;%\n  mutate(\n    # Convertir fechas de texto a fecha\n    fecha_nacimiento = case_when(\n      str_detect(fecha_nacimiento_raw, \"/\") ~ dmy(fecha_nacimiento_raw),\n      str_detect(fecha_nacimiento_raw, \"-\") ~ ymd(fecha_nacimiento_raw),\n      TRUE ~ as.Date(as.numeric(fecha_nacimiento_raw), origin = \"1899-12-30\")\n    ),\n    \n    # Calcular edad\n    edad = as.numeric(difftime(Sys.Date(), fecha_nacimiento, units = \"days\") / 365.25),\n    \n    # Crear grupos de edad\n    grupo_edad = case_when(\n      edad &lt; 18 ~ \"Menor\",\n      edad &lt; 65 ~ \"Adulto\",\n      TRUE ~ \"Adulto mayor\"\n    )\n  )\n\n# 2. Imputar valores faltantes en mediciones\ndatos_completos &lt;- datos_estandarizados %&gt;%\n  group_by(grupo_edad, sexo) %&gt;%\n  mutate(\n    peso = if_else(is.na(peso), mean(peso, na.rm = TRUE), peso),\n    altura = if_else(is.na(altura), mean(altura, na.rm = TRUE), altura)\n  ) %&gt;%\n  ungroup()"
+  },
+  {
+    "objectID": "encuentro4.html#recursos-útiles",
+    "href": "encuentro4.html#recursos-útiles",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Recursos útiles",
+    "text": "Recursos útiles\nPaquetes destacados\n\nreadxl, openxlsx: Importación/exportación de Excel\ngooglesheets4: Trabajo con Google Sheets\ntidyxl, unpivotr: Manejo de hojas con formato complejo\njanitor: Limpieza de datos y nombres de columnas\nlubridate: Manejo de fechas\nnaniar: Análisis de datos faltantes"
+  },
+  {
+    "objectID": "encuentro4.html#recursos-útiles-continuación",
+    "href": "encuentro4.html#recursos-útiles-continuación",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Recursos útiles (continuación)",
+    "text": "Recursos útiles (continuación)\nDocumentación y tutoriales\n\nR for Data Science (2e)\nDocumentación de readxl\nImportando datos en tidyverse\nWorking with Spreadsheets\nopenxlsx Vignettes"
+  },
+  {
+    "objectID": "encuentro4.html#consejos-finales",
+    "href": "encuentro4.html#consejos-finales",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Consejos finales",
+    "text": "Consejos finales\n\nVerificar siempre los datos importados (primeras y últimas filas)\nDocumentar el procesamiento de datos\nUtilizar funciones para tareas repetitivas\nCrear flujos de trabajo reproducibles\nConsiderar la creación de paquetes para organizaciones"
+  },
+  {
+    "objectID": "encuentro4.html#discusión",
+    "href": "encuentro4.html#discusión",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Discusión",
+    "text": "Discusión\n\n¿Qué desafíos específicos enfrentan con sus hojas de cálculo?\n¿Qué técnicas han encontrado útiles?\n¿Cómo podemos mejorar la colaboración entre usuarios de Excel y R?\n¿Qué temas les gustaría explorar con más profundidad?"
+  },
+  {
+    "objectID": "encuentro4.html#gracias-por-participar",
+    "href": "encuentro4.html#gracias-por-participar",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "¡Gracias por participar!",
+    "text": "¡Gracias por participar!\nLuis D. Verde Arregoitia\nluis@liomys.mx\nRecursos adicionales disponibles en el sitio del curso:\nMateriales del curso"
+  },
+  {
+    "objectID": "encuentro2.html#resumen-del-encuentro-anterior",
+    "href": "encuentro2.html#resumen-del-encuentro-anterior",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Resumen del encuentro anterior",
+    "text": "Resumen del encuentro anterior\n\nBuenas prácticas para organizar datos\nFundamentos de hojas de cálculo\nImportación básica de archivos Excel y CSV"
+  },
+  {
+    "objectID": "encuentro2.html#listas-en-r",
+    "href": "encuentro2.html#listas-en-r",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Listas en R",
+    "text": "Listas en R\nLas listas son estructuras de datos versátiles que pueden contener diferentes tipos de objetos:\n\n# Crear una lista con diferentes tipos de datos\nmi_lista &lt;- list(\n  numeros = 1:5,\n  texto = \"Hoja de cálculo\",\n  logico = TRUE,\n  data = data.frame(x = 1:3, y = c(\"a\", \"b\", \"c\"))\n)\n\n# Acceder a elementos de la lista\nmi_lista$numeros\nmi_lista[[\"texto\"]]\nmi_lista[[3]]  # Elemento logico"
+  },
+  {
+    "objectID": "encuentro2.html#por-qué-usar-listas-con-hojas-de-cálculo",
+    "href": "encuentro2.html#por-qué-usar-listas-con-hojas-de-cálculo",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "¿Por qué usar listas con hojas de cálculo?",
+    "text": "¿Por qué usar listas con hojas de cálculo?\n\nAlmacenar múltiples dataframes (pestañas de Excel)\nMantener metadatos junto con los datos\nOrganizar resultados de operaciones sobre múltiples archivos\nPreservar la estructura de archivos Excel con múltiples hojas"
+  },
+  {
+    "objectID": "encuentro2.html#iteración-aplicando-funciones-a-múltiples-elementos",
+    "href": "encuentro2.html#iteración-aplicando-funciones-a-múltiples-elementos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Iteración: Aplicando funciones a múltiples elementos",
+    "text": "Iteración: Aplicando funciones a múltiples elementos\n\n# Usando lapply para aplicar una función a cada elemento de una lista\narchivos_csv &lt;- list.files(pattern = \"*.csv\")\ndatos_lista &lt;- lapply(archivos_csv, read.csv)\n\n# Usando un bucle for\ndatos_lista2 &lt;- list()\nfor (archivo in archivos_csv) {\n  datos_lista2[[archivo]] &lt;- read.csv(archivo)\n}"
+  },
+  {
+    "objectID": "encuentro2.html#trabajo-con-el-sistema-de-archivos-desde-r",
+    "href": "encuentro2.html#trabajo-con-el-sistema-de-archivos-desde-r",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Trabajo con el sistema de archivos desde R",
+    "text": "Trabajo con el sistema de archivos desde R\n\n# Listar archivos\narchivos &lt;- list.files()\narchivos_excel &lt;- list.files(pattern = \"*.xlsx\")\n\n# Comprobar si un archivo existe\nfile.exists(\"datos.xlsx\")\n\n# Obtener información de un archivo\nfile.info(\"datos.xlsx\")\n\n# Crear un directorio\ndir.create(\"resultados\")"
+  },
+  {
+    "objectID": "encuentro2.html#importación-de-múltiples-archivos-o-pestañas",
+    "href": "encuentro2.html#importación-de-múltiples-archivos-o-pestañas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Importación de múltiples archivos o pestañas",
+    "text": "Importación de múltiples archivos o pestañas\nMúltiples archivos CSV\n\n# Obtener lista de archivos CSV en un directorio\narchivos_csv &lt;- list.files(path = \"datos\", \n                          pattern = \"*.csv\", \n                          full.names = TRUE)\n\n# Leer todos los archivos y combinarlos\nlibrary(tidyverse)\ndatos_combinados &lt;- archivos_csv %&gt;%\n  map_df(read_csv, .id = \"archivo\")"
+  },
+  {
+    "objectID": "encuentro2.html#importación-de-múltiples-pestañas-de-excel",
+    "href": "encuentro2.html#importación-de-múltiples-pestañas-de-excel",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Importación de múltiples pestañas de Excel",
+    "text": "Importación de múltiples pestañas de Excel\n\n# Leer todas las pestañas de un archivo Excel\nlibrary(readxl)\npestanas &lt;- excel_sheets(\"archivo.xlsx\")\n\n# Método 1: Usar lapply\ndatos_pestanas &lt;- lapply(pestanas, function(sheet) {\n  read_excel(\"archivo.xlsx\", sheet = sheet)\n})\nnames(datos_pestanas) &lt;- pestanas\n\n# Método 2: Usando purrr\nlibrary(purrr)\ndatos_pestanas2 &lt;- pestanas %&gt;%\n  set_names() %&gt;%\n  map(~read_excel(\"archivo.xlsx\", sheet = .x))"
+  },
+  {
+    "objectID": "encuentro2.html#dividir-datos-en-pestañas-o-archivos-separados",
+    "href": "encuentro2.html#dividir-datos-en-pestañas-o-archivos-separados",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Dividir datos en pestañas o archivos separados",
+    "text": "Dividir datos en pestañas o archivos separados\n\n# Dividir un dataframe por una variable categórica\nlibrary(dplyr)\ndatos_divididos &lt;- split(datos, datos$categoria)\n\n# Guardar cada grupo como un archivo CSV separado\nfor (nombre in names(datos_divididos)) {\n  write.csv(datos_divididos[[nombre]], \n            paste0(\"grupo_\", nombre, \".csv\"),\n            row.names = FALSE)\n}"
+  },
+  {
+    "objectID": "encuentro2.html#operaciones-comunes-con-dataframes",
+    "href": "encuentro2.html#operaciones-comunes-con-dataframes",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Operaciones comunes con dataframes",
+    "text": "Operaciones comunes con dataframes\n\n\nOrdenar filas\n\n# Base R\ndatos[order(datos$fecha), ]\n\n# dplyr\ndatos %&gt;% arrange(fecha)\ndatos %&gt;% arrange(desc(ventas))\n\n\nReacomodar columnas\n\n# Seleccionar columnas específicas\ndatos %&gt;% select(id, nombre, valor)\n\n# Reordenar todas las columnas\ndatos %&gt;% select(fecha, id, everything())"
+  },
+  {
+    "objectID": "encuentro2.html#operaciones-comunes-continuación",
+    "href": "encuentro2.html#operaciones-comunes-continuación",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Operaciones comunes (continuación)",
+    "text": "Operaciones comunes (continuación)\n\n\nSubconjuntos de datos\n\n# Base R\ndatos[datos$ventas &gt; 1000, ]\n\n# dplyr\ndatos %&gt;% filter(ventas &gt; 1000)\ndatos %&gt;% filter(region == \"Norte\", \n                año == 2025)\n\n\nFiltros\n\n# Filtrar datos faltantes\ndatos %&gt;% filter(!is.na(ventas))\n\n# Filtrar por patrón en texto\ndatos %&gt;% \n  filter(str_detect(producto, \"Excel\"))"
+  },
+  {
+    "objectID": "encuentro2.html#exportando-objetos-de-r-a-hojas-de-cálculo",
+    "href": "encuentro2.html#exportando-objetos-de-r-a-hojas-de-cálculo",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Exportando objetos de R a hojas de cálculo",
+    "text": "Exportando objetos de R a hojas de cálculo\nArchivos CSV\n\n# Base R\nwrite.csv(datos, \"resultados.csv\", row.names = FALSE)\n\n# readr (tidyverse)\nwrite_csv(datos, \"resultados.csv\")\n\nArchivos Excel (con openxlsx)\n\nlibrary(openxlsx)\n\n# Crear un libro de trabajo\nwb &lt;- createWorkbook()\n\n# Agregar una hoja\naddWorksheet(wb, \"Datos\")\nwriteData(wb, \"Datos\", datos)\n\n# Guardar el libro\nsaveWorkbook(wb, \"resultados.xlsx\", overwrite = TRUE)"
+  },
+  {
+    "objectID": "encuentro2.html#exportando-múltiples-dataframes-a-excel",
+    "href": "encuentro2.html#exportando-múltiples-dataframes-a-excel",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Exportando múltiples dataframes a Excel",
+    "text": "Exportando múltiples dataframes a Excel\n\n# Lista de dataframes\nlista_datos &lt;- list(\n  Ventas = datos_ventas,\n  Clientes = datos_clientes,\n  Productos = datos_productos\n)\n\n# Crear un libro con múltiples hojas\nwb &lt;- createWorkbook()\n\n# Agregar cada dataframe como una hoja\nfor (nombre in names(lista_datos)) {\n  addWorksheet(wb, nombre)\n  writeData(wb, nombre, lista_datos[[nombre]])\n}\n\n# Guardar el libro\nsaveWorkbook(wb, \"informe_completo.xlsx\")"
+  },
+  {
+    "objectID": "encuentro2.html#añadiendo-formato-a-las-hojas-exportadas",
+    "href": "encuentro2.html#añadiendo-formato-a-las-hojas-exportadas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Añadiendo formato a las hojas exportadas",
+    "text": "Añadiendo formato a las hojas exportadas\n\n# Crear estilos\nestilo_encabezado &lt;- createStyle(\n  fontSize = 12, textDecoration = \"bold\",\n  fgFill = \"#8BC34A\", fontColour = \"white\"\n)\n\nestilo_numero &lt;- createStyle(numFmt = \"#,##0.00\")\n\n# Aplicar estilos\naddWorksheet(wb, \"Datos\")\nwriteData(wb, \"Datos\", datos)\n\n# Aplicar estilo a encabezados\naddStyle(wb, \"Datos\", estilo_encabezado, \n         rows = 1, cols = 1:ncol(datos))\n\n# Aplicar estilo a columnas numéricas\naddStyle(wb, \"Datos\", estilo_numero, \n         cols = c(3, 5), rows = 2:(nrow(datos) + 1))"
+  },
+  {
+    "objectID": "encuentro2.html#para-el-próximo-encuentro",
+    "href": "encuentro2.html#para-el-próximo-encuentro",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Para el próximo encuentro…",
+    "text": "Para el próximo encuentro…\n\nTrabajaremos con archivos en la nube (Google Sheets)\nAprenderemos a conectarnos con la API de Google\nVeremos cómo trabajar con formato en celdas o texto\n\nEjercicio sugerido\nPractiquen importar múltiples hojas de Excel y exportar los resultados con formato básico."
+  },
+  {
+    "objectID": "examplesite/setup.html#hello",
+    "href": "examplesite/setup.html#hello",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Hello!",
+    "text": "Hello!\n\n\n\n @LuisDVA\n liomys.mx\n luis@liomys.mx\n\n\n\nMammals, macroecology, conservation\nR user since 2011 / ‘blogger’ since 2015\nCertified Instructor - Posit(RStudio) & The Carpentries\n\nOnline and in-person courses all year (Physalia Courses, Estación R, R for the Rest of Us)\nrOpenSci mentor 2023-2026\nPackage developer\nR conference speaker + organizer\nR-Ladies collaborator (St. Louis 🇺🇸; Buenos Aires 🇦🇷; Gaborone 😃 🇧🇼)"
+  },
+  {
+    "objectID": "examplesite/setup.html#online-guide",
+    "href": "examplesite/setup.html#online-guide",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Online Guide",
+    "text": "Online Guide\n-Tools, packages, and extensions for working with LLMs + R - English and Spanish, updated 2x/month\n\nhome"
+  },
+  {
+    "objectID": "examplesite/setup.html#more-introductions",
+    "href": "examplesite/setup.html#more-introductions",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "🤝 More introductions",
+    "text": "🤝 More introductions\n\nAre you an AI {skeptic | hater | enthusiast | pragmatist} ? \nHave you been pleasantly surprised/impressed by an AI tool? \nHave you been disappointed or burned by an AI tool?"
+  },
+  {
+    "objectID": "examplesite/setup.html#projects",
+    "href": "examplesite/setup.html#projects",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Projects",
+    "text": "Projects"
+  },
+  {
+    "objectID": "examplesite/setup.html#project-oriented-workflow",
+    "href": "examplesite/setup.html#project-oriented-workflow",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Project-oriented workflow",
+    "text": "Project-oriented workflow\nProject: A folder on your computer that holds all the files relevant to a particular piece of work. We usually separate:\n📁 Data\n📁 Scripts\n📁 Outputs\n\n\n\n\n\nJenny Bryan (2017)\nProject-oriented workflow\n\nMaëlle Salmon (2021)\nDraw me a project"
+  },
+  {
+    "objectID": "examplesite/setup.html#projects-1",
+    "href": "examplesite/setup.html#projects-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Projects",
+    "text": "Projects\n\nEfficient and organized workflows\nRelative file paths and working directories\nSafer and cheaper approach when using AI assistants"
+  },
+  {
+    "objectID": "examplesite/setup.html#ides",
+    "href": "examplesite/setup.html#ides",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "IDEs",
+    "text": "IDEs\n\n\nRStudio\n\nFamiliar and trusted\nAI tools available (fewer GUI options)\nNot going anywhere\n\n\nPositron\n\nExtensible\nBuilt-in LLM tools\nConstant development\nAlternatives available"
+  },
+  {
+    "objectID": "examplesite/setup.html#positron-1",
+    "href": "examplesite/setup.html#positron-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Positron?",
+    "text": "Positron?\nPositron for RStudio Users: A Gentle Introduction\nIsabella Velazquez - Oct. 2025\n\nVideo\nSlides"
+  },
+  {
+    "objectID": "examplesite/setup.html#section",
+    "href": "examplesite/setup.html#section",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "We’ll use cloud-based models for this course. More on this later."
+  },
+  {
+    "objectID": "examplesite/setup.html#application-programming-interfaces",
+    "href": "examplesite/setup.html#application-programming-interfaces",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Application Programming Interfaces",
+    "text": "Application Programming Interfaces\n\n\n\n\n\nAI-generated image created with DALL·E 3 via Bing Image Generator\n\n\n\n\nThe rules and protocols that determine how one application can request data from another.\nLet different software systems talk to each other and exchange data without having to understand each others’ inner workings."
+  },
+  {
+    "objectID": "examplesite/setup.html#apis",
+    "href": "examplesite/setup.html#apis",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "APIs",
+    "text": "APIs\nAllow applications (R scripts, browser-based prompts, mobile apps) to:\n\nSend input text (prompts)\nReceive generated text, code, or structured data back\nHandle authentication (e.g., using API keys)"
+  },
+  {
+    "objectID": "examplesite/setup.html#api-keys",
+    "href": "examplesite/setup.html#api-keys",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "API Keys",
+    "text": "API Keys\nWorking with APIs means we need to identify ourselves to the model provider and authenticate our encrypted connection to their servers\n\nOverall workflow\n\nCreate and account with a model provider\n💳 ?\nGenerate an API key\nKeep it safe but reachable by your LLM tools"
+  },
+  {
+    "objectID": "examplesite/setup.html#section-1",
+    "href": "examplesite/setup.html#section-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "In R\nMost packages work with keys stored in Environment Variables.\nIn GUI-based assistants\nWe enter our keys interactively\n\n⚠️ Never share API keys in public repositories, network drives, shared documents or screen recordings.\n\n\n\n\nH. Wickham  Managing secrets\n\nTed Laderas  A gRadual introduction to web APIs and JSON"
+  },
+  {
+    "objectID": "examplesite/setup.html#api-key-setup",
+    "href": "examplesite/setup.html#api-key-setup",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "API key setup",
+    "text": "API key setup\nWe’ll provide keys for two popular providers. These will only be active during the course hours.\nR\nTemporary: Sys.setenv(OPENAI_API_KEY = \"api_key\") (quoted)\nPermanent: usethis::edit_r_environ()"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#context-aware-help",
+    "href": "examplesite/hands-on.html#context-aware-help",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Context-Aware Help",
+    "text": "Context-Aware Help\nTrying to help someone over the phone vs. helping someone at the computer\n\nYoung Thug and Lil Durk Troubleshooting meme - imgflip"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#contex-aware-help",
+    "href": "examplesite/hands-on.html#contex-aware-help",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Contex-Aware Help",
+    "text": "Contex-Aware Help\n\nAsk the chatbot in the browser IDE\nCopy Apply the response and paste it in R\nShare the errors or output with the chat\nRepeat (and potentially introduce errors)"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#ellmer-and-friends",
+    "href": "examplesite/hands-on.html#ellmer-and-friends",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "ellmer and friends",
+    "text": "ellmer and friends\n\nBridging R and LLMs\n\nRobust and designed specifically for easy interaction with LLMs directly from R\nBroad provider support and meant for entreprise/production use\nAllows models to extend their capabilities by executing R code"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#ellmer-and-friends-1",
+    "href": "examplesite/hands-on.html#ellmer-and-friends-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "ellmer and friends",
+    "text": "ellmer and friends\n\nBridging R and LLMs\n\nCan produce output that is immediately usable in R\nLeverages the btw package to ‘see’ the R session\nStrong dev team"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#gander",
+    "href": "examplesite/hands-on.html#gander",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "gander",
+    "text": "gander\n\n\n\n\n\nMore than a simple chat window\nPowered by ellmer\nRStudio & Positron\n\n\ngander receives a snapshot of our environment with every request and recognizes what we are talking about, including object and variable names"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#gander-demo",
+    "href": "examplesite/hands-on.html#gander-demo",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "gander demo",
+    "text": "gander demo\nWe use ellmer to specify which model powers the addin (and optionally set a system prompt).\nToday we can use openAI or Anthropic models.\n\nuse with ctr+alt+G\n\nganderDemo.R\nSetup instructions for Positron here"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#ellmer-demo",
+    "href": "examplesite/hands-on.html#ellmer-demo",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "ellmer demo",
+    "text": "ellmer demo\n\nlibrary(ellmer)\nmy_chat &lt;- chat_openai() \nmy_chat\n\n Chat with the model then look at your chat object again\n Create a new chat object with a different model and system prompt"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#interacting-with-the-chat-object",
+    "href": "examplesite/hands-on.html#interacting-with-the-chat-object",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Interacting with the chat object",
+    "text": "Interacting with the chat object\nWithout leaving R:\n\n\n\nIn the R console\nlive_console(my_chat)\n\nIn our web browser\nlive_browser(my_chat)"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#positron-vscode-extensions",
+    "href": "examplesite/hands-on.html#positron-vscode-extensions",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Positron (vsCode) extensions",
+    "text": "Positron (vsCode) extensions\nInstall from the OpenVSX marketplace from the Extensions pane\n\n\nPositron Assistant\n\nContinue\n\nRoo Code\n\nWindsurf"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#continue-continue.dev",
+    "href": "examplesite/hands-on.html#continue-continue.dev",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Continue continue.dev",
+    "text": "Continue continue.dev\n\n“Ship faster with Continuous AI”\n\nCool IDE features:\n\nChat\nAutocomplete\nContext Items\nAgent mode\nPlanning mode"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#windsurf-windsurf.com",
+    "href": "examplesite/hands-on.html#windsurf-windsurf.com",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Windsurf windsurf.com",
+    "text": "Windsurf windsurf.com\n\nformerly Codeium\n\n\nthe most intuitive AI coding experience, built to keep you—and your team—in flow\n\nCool IDE features:\n\nChat\nAutocomplete\nContext Items\nBase model included with free tier is Meta’s Llama 3.1 70B."
+  },
+  {
+    "objectID": "examplesite/hands-on.html#roo-code-roocode.com",
+    "href": "examplesite/hands-on.html#roo-code-roocode.com",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Roo Code roocode.com",
+    "text": "Roo Code roocode.com\n\nThe AI dev team that gets things done\n\nCool IDE features:\n\nChat\nContext Items\nMultiple customizable ‘personas’ (agent, debugger, coder, code architect, etc)\nShows model details"
+  },
+  {
+    "objectID": "examplesite/hands-on.html#positron-assistant",
+    "href": "examplesite/hands-on.html#positron-assistant",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Positron Assistant",
+    "text": "Positron Assistant\n\nComes with recent versions of Positron\nHighly integrated\nMeant for R and Python\nLimited models supported at present\n👀"
+  },
+  {
+    "objectID": "examplesite/index.html",
+    "href": "examplesite/index.html",
+    "title": "Course Website",
+    "section": "",
+    "text": "Integrating Large Language Model tools to our R workflows\nAll slides and materials live here.\nThis site will be updated after each day during the course to correct any issues, or to add links or interesting topics that came up during the sessions.\nInstructor: Luis D. Verde Arregoitia\n📆   5 & 12 November, 2025\n⏰   13:00-18:00 (Berlin Time)"
+  },
+  {
+    "objectID": "temario.html#presentaciones-e-introducción",
+    "href": "temario.html#presentaciones-e-introducción",
+    "title": "Curso: R para el tratamiento de Hojas de Cálculo",
+    "section": "Presentaciones e Introducción",
+    "text": "Presentaciones e Introducción"
+  },
+  {
+    "objectID": "temario.html#antecedentes-sobre-hojas-de-cálculo",
+    "href": "temario.html#antecedentes-sobre-hojas-de-cálculo",
+    "title": "Curso: R para el tratamiento de Hojas de Cálculo",
+    "section": "Antecedentes sobre hojas de cálculo",
+    "text": "Antecedentes sobre hojas de cálculo"
+  },
+  {
+    "objectID": "temario.html#buenas-prácticas-para-la-organización-de-datos",
+    "href": "temario.html#buenas-prácticas-para-la-organización-de-datos",
+    "title": "Curso: R para el tratamiento de Hojas de Cálculo",
+    "section": "Buenas prácticas para la organización de datos",
+    "text": "Buenas prácticas para la organización de datos"
+  },
+  {
+    "objectID": "temario.html#importando-hojas-de-cálculo-a-r",
+    "href": "temario.html#importando-hojas-de-cálculo-a-r",
+    "title": "Curso: R para el tratamiento de Hojas de Cálculo",
+    "section": "Importando hojas de cálculo a R",
+    "text": "Importando hojas de cálculo a R\n\nFormatos y paquetes\nLibros de trabajo vs dataframes"
+  },
+  {
+    "objectID": "temario.html#listas-e-iteración-aplicadas-a-archivos-y-pestañas",
+    "href": "temario.html#listas-e-iteración-aplicadas-a-archivos-y-pestañas",
+    "title": "Curso: R para el tratamiento de Hojas de Cálculo",
+    "section": "Listas e iteración aplicadas a archivos y pestañas",
+    "text": "Listas e iteración aplicadas a archivos y pestañas\n\nTrabajo con el sistema de archivos desde R\nImportar multiples archivos o pestañas\nDividir datos agrupados en pestañas o archivos separados\nOperaciones comunes (ordenar filas, reacomodar columnas, subconjuntos de datos, filtros, etc.) ## Exportando objetos de R a hojas de cálculo"
+  },
+  {
+    "objectID": "temario.html#trabajo-con-archivos-en-la-nube-google-sheets",
+    "href": "temario.html#trabajo-con-archivos-en-la-nube-google-sheets",
+    "title": "Curso: R para el tratamiento de Hojas de Cálculo",
+    "section": "Trabajo con archivos en la nube (google sheets)",
+    "text": "Trabajo con archivos en la nube (google sheets)\n\nInicio de sesión y conexión con la API de google\nArchivos en Sheets y Drive ## Trabajando con formato en el celdas o texto\nImportando hojas con formato"
+  },
+  {
+    "objectID": "temario.html#resolviendo-problemas-comunes",
+    "href": "temario.html#resolviendo-problemas-comunes",
+    "title": "Curso: R para el tratamiento de Hojas de Cálculo",
+    "section": "Resolviendo problemas comunes",
+    "text": "Resolviendo problemas comunes\n\nFechas\nEncabezados problemáticos\nDisposiciones irregulares de los datos ## Ejemplos reales ## Recursos útiles ## Discusión"
+  },
+  {
+    "objectID": "encuentro3.html#resumen-del-encuentro-anterior",
+    "href": "encuentro3.html#resumen-del-encuentro-anterior",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Resumen del encuentro anterior",
+    "text": "Resumen del encuentro anterior\n\nListas e iteración en R\nTrabajo con múltiples archivos o pestañas\nExportación de datos a Excel\nOperaciones comunes con dataframes"
+  },
+  {
+    "objectID": "encuentro3.html#objetivos-de-hoy",
+    "href": "encuentro3.html#objetivos-de-hoy",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Objetivos de hoy",
+    "text": "Objetivos de hoy\n\nConectar R con Google Sheets\nLeer y escribir datos en hojas de cálculo en la nube\nTrabajar con formato de celdas\nImportar hojas con formato conservando su estructura"
+  },
+  {
+    "objectID": "encuentro3.html#trabajo-con-archivos-en-la-nube-google-sheets",
+    "href": "encuentro3.html#trabajo-con-archivos-en-la-nube-google-sheets",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Trabajo con archivos en la nube (Google Sheets)",
+    "text": "Trabajo con archivos en la nube (Google Sheets)\nVentajas\n\nAcceso desde cualquier dispositivo\nColaboración en tiempo real\nControl de versiones\nIntegración con otros servicios de Google\nAutomatización de tareas"
+  },
+  {
+    "objectID": "encuentro3.html#inicio-de-sesión-y-conexión-con-la-api-de-google",
+    "href": "encuentro3.html#inicio-de-sesión-y-conexión-con-la-api-de-google",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Inicio de sesión y conexión con la API de Google",
+    "text": "Inicio de sesión y conexión con la API de Google\nInstalación de paquetes necesarios\n\n# Instalar paquetes\ninstall.packages(c(\"googlesheets4\", \"googledrive\"))\n\n# Cargar paquetes\nlibrary(googlesheets4)\nlibrary(googledrive)"
+  },
+  {
+    "objectID": "encuentro3.html#autenticación-con-google",
+    "href": "encuentro3.html#autenticación-con-google",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Autenticación con Google",
+    "text": "Autenticación con Google\n\n# Autenticación con interacción del usuario\ngs4_auth()\ndrive_auth()\n\n# También es posible autenticar con un archivo de credenciales\ngs4_auth(path = \"tu_archivo_credenciales.json\")\n\n# O usar un token guardado previamente\ngs4_auth(token = \"token.rds\")"
+  },
+  {
+    "objectID": "encuentro3.html#accediendo-a-hojas-de-google-sheets",
+    "href": "encuentro3.html#accediendo-a-hojas-de-google-sheets",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Accediendo a hojas de Google Sheets",
+    "text": "Accediendo a hojas de Google Sheets\n\n# Listar hojas de cálculo disponibles\nmis_sheets &lt;- gs4_find()\n\n# Acceder por URL\ndatos &lt;- read_sheet(\"https://docs.google.com/spreadsheets/d/abc123...\")\n\n# Acceder por ID\nid_sheet &lt;- \"abc123...\"\ndatos &lt;- read_sheet(id_sheet)\n\n# Acceder a una hoja específica\ndatos &lt;- read_sheet(id_sheet, sheet = \"Ventas\")"
+  },
+  {
+    "objectID": "encuentro3.html#trabajando-con-pestañas-específicas",
+    "href": "encuentro3.html#trabajando-con-pestañas-específicas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Trabajando con pestañas específicas",
+    "text": "Trabajando con pestañas específicas\n\n# Obtener nombres de las pestañas\nsheet_names &lt;- sheet_names(id_sheet)\n\n# Leer múltiples pestañas\nall_sheets &lt;- sheet_names %&gt;%\n  purrr::set_names() %&gt;%\n  purrr::map(~read_sheet(id_sheet, sheet = .x))\n\n# Leer rangos específicos\ndatos_rango &lt;- read_sheet(id_sheet, \n                         sheet = \"Ventas\",\n                         range = \"A1:D20\")"
+  },
+  {
+    "objectID": "encuentro3.html#escribiendo-datos-a-google-sheets",
+    "href": "encuentro3.html#escribiendo-datos-a-google-sheets",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Escribiendo datos a Google Sheets",
+    "text": "Escribiendo datos a Google Sheets\n\n# Crear una nueva hoja de cálculo\nnuevo_sheet &lt;- gs4_create(\"Nuevo análisis\")\n\n# Escribir datos a una hoja existente\nwrite_sheet(datos, ss = id_sheet, sheet = \"Nueva pestaña\")\n\n# Actualizar datos existentes\nsheet_write(datos_actualizados, \n            ss = id_sheet, \n            sheet = \"Datos\")"
+  },
+  {
+    "objectID": "encuentro3.html#archivos-en-sheets-y-drive",
+    "href": "encuentro3.html#archivos-en-sheets-y-drive",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Archivos en Sheets y Drive",
+    "text": "Archivos en Sheets y Drive\n\n# Listar archivos en Drive\nmis_archivos &lt;- drive_find(type = \"spreadsheet\")\n\n# Buscar un archivo específico\narchivo &lt;- drive_find(pattern = \"Ventas 2025\")\n\n# Descargar un archivo\ndrive_download(archivo, path = \"ventas_local.xlsx\")\n\n# Compartir un archivo\ndrive_share(archivo, role = \"reader\", \n            type = \"anyone\", emailAddress = \"usuario@example.com\")"
+  },
+  {
+    "objectID": "encuentro3.html#integración-de-sheets-con-dplyr",
+    "href": "encuentro3.html#integración-de-sheets-con-dplyr",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Integración de Sheets con dplyr",
+    "text": "Integración de Sheets con dplyr\n\nlibrary(dplyr)\n\n# Leer datos de Google Sheets\ndatos_ventas &lt;- read_sheet(id_sheet, sheet = \"Ventas\")\n\n# Aplicar operaciones dplyr\nresultados &lt;- datos_ventas %&gt;%\n  filter(region == \"Norte\") %&gt;%\n  group_by(producto) %&gt;%\n  summarize(total_ventas = sum(ventas, na.rm = TRUE)) %&gt;%\n  arrange(desc(total_ventas))\n\n# Escribir resultados de vuelta a Google Sheets\nwrite_sheet(resultados, ss = id_sheet, sheet = \"Resultados\")"
+  },
+  {
+    "objectID": "encuentro3.html#trabajando-con-formato-en-celdas-o-texto",
+    "href": "encuentro3.html#trabajando-con-formato-en-celdas-o-texto",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Trabajando con formato en celdas o texto",
+    "text": "Trabajando con formato en celdas o texto\nDesafíos comunes con formato\n\nColores de fondo o texto que representan información\nCeldas combinadas\nAlineación específica de datos\nFuentes o tamaños de texto significativos\nBordes que denotan agrupaciones"
+  },
+  {
+    "objectID": "encuentro3.html#importando-hojas-con-formato",
+    "href": "encuentro3.html#importando-hojas-con-formato",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Importando hojas con formato",
+    "text": "Importando hojas con formato\nEl paquete openxlsx permite conservar y manipular formato:\n\nlibrary(openxlsx)\n\n# Leer un archivo Excel preservando el formato\nwb &lt;- loadWorkbook(\"datos_con_formato.xlsx\")\n\n# Obtener hojas disponibles\nsheets &lt;- getSheetNames(\"datos_con_formato.xlsx\")\n\n# Leer una hoja específica como dataframe\ndatos &lt;- read.xlsx(wb, sheet = 1)"
+  },
+  {
+    "objectID": "encuentro3.html#detectando-celdas-con-formato-en-excel",
+    "href": "encuentro3.html#detectando-celdas-con-formato-en-excel",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Detectando celdas con formato en Excel",
+    "text": "Detectando celdas con formato en Excel\n\n# Obtener información de estilo de celda\nestilos &lt;- getStyles(wb)\n\n# Verificar celdas con formato específico\nceldas_rojas &lt;- getCellStyle(wb, sheet = 1, rows = 1:10, cols = 1:5)\n\n# Identificar celdas con fondo rojo (para análisis posterior)\nfor (i in 1:length(celdas_rojas)) {\n  if (!is.null(celdas_rojas[[i]]$fill$fillFg) && \n      celdas_rojas[[i]]$fill$fillFg == \"#FF0000\") {\n    # Procesar estas celdas de forma especial\n    print(paste(\"Celda con fondo rojo encontrada en posición:\", i))\n  }\n}"
+  },
+  {
+    "objectID": "encuentro3.html#creando-informes-con-formato-personalizado",
+    "href": "encuentro3.html#creando-informes-con-formato-personalizado",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Creando informes con formato personalizado",
+    "text": "Creando informes con formato personalizado\n\n# Crear un libro de trabajo\nwb &lt;- createWorkbook()\naddWorksheet(wb, \"Informe\")\n\n# Escribir datos\nwriteData(wb, \"Informe\", datos)\n\n# Definir estilos\nestilo_encabezado &lt;- createStyle(\n  fontColour = \"#FFFFFF\", fontSize = 12,\n  fgFill = \"#8BC34A\", textDecoration = \"bold\",\n  halign = \"center\", border = \"TopBottom\"\n)\n\nestilo_numerico &lt;- createStyle(\n  numFmt = \"#,##0.00\", \n  halign = \"right\"\n)\n\n# Aplicar estilos\naddStyle(wb, \"Informe\", estilo_encabezado, \n         rows = 1, cols = 1:ncol(datos))\n\n# Aplicar formato condicional\nconditionalFormatting(wb, \"Informe\", \n                     cols = 3, \n                     rows = 2:(nrow(datos) + 1),\n                     rule = \"$C2&gt;1000\", \n                     style = createStyle(fgFill = \"#AED581\"))"
+  },
+  {
+    "objectID": "encuentro3.html#extrayendo-información-de-celdas-con-formato",
+    "href": "encuentro3.html#extrayendo-información-de-celdas-con-formato",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Extrayendo información de celdas con formato",
+    "text": "Extrayendo información de celdas con formato\n\nlibrary(tidyxl)\nlibrary(unpivotr)\n\n# Importar Excel preservando formato\nceldas &lt;- xlsx_cells(\"datos_con_formato.xlsx\", sheets = \"Hoja1\")\n\n# Examinar celdas con formato específico\nceldas_con_color &lt;- celdas %&gt;%\n  filter(!is.na(fill_color))\n\n# Extraer datos estructurados de celdas con formato\ndatos_estructurados &lt;- celdas %&gt;%\n  filter(row &gt;= 5, col &gt;= 3, col &lt;= 7) %&gt;%\n  select(row, col, character, numeric, formula, is_blank) %&gt;%\n  behead(\"up\", header) %&gt;%\n  behead(\"left\", categoria)"
+  },
+  {
+    "objectID": "encuentro3.html#generando-informes-con-estilo-consistente",
+    "href": "encuentro3.html#generando-informes-con-estilo-consistente",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Generando informes con estilo consistente",
+    "text": "Generando informes con estilo consistente\n\n# Función para aplicar un estilo consistente a informes\ncrear_informe_estilo &lt;- function(datos, nombre_archivo) {\n  wb &lt;- createWorkbook()\n  addWorksheet(wb, \"Informe\")\n  \n  writeData(wb, \"Informe\", datos)\n  \n  # Aplicar estilos corporativos\n  addStyle(wb, \"Informe\", estilo_corporativo_header(), \n           rows = 1, cols = 1:ncol(datos))\n  \n  # Ajustar ancho de columnas\n  setColWidths(wb, \"Informe\", cols = 1:ncol(datos), \n               widths = \"auto\")\n  \n  # Guardar archivo\n  saveWorkbook(wb, nombre_archivo, overwrite = TRUE)\n}"
+  },
+  {
+    "objectID": "encuentro3.html#para-el-próximo-encuentro",
+    "href": "encuentro3.html#para-el-próximo-encuentro",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Para el próximo encuentro…",
+    "text": "Para el próximo encuentro…\n\nResolveremos problemas comunes con hojas de cálculo:\n\nManejo de fechas\nEncabezados problemáticos\nDisposiciones irregulares de datos\n\nAnalizaremos ejemplos reales\nDiscutiremos recursos útiles y mejores prácticas\n\nEjercicio sugerido\nConecten R con una hoja de Google Sheets y practiquen la lectura/escritura de datos."
+  },
+  {
+    "objectID": "encuentro1.html#hola",
+    "href": "encuentro1.html#hola",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "👋 ¡Hola!",
+    "text": "👋 ¡Hola!\n\n\n\n @LuisDVA\n liomys.mx\n luis@liomys.mx\n\n\nMamíferos, ecología, conservación\n\nInstructor certificado - Posit(RStudio) & The Carpentries\n\nmentor rOpenSci 2023-2026\nDesarrollo de paquetes\n\nColaborador R-Ladies (St. Louis 🇺🇸; Buenos Aires 🇦🇷; Gaborone 🇧🇼)"
+  },
+  {
+    "objectID": "encuentro1.html#este-curso",
+    "href": "encuentro1.html#este-curso",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "📚 Este curso",
+    "text": "📚 Este curso\n\nTécnicas eficientes para trabajar con hojas de cálculo en R\nImportar y exportar archivos\nTrabajar con múltiples hojas o archivos\nArchivos en la nube (Google Sheets)\nSoluciones a problemas comunes"
+  },
+  {
+    "objectID": "encuentro1.html#qué-necesitamos",
+    "href": "encuentro1.html#qué-necesitamos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "💻 ¿Qué necesitamos?",
+    "text": "💻 ¿Qué necesitamos?\nSoftware\n\nR v.4.4.0 o mayor\nRStudio 2024.04 o mayor\n\nPaquetes\n\n\n\nreadxl\nfs\nreadODS\n\n\n\nwritexl\ndplyr\ntidyr"
+  },
+  {
+    "objectID": "encuentro1.html#mi-máquina",
+    "href": "encuentro1.html#mi-máquina",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "🖥️ Mi máquina",
+    "text": "🖥️ Mi máquina\n\nR versión 4.5.2 (2025-10-31)\nRstudio versión 2025.9.2.418\nLinux Mint 22.2"
+  },
+  {
+    "objectID": "encuentro1.html#uso-de-ia-en-el-curso",
+    "href": "encuentro1.html#uso-de-ia-en-el-curso",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "🤖 Uso de IA en el curso",
+    "text": "🤖 Uso de IA en el curso\n\n\n🤠 adelante"
+  },
+  {
+    "objectID": "encuentro1.html#hojas-de-cálculo",
+    "href": "encuentro1.html#hojas-de-cálculo",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "🌎 Hojas de cálculo",
+    "text": "🌎 Hojas de cálculo\n\n&gt; 800,000,000 usuarios de Excel\n~170,000,000 usuarios de Google Sheets\n\n\n\nRebman et al. (2023)"
+  },
+  {
+    "objectID": "encuentro1.html#section-1",
+    "href": "encuentro1.html#section-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "Importancia de scripts y código\nSistemas de archivos & proyectos\nDatos organizados"
+  },
+  {
+    "objectID": "encuentro1.html#hojas-de-cálculo-en-disco",
+    "href": "encuentro1.html#hojas-de-cálculo-en-disco",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Hojas de cálculo en disco",
+    "text": "Hojas de cálculo en disco\nxls\nExcel 2003 - Archivo binario, patentado por Microsoft. Permite macros.\nxlsx\nExcel 2007 en adelante - Formato XML. Con compresión. No permite macros. Almacena más filas y columnas que .xls.\nods\nOpenOffice, StarOffice & LibreOffice - Formato XML libre similar a xlsx. Licencia CC."
+  },
+  {
+    "objectID": "encuentro1.html#hojas-de-cálculo-1",
+    "href": "encuentro1.html#hojas-de-cálculo-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "🌍 Hojas de cálculo",
+    "text": "🌍 Hojas de cálculo\nEn 2018\n\n&gt; 800,000,000 usuarios de Excel\n~170,000,000 usuarios de Google Sheets\n\n\n\nRebman et al. (2023)"
+  },
+  {
+    "objectID": "encuentro1.html#ventajas-de-las-hojas-de-cálculo",
+    "href": "encuentro1.html#ventajas-de-las-hojas-de-cálculo",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Ventajas de las hojas de cálculo",
+    "text": "Ventajas de las hojas de cálculo\n\n\n\nInterfaz gráfica intuitiva\nFácil de aprender y usar\nCálculos inmediatos y visibles\nAmpliamente disponibles\nBarrera de entrada baja\n\n\n\nFunciones predefinidas útiles\nVisualizaciones básicas incorporadas\nNo requiere conocimientos de programación\nIdeal para conjuntos pequeños de datos\nRápido para análisis simples"
+  },
+  {
+    "objectID": "encuentro1.html#scripts-y-código-fuente",
+    "href": "encuentro1.html#scripts-y-código-fuente",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "📝 Scripts y código fuente",
+    "text": "📝 Scripts y código fuente\nTrabajando con scripts ordenados, podemos:\n\n\n\n\n\nReproducir y modificar pasos\nEncontrar errores\nDocumentar el proceso\nExaminar código ajeno"
+  },
+  {
+    "objectID": "encuentro1.html#fs",
+    "href": "encuentro1.html#fs",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "📦 fs",
+    "text": "📦 fs\nTrabajando con el sistema de archivos\nfs trabaja con rutas que siempre funcionan en cualquier plataforma. Sirve para:\n\nCrear directorios\nMover archivos\nCopiar archivos\nCambiar nombres"
+  },
+  {
+    "objectID": "encuentro1.html#section-4",
+    "href": "encuentro1.html#section-4",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "Ventajas de usar R con hojas de cálculo\n\nAutomatización de tareas repetitivas\nReproducibilidad del análisis\nManejo de grandes volúmenes de datos\nDocumentación del proceso\nControl de versiones del código\nHerramientas estadísticas avanzadas"
+  },
+  {
+    "objectID": "encuentro1.html#el-resto-es-historia",
+    "href": "encuentro1.html#el-resto-es-historia",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "El resto es historia",
+    "text": "El resto es historia\n\nLotus 1-2-3 (1983)\nMicrosoft Excel (1985)\nOpciones Open Source\n\nColaboración en la nube\n\nGoogle Spreadsheets (2006) -&gt; Google Sheets (2012)\nAlmacenamiento remoto (Dropbox, Drive, OneDrive, etc.)"
+  },
+  {
+    "objectID": "encuentro1.html#section-3",
+    "href": "encuentro1.html#section-3",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "Ventajas de usar R con hojas de cálculo\n\nAutomatización de tareas repetitivas\nReproducibilidad del análisis\nManejo de grandes volúmenes de datos\nDocumentación del proceso\nControl de versiones del código\nHerramientas estadísticas avanzadas"
+  },
+  {
+    "objectID": "encuentro1.html#desventajas",
+    "href": "encuentro1.html#desventajas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Desventajas",
+    "text": "Desventajas\n\n\nConceptuales\n\nProceso manual, repetitivo, difícil de automatizar\nLibertad para crear datos inutilizables\nErrores difíciles de detectar\n\n\nTécnicas\n\nLímites de filas y columnas\nPoca trazabilidad\nDificultad para compartir datos entre plataformas"
+  },
+  {
+    "objectID": "encuentro1.html#ventajas",
+    "href": "encuentro1.html#ventajas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "✅ Ventajas",
+    "text": "✅ Ventajas\n\n\nConceptuales\n\nInterfaz gráfica intuitiva\nCálculos inmediatos y visibles\nBarrera de entrada baja\n\n\nTécnicas\n\nVisualizaciones incorporadas\nNo hace falta saber programar\nReactividad para análisis inmediatos"
+  },
+  {
+    "objectID": "encuentro1.html#técnicas-1",
+    "href": "encuentro1.html#técnicas-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Técnicas",
+    "text": "Técnicas\n\nVisualizaciones incorporadas\nNo hace falta saber programar\nReactividad para análisis inmediatos"
+  },
+  {
+    "objectID": "encuentro1.html#flujo-de-trabajo-1",
+    "href": "encuentro1.html#flujo-de-trabajo-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Flujo de trabajo",
+    "text": "Flujo de trabajo\n\nImportancia de scripts y código\nSistemas de archivos & proyecto\nDatos organizados"
+  },
+  {
+    "objectID": "encuentro1.html#recomendaciones",
+    "href": "encuentro1.html#recomendaciones",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Recomendaciones",
+    "text": "Recomendaciones\n\n\n\n\n\nUna sola fila para encabezados\nNo combinar celdas\nEvitar espacios en blanco como separadores o decoración\nEvitar notas en celdas de datos\n\nNo almacenar información en el formato"
+  },
+  {
+    "objectID": "encuentro1.html#section-2",
+    "href": "encuentro1.html#section-2",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "Ventajas de usar R con hojas de cálculo\n\nAutomatización de tareas repetitivas\nReproducibilidad del análisis\nManejo de grandes volúmenes de datos\nDocumentación del proceso\nControl de versiones del código\nHerramientas estadísticas avanzadas"
+  },
+  {
+    "objectID": "encuentro1.html#proyectos-y-sistemas-de-archivos",
+    "href": "encuentro1.html#proyectos-y-sistemas-de-archivos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "📁 Proyectos y sistemas de archivos",
+    "text": "📁 Proyectos y sistemas de archivos"
+  },
+  {
+    "objectID": "encuentro1.html#organización-de-datos",
+    "href": "encuentro1.html#organización-de-datos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "📊 Organización de datos",
+    "text": "📊 Organización de datos\n\n\n\nBroman & Woo (2018)\nData Organization in Spreadsheets"
+  },
+  {
+    "objectID": "encuentro1.html#proyecto",
+    "href": "encuentro1.html#proyecto",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Proyecto",
+    "text": "Proyecto\nDirectorio con todo los archivos relevantes para algún trabajo\nSeparar:\n📁 Datos\n📁 Código\n📁 Salidas (figuras, informes, datos intermedios, etc.)\n\n\n\n\n\nJenny Bryan (2017)\nProject-oriented workflow\n\nMaëlle Salmon (2021)\nDraw me a project"
+  },
+  {
+    "objectID": "encuentro1.html#ejercicio---proyecto-para-el-curso",
+    "href": "encuentro1.html#ejercicio---proyecto-para-el-curso",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "✏️ Ejercicio - Proyecto para el curso",
+    "text": "✏️ Ejercicio - Proyecto para el curso\nEs momento de crear un proyecto o carpeta para este curso:\n - Manualmente o desde RStudio\n- Ubicación accesible\n- Evitar OneDrive\n- Descargar archivos y descomprimir"
+  },
+  {
+    "objectID": "encuentro1.html#ejercicio---sistema-de-archivos",
+    "href": "encuentro1.html#ejercicio---sistema-de-archivos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "✏️ Ejercicio - Sistema de Archivos",
+    "text": "✏️ Ejercicio - Sistema de Archivos\nCarguemos el paquete fs y exploremos los archivos proporcionados\n\nlibrary(fs)\ndir_ls(\"mi_proyecto/datos/\")"
+  },
+  {
+    "objectID": "encuentro1.html#formatos-comunes",
+    "href": "encuentro1.html#formatos-comunes",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "📋 Formatos Comunes",
+    "text": "📋 Formatos Comunes\nxls\nExcel 2003 - Archivo binario, patentado por Microsoft. Permite macros.\nxlsx\nExcel 2007 en adelante - Formato XML. Con compresión. No permite macros. Almacena más filas y columnas que .xls.\nods\nOpenOffice, StarOffice & LibreOffice - Formato XML libre similar a xlsx. Licencia CC."
+  },
+  {
+    "objectID": "encuentro1.html#importando-datos",
+    "href": "encuentro1.html#importando-datos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Importando datos",
+    "text": "Importando datos\nArgumentos útiles\n\nsheet\nskip\ntrim_ws\n\n\nProbemos el script importar.R"
+  },
+  {
+    "objectID": "encuentro1.html#importando-datos-1",
+    "href": "encuentro1.html#importando-datos-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Importando datos",
+    "text": "Importando datos\nPodemos importar hojas por nombre o por posición\n\nexcel_sheets(\"archivo.xlsx\")\n\nruta &lt;- \"archivo.xlsx\"\n\nruta |&gt; \n  read_excel(sheet = \"nombre de la primer hoja\")\nruta |&gt; \n  read_excel(sheet = 1)"
+  },
+  {
+    "objectID": "encuentro1.html#libros-de-trabajo-vs-dataframes",
+    "href": "encuentro1.html#libros-de-trabajo-vs-dataframes",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Libros de trabajo vs dataframes",
+    "text": "Libros de trabajo vs dataframes\n\n\nLibro de trabajo\n\nMúltiples hojas\nCeldas con fórmulas\nFormato (colores, bordes)\nMezcla de datos y análisis\n\n\n\n\ndata frame\n\nRectangular\nEn memoria\nOperaciones programáticas\nSeparación de datos y análisis"
+  },
+  {
+    "objectID": "encuentro1.html#próximo-encuentro",
+    "href": "encuentro1.html#próximo-encuentro",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "🔜 Próximo encuentro",
+    "text": "🔜 Próximo encuentro\n\nExploraremos listas e iteración para trabajar con múltiples archivos\nAprenderemos operaciones comunes de manipulación\nVeremos cómo exportar objetos de R a hojas de cálculo"
+  },
+  {
+    "objectID": "materiales.html#presentaciones-y-archivos",
+    "href": "materiales.html#presentaciones-y-archivos",
+    "title": "Materiales del Curso",
+    "section": "",
+    "text": "Introducción y fundamentos\nEjemplos 1er encuentro"
+  },
+  {
+    "objectID": "encuentro1.html",
+    "href": "encuentro1.html",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "@LuisDVA\n liomys.mx\n luis@liomys.mx\n\n\nMamíferos, ecología, conservación\n\nInstructor certificado - Posit(RStudio) & The Carpentries\n\nmentor rOpenSci 2023-2026\nDesarrollo de paquetes\n\nColaborador R-Ladies (St. Louis 🇺🇸; Buenos Aires 🇦🇷; Gaborone 🇧🇼)"
+  },
+  {
+    "objectID": "encuentro1.html#este-curso-1",
+    "href": "encuentro1.html#este-curso-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Este curso",
+    "text": "Este curso\n\nTécnicas eficientes para trabajar con hojas de cálculo en R\nImportar y exportar archivos\nTrabajar con múltiples hojas o archivos\nArchivos en la nube (Google Sheets)\nSoluciones a problemas comunes"
+  },
+  {
+    "objectID": "encuentro1.html#qué-necesitamos-1",
+    "href": "encuentro1.html#qué-necesitamos-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "¿Qué necesitamos?",
+    "text": "¿Qué necesitamos?\nSoftware\n\nR v.4.4.0 o mayor\nRStudio 2024.04 o mayor\n\nPaquetes\n\n\n\nreadxl\nfs\nreadODS\n\n\n\nwritexl\ndplyr\ntidyr"
+  },
+  {
+    "objectID": "encuentro1.html#mi-máquina-1",
+    "href": "encuentro1.html#mi-máquina-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Mi máquina",
+    "text": "Mi máquina\n\nR versión 4.5.2 (2025-10-31)\nRstudio versión 2025.9.2.418\nLinux Mint 22.2"
+  },
+  {
+    "objectID": "encuentro1.html#uso-de-ia-en-el-curso-1",
+    "href": "encuentro1.html#uso-de-ia-en-el-curso-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "🤖 Uso de IA en el curso",
+    "text": "🤖 Uso de IA en el curso\n\n\n🤠 adelante"
+  }
+]

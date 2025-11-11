@@ -1,0 +1,426 @@
+---
+title: "Integrating Large Language Model tools to our R workflows"
+subtitle: "Physalia Courses"
+date: "November 5 2025"
+author: "Luis D. Verde Arregoitia"
+format:
+  revealjs:
+    slide-number: true
+    theme: slides.scss
+editor: visual
+---
+
+## Background
+
+Language Models?
+<br/>
+
+. . .
+
+**Large** Language Models?
+<br/>
+
+. . .
+
+Generative AI?
+
+## 
+
+<br/><br/>
+
+:::::: columns
+::: {.column width="30%"}
+![AI-generated image created with DALL·E via ChatGPT](imgs/mami.png)
+:::
+
+:::: {.column width="70%"}
+::: large-font-slide
+After drinking some water, the dog went back to the bed to feed her \_\_\_\_\_\_\_\_\_\_\_.
+:::
+::::
+::::::
+
+. . .
+
+## Token probabilities
+
+Let's use `promptr` to explore the probabilistic nature of LLMs (and check if our OpenAI key is set up correctly)
+
+<br/>
+
+```{r}
+#| eval: false
+#| echo: true
+library(promptr)
+promptr::complete_prompt("After drinking some water, the dog went to bed feed her")
+```
+
+<br/>
+-   Let's change the prompt and the `max_tokens` argument
+
+##  Demo
+
+Token Possibilities app by Garrick Aiden Buie
+
+Code to run the app locally on your machine can be found [here](https://github.com/posit-conf-2025/llm/blob/f41bb7edd37f20a44ec76cb35e9791bd60082837/_demos/04_token-possibilities/app.R)
+
+## 
+
+### Language models
+
+Predict and generate text by estimating the probability of tokens occurring in a given sequence.
+
+<br/>
+
+### *Large* language models
+
+Add more parameters and massive datasets, enabling more complex tasks
+
+<br/>
+
+#### Tokens
+
+Basic units of text that LLMs use to process language. May be words, character sets, combinations of words, and punctuation.
+
+## 
+
+Jim Amos on linkedin:
+
+> LLMs are language calculators: they use Natural Language Processing algorithms to intepret prompts then generate statistically plausible answers rendered from algebraic vectors -- afterimages of training data compressed into non-euclidian space...
+
+. . .
+
+<br/>
+
+**statistically plausible** can be good enough for what we need
+
+
+## LLMs can help us with:
+
+::: large-font-slide
+Text generation, translation, sentiment analysis, writing and debugging code, generating images and videos, etc.
+:::
+
+# However
+
+## Let's consider:
+
+-   Growing evidence of negative effects on learning
+-   Biases
+-   Hype
+-   Valid anti-AI sentiment
+-   Issues with training material
+-   Provider intentions
+-   Lax security
+
+## 🚫 Hype 🚫
+
+
+::::: columns
+::: {.column width="40%"}
+![](imgs/onvres.jpeg)
+:::
+
+::: {.column width="60%"}
+"If you don't become an AI/prompt engineer by tomorrow you're a loser with no future"
+
+<br/> "Your product needs AI or it will be worthless"
+
+<br/> "All your training in data and coding was a waste of time"
+:::
+:::::
+
+## Still...
+
+> I believe everyone deserves the ability to automate tedious tasks in their lives with computers - Simon Willison
+
+> ..providing a way for people to talk with machines in plain language constitutes a dramatic step forward in making computing accessible to everyone - Carl Bergstrom (paraphrased)
+
+## Where are the models? Who makes them?
+
+Many popular models live on the cloud
+
+-   [OpenAI](https://openai.com/) (Known for GPT series including ChatGPT)
+-   [Google AI](https://ai.google.dev/) (Gemini models)
+-   [Anthropic](https://www.anthropic.com/) (Claude models)
+-   [DeepSeek](https://www.deepseek.com/en) (DeepSeek R1)
+- [GitHub Copilot](https://github.com/copilot) (multiple models)
+
+
+## Models != Providers
+
+Companies train and release models for different use cases
+
+:::{.incremental}
+- General purpose, lightweight models, coding, etc.
+- Models may be open or proprietary
+- Cloud providers may host multiple models from different makers
+- Web-based chats include models + various tools (which are not necessarily evident)
+:::
+## Let's explore
+
+::: large-font-slide
+- [Models](https://docs.continue.dev/customize/model-providers) supported by Continue
+
+- LLM [leaderboard](https://artificialanalysis.ai/leaderboards/models)
+:::
+
+## Cloud-Hosted models
+
+:::::: columns
+::: {.column width="43%"}
+-   Relatively easy setup
+-   Create account, set up billing if applicable, get an API key
+-   Access to new and in-development models and massive computing power
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="43%"}
+-   Can be costly
+
+-   Need internet access
+
+-   We send our data to the API
+:::
+::::::
+
+## Local models
+
+Download smaller models on our own hardware
+
+:::::: columns
+::: {.column width="43%"}
+-   Data not shared with a provider
+-   No ongoing costs
+-   Work offline
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="43%"}
+-   Steep learning curve
+-   Large memory requirements
+-   Slower performance
+:::
+::::::
+
+<br/>
+
+#### Examples:
+
+[`Ollama`](https://ollama.com/) (Simplifies running open-source LLMs locally)\
+[Hugging Face `transformers`](https://huggingface.co/docs/transformers/index) (lots of open-source models)
+
+## Which model do I use?
+
+### Considerations
+
+::: columns
+::: {.column width="50%"}
+-   Pricing
+-   Free tiers, token pricing, billing policies
+-   Context Windows
+-   **Compatibility with our chosen tools**
+-   Speed
+
+:::
+
+::: {.column width="50%"}
+-   Performance
+-   Privacy
+-   Hardware
+:::
+:::
+
+
+## On pricing
+
+> Nothing is more costly than something given free of charge\
+> - Japanese proverb.
+
+. . .
+
+-   nothing is offered for free unless there is something to be gained for the party involved
+
+-   if we are not paying for the product, then **we** are the product
+
+# Why LLMs + R
+
+## Decent enough outputs
+
+- Working code -> actual problems solved & time saved
+
+- Updated and more recent knowledge cut-offs
+
+## Explosion of programs, packages and features since late 2024
+
+- Relevant keynotes, blog posts, demos, workshops
+
+- 💡[R + AI conference](https://rconsortium.github.io/RplusAI_website/) happening next week!
+
+## Cut down on **context switching**
+
+- Growing support in R for AI tools
+
+Shifting our attention between different tasks or programs can be tiring and make us less productive and efficient.
+
+:::{.incremental}
+- Ask the chatbot in the browser
+- Copy the response and paste it in R
+- Share the errors or output with the chat
+- Repeat (and potentially introduce errors)
+:::
+
+# Getting started
+
+## Coding with LLMs
+<br/>
+
+### Autocomplete
+
+<br/>
+
+-   Models suggest 'ghost text' as we type  
+-   Very distracting during teaching  
+-   Suggestions may be unhelpful but mostly harmless
+
+## Coding with LLMs
+
+<br/>
+
+### Chats
+
+<br/>
+
+-   Send prompts, get answers
+-   Often let us provide context and upload files
+-   Results can be copied or inserted directly to a script
+-   In the browser or through APIs 
+
+## Coding with LLMs
+<br/>
+
+### Agents/Agentic
+
+:::{.incremental}
+-   Can run code and change files
+-   Follow a general plan and iterates
+-   Works on a task 'autonomously'
+-   Token-hungry and potentially slow
+-   Makes us assume that results are correct
+-   Game-changing potential
+:::
+
+# Conversations with LLMs
+
+## Questions we might put in an LLM chat window?
+
+<br/>
+
+::: retro-console-window
+\> How do I add a subtitle to my ggplot figure?\
+\> What are the arguments for pivot_wider()?\
+\> I can't join my table_1 object with my dat3 data frame, help!
+:::
+
+<br/>
+
+. . . 
+
+
+Note the difference in the type of question. This will be important soon.
+
+## Request-response cycle
+
+Different parts of the internet communicate through HTTP requests. This includes interacting with LLMs.
+
+- Web searches
+- File downloads
+- Posting a status on social media
+
+```{text}
+Host:      api.openai.com
+Endpoint:  /v1/chat/completions
+Prompt:    "Tell me a fun fact about cats."
+```
+
+## 
+
+| Role | Description |
+|:----------------|:------------------------------------------------------|
+| `system_prompt` | Overarching instructions from the user that define the behavior of the assistant |
+| `user` | Messages from the user interacting<br>with the model |
+| `assistant` | The model's responses to the user |
+
+## Conversation with a chatbot
+
+<br> 🧍: name three mammals <br> 
+🤖: dog, cat, mouse
+<br/>
+
+<hr>
+
+🧍: name three mammals <br> 
+🤖: perro, gato, ratón
+
+. . . 
+
+<br/>
+<br/>
+**What happened?**
+
+## System Prompts
+
+Define specific instructions on role, tone, or constraints
+
+<br/>
+
+### No system prompt?
+
+-   Models default to base programming, leads to general and less predictable responses
+
+
+## System Prompts
+
+Repeatable, consistent results suited to what we need to do.
+
+- "you are an expert R programmer that only uses base R"
+
+- "you are an expert R programmer that only uses base R. Do not add any comments. Do not explain the output"
+
+- "you are an expert R programmer. Comment the code in French"
+
+::::{.rightref}
+:::{.refbox}
+ellmer prompt design [Vignette](https://ellmer.tidyverse.org/articles/prompt-design.html)
+:::
+::::  
+
+## LLMs are stateless
+
+![](imgs/MementO.jpg)
+
+## LLMs are stateless
+
+-   LLMs don't retain memory of prior interactions
+
+-   Context happens by sending all previous messages with each new request
+
+-   Because of limitations on tokens and context size, there are truncation and optimization strategies at work
+
+## LLMs are stateless
+
+:::{large-slide-text}
+
+- Start new chats often
+
+- Split up tasks across chats
+
+- Use detailed system prompts
+
+:::
+
+# Break

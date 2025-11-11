@@ -1,0 +1,39 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+// fonts
+$font-family-sans-serif: 'Inclusive Sans', 'Sora', Helvetica, sans-serif, 'News Cycle';
+$font-family-monospace: 'Martian Mono', monospace;
+$code-color: #689F38; // Changed to dark green to match slides.scss
+
+/*-- scss:rules --*/
+
+.navbar { 
+  font-family: 'Sora'; 
+  }
+  
+// Custom styles for this course
+.code {
+  font-family: 'Martian Mono', monospace;
+  background-color: #f0f8e6; // Light green background
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+a {
+  color: #558B2F; // Green color for links
+}
+
+a:hover {
+  color: #1B5E20; // Darker green for hover state
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #33691E; // Dark green for headings
+}
+
+.nav-link.active {
+  background-color: #8BC34A !important; // Active nav link background
+  color: white !important;
+}

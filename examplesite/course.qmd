@@ -1,0 +1,14 @@
+---
+title: "Outline and schedule"
+---
+
+Course description at [Physalia Courses](https://www.physalia-courses.org/courses-workshops/llms-4-r) 
+
+## Day 1
+
+Setup and background  
+First steps
+
+## Day 2 
+
+Assistants, examples, exercises

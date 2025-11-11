@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "R para el tratamiento de Hojas de Cálculo"
+  navbar:
+    background: "#8BC34A"  # Green color matching estacion-r theme
+    pinned: true
+    align: left
+    left: 
+      - href: index.qmd
+        text: Inicio
+      - href: curso.qmd
+        text: Contenido y horario
+      - href: materiales.qmd
+        text: Materiales del curso
+  page-footer:
+    left: "Creado con [Quarto](https://quarto.org/)."
+    right: "Luis D. Verde Arregoitia - 2025"
+
+format:
+  html:
+    theme: 
+      light: [flatly, css/web_styles.scss]
+    toc: true
+    mainfont: "Inclusive Sans"
+    
+execute:
+  freeze: auto

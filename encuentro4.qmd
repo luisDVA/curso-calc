@@ -1,0 +1,347 @@
+---
+title: "R para el tratamiento de Hojas de Cálculo"
+subtitle: "Cuarto encuentro: Problemas comunes y ejemplos prácticos"
+date: "2 de Diciembre, 2025"
+author: "Luis D. Verde Arregoitia"
+format:
+  revealjs:
+    slide-number: true
+    theme: css/slides.scss
+editor: visual
+---
+
+## Resumen del curso hasta ahora
+
+- Introducción a hojas de cálculo y buenas prácticas
+- Listas e iteración para trabajar con múltiples archivos
+- Importación y exportación de datos
+- Trabajo con archivos en la nube y formato
+
+## Objetivos de hoy
+
+- Resolver problemas comunes con hojas de cálculo
+- Analizar ejemplos reales
+- Explorar recursos útiles
+- Discutir estrategias avanzadas
+
+## Resolviendo problemas comunes
+
+Los desafíos más frecuentes al trabajar con hojas de cálculo incluyen:
+
+- Formatos de fecha inconsistentes
+- Encabezados problemáticos
+- Disposiciones irregulares de datos
+- Valores faltantes o inconsistentes
+- Combinación de múltiples fuentes
+
+## Trabajando con fechas
+
+Las fechas son notoriamente difíciles de manejar en hojas de cálculo:
+
+```{r}
+#| eval: false
+#| echo: true
+# Importar datos con fechas
+library(readxl)
+datos <- read_excel("datos_fechas.xlsx", 
+                    col_types = c("date", "text", "numeric"))
+
+# Formateo de fechas con lubridate
+library(lubridate)
+fechas_arregladas <- mdy(datos$fecha_texto)  # Mes-día-año
+fechas_arregladas2 <- dmy(datos$fecha_texto) # Día-mes-año
+fechas_arregladas3 <- ymd(datos$fecha_texto) # Año-mes-día
+```
+
+## Problemas comunes con fechas
+
+```{r}
+#| eval: false
+#| echo: true
+# Conversión de números de Excel a fechas R
+fechas_excel <- as.Date(datos$numero_excel, origin = "1899-12-30")
+
+# Extracción de componentes de fecha
+library(dplyr)
+datos <- datos %>% 
+  mutate(
+    año = year(fecha),
+    mes = month(fecha),
+    dia = day(fecha),
+    dia_semana = wday(fecha, label = TRUE)
+  )
+```
+
+## Encabezados problemáticos
+
+Problemas comunes:
+- Espacios o caracteres especiales
+- Múltiples filas de encabezados
+- Nombres duplicados
+- Celdas combinadas
+
+```{r}
+#| eval: false
+#| echo: true
+# Limpiar nombres de columnas
+library(janitor)
+datos_limpios <- clean_names(datos)
+
+# Especificar manualmente los nombres
+colnames(datos) <- c("id", "nombre", "valor", "fecha")
+
+# Saltar filas iniciales y especificar nombres
+datos <- read_excel("archivo.xlsx", 
+                    skip = 3, 
+                    col_names = c("id", "nombre", "valor", "fecha"))
+```
+
+## Manejo de múltiples filas de encabezados
+
+```{r}
+#| eval: false
+#| echo: true
+# Leer encabezados compuestos
+encabezados <- read_excel("datos_complejos.xlsx", 
+                         n_max = 2)
+
+# Combinar encabezados
+nombres_combinados <- paste(
+  encabezados[1, ], 
+  encabezados[2, ], 
+  sep = "_"
+)
+
+# Leer el archivo con encabezados combinados
+datos <- read_excel("datos_complejos.xlsx", 
+                    skip = 2, 
+                    col_names = nombres_combinados)
+```
+
+## Disposiciones irregulares de los datos
+
+Problemas comunes:
+- Tablas con filas de subtotales o resúmenes
+- Múltiples tablas en una hoja
+- Filas en blanco con significado
+- Estructuras pivotadas incorrectamente
+
+## Manejo de datos con estructuras irregulares
+
+```{r}
+#| eval: false
+#| echo: true
+# Eliminar filas de subtotales
+datos <- datos %>% 
+  filter(!str_detect(descripcion, "Total|Subtotal"))
+
+# Extraer una tabla específica de una hoja
+tabla1 <- read_excel("archivo.xlsx", 
+                     range = "A5:F20")
+
+tabla2 <- read_excel("archivo.xlsx", 
+                     range = "A25:F40")
+```
+
+## Tratamiento de datos pivotados incorrectamente
+
+```{r}
+#| eval: false
+#| echo: true
+# Convertir datos de formato ancho a largo
+library(tidyr)
+datos_largos <- datos %>%
+  pivot_longer(
+    cols = -c(id, categoria),
+    names_to = "mes",
+    values_to = "valor"
+  )
+
+# Convertir datos de formato largo a ancho
+datos_anchos <- datos_largos %>%
+  pivot_wider(
+    names_from = mes,
+    values_from = valor
+  )
+```
+
+## Manejo de valores faltantes
+
+```{r}
+#| eval: false
+#| echo: true
+# Identificar valores faltantes
+library(naniar)
+miss_var_summary(datos)
+
+# Filtrar o reemplazar valores faltantes
+datos %>% filter(!is.na(valor))
+
+# Imputación de valores faltantes
+datos <- datos %>%
+  mutate(valor = if_else(is.na(valor), 
+                         mean(valor, na.rm = TRUE), 
+                         valor))
+```
+
+## Ejemplos reales: Caso 1 - Datos de ventas
+
+```{r}
+#| eval: false
+#| echo: true
+# Problema: Archivo de ventas con múltiples pestañas mensuales
+# y formatos inconsistentes
+
+# Solución:
+library(tidyverse)
+library(readxl)
+
+# 1. Identificar todas las pestañas
+pestanas <- excel_sheets("ventas_anuales.xlsx")
+
+# 2. Función para procesar cada pestaña
+procesar_pestana <- function(sheet_name) {
+  # Leer los datos saltando encabezados irrelevantes
+  datos_crudos <- read_excel("ventas_anuales.xlsx", 
+                             sheet = sheet_name, 
+                             skip = 3)
+  
+  # Limpiar nombres de columnas
+  datos_limpios <- clean_names(datos_crudos)
+  
+  # Eliminar filas de resumen
+  datos_filtrados <- datos_limpios %>%
+    filter(!is.na(codigo_producto), 
+           !str_detect(producto, "Total"))
+  
+  # Agregar columna de mes
+  datos_filtrados %>%
+    mutate(mes = sheet_name)
+}
+
+# 3. Aplicar la función a todas las pestañas y combinar
+datos_combinados <- pestanas %>%
+  map_dfr(procesar_pestana)
+```
+
+## Ejemplos reales: Caso 2 - Datos gubernamentales
+
+```{r}
+#| eval: false
+#| echo: true
+# Problema: Reportes de presupuesto con encabezados
+# compuestos y múltiples niveles jerárquicos
+
+# Solución:
+# 1. Leer encabezados
+encabezados <- read_excel("presupuesto.xlsx", n_max = 2)
+encabezados_combinados <- paste(encabezados[1, ], encabezados[2, ], sep = "_")
+encabezados_combinados <- make.names(encabezados_combinados)
+
+# 2. Leer datos con nuevos encabezados
+datos <- read_excel("presupuesto.xlsx", 
+                    skip = 2, 
+                    col_names = encabezados_combinados)
+
+# 3. Extraer información jerárquica
+datos_procesados <- datos %>%
+  # Identificar niveles jerárquicos
+  mutate(
+    nivel = case_when(
+      !is.na(codigo_nivel_1) & is.na(codigo_nivel_2) ~ 1,
+      !is.na(codigo_nivel_2) & is.na(codigo_nivel_3) ~ 2,
+      !is.na(codigo_nivel_3) ~ 3,
+      TRUE ~ NA_real_
+    )
+  ) %>%
+  # Llenado hacia abajo para categorías jerárquicas
+  fill(categoria_nivel_1) %>%
+  # Filtrar solo registros de nivel 3 (detalle)
+  filter(nivel == 3)
+```
+
+## Ejemplos reales: Caso 3 - Informes médicos
+
+```{r}
+#| eval: false
+#| echo: true
+# Problema: Datos de pacientes con fechas en formatos 
+# inconsistentes y valores faltantes
+
+# Solución:
+# 1. Leer los datos y estandarizar formatos de fecha
+datos_pacientes <- read_excel("pacientes.xlsx")
+
+datos_estandarizados <- datos_pacientes %>%
+  mutate(
+    # Convertir fechas de texto a fecha
+    fecha_nacimiento = case_when(
+      str_detect(fecha_nacimiento_raw, "/") ~ dmy(fecha_nacimiento_raw),
+      str_detect(fecha_nacimiento_raw, "-") ~ ymd(fecha_nacimiento_raw),
+      TRUE ~ as.Date(as.numeric(fecha_nacimiento_raw), origin = "1899-12-30")
+    ),
+    
+    # Calcular edad
+    edad = as.numeric(difftime(Sys.Date(), fecha_nacimiento, units = "days") / 365.25),
+    
+    # Crear grupos de edad
+    grupo_edad = case_when(
+      edad < 18 ~ "Menor",
+      edad < 65 ~ "Adulto",
+      TRUE ~ "Adulto mayor"
+    )
+  )
+
+# 2. Imputar valores faltantes en mediciones
+datos_completos <- datos_estandarizados %>%
+  group_by(grupo_edad, sexo) %>%
+  mutate(
+    peso = if_else(is.na(peso), mean(peso, na.rm = TRUE), peso),
+    altura = if_else(is.na(altura), mean(altura, na.rm = TRUE), altura)
+  ) %>%
+  ungroup()
+```
+
+## Recursos útiles
+
+### Paquetes destacados
+
+- `readxl`, `openxlsx`: Importación/exportación de Excel
+- `googlesheets4`: Trabajo con Google Sheets
+- `tidyxl`, `unpivotr`: Manejo de hojas con formato complejo
+- `janitor`: Limpieza de datos y nombres de columnas
+- `lubridate`: Manejo de fechas
+- `naniar`: Análisis de datos faltantes
+
+## Recursos útiles (continuación)
+
+### Documentación y tutoriales
+
+- [R for Data Science (2e)](https://r4ds.hadley.nz/)
+- [Documentación de readxl](https://readxl.tidyverse.org/)
+- [Importando datos en tidyverse](https://www.tidyverse.org/blog/2020/01/usethis-1-5-0/)
+- [Working with Spreadsheets](https://datacarpentry.org/spreadsheets-socialsci/)
+- [openxlsx Vignettes](https://ycphs.github.io/openxlsx/)
+
+## Consejos finales
+
+- Verificar siempre los datos importados (primeras y últimas filas)
+- Documentar el procesamiento de datos
+- Utilizar funciones para tareas repetitivas
+- Crear flujos de trabajo reproducibles
+- Considerar la creación de paquetes para organizaciones
+
+## Discusión
+
+- ¿Qué desafíos específicos enfrentan con sus hojas de cálculo?
+- ¿Qué técnicas han encontrado útiles?
+- ¿Cómo podemos mejorar la colaboración entre usuarios de Excel y R?
+- ¿Qué temas les gustaría explorar con más profundidad?
+
+## ¡Gracias por participar!
+
+Luis D. Verde Arregoitia  
+[luis@liomys.mx](mailto:luis@liomys.mx)
+
+Recursos adicionales disponibles en el sitio del curso:  
+[Materiales del curso](materiales.qmd)

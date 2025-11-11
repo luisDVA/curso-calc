@@ -1,0 +1,447 @@
+---
+title: "R para el tratamiento de Hojas de Cálculo"
+subtitle: "Primer encuentro: Introducción y fundamentos"
+date: "11/11/2025"
+author: "Luis D. Verde Arregoitia"
+format:
+  revealjs:
+    slide-number: true
+    theme: css/slides.scss
+---
+
+```{r fa packages setup}
+#| echo: false
+library(fontawesome)
+```
+
+
+## 👋 ¡Hola!
+
+:::::: columns
+::: {.column width="30%"}
+![](images/luisbb.jpg){width="80%"}\
+[`r fontawesome::fa(name = "github")` \@LuisDVA](https://github.com/luisdva)\
+[`r fontawesome::fa(name = "link")` liomys.mx](https://liomys.mx)\
+[`r fontawesome::fa(name = "paper-plane")` luis\@liomys.mx](mailto:luis@liomys.mx)
+:::
+
+:::: {.column width="70%"}
+-   Mamíferos, ecología, conservación  
+-   Instructor certificado - Posit(RStudio) & The Carpentries\
+-   mentor rOpenSci 2023-2026
+-   Desarrollo de paquetes  
+-   Colaborador R-Ladies (St. Louis 🇺🇸; Buenos Aires 🇦🇷; Gaborone 🇧🇼)
+::::
+::::::
+
+## 📚 Este curso
+
+- Técnicas eficientes para trabajar con hojas de cálculo en R
+- Importar y exportar archivos
+- Trabajar con múltiples hojas o archivos
+- Archivos en la nube (Google Sheets)
+- Soluciones a problemas comunes
+
+## 💻 ¿Qué necesitamos?
+
+### Software
+
+- R v.4.4.0 o mayor
+- RStudio 2024.04 o mayor
+
+### Paquetes
+
+:::::: columns
+::: {.column width="50%"}
+- `readxl`
+- `fs`
+- `readODS`
+
+:::
+
+::: {.column width="50%"}
+- `writexl`
+- `dplyr`
+- `tidyr`
+:::
+::::
+
+## 🖥️ Mi máquina
+
+- R versión 4.5.2 (2025-10-31)
+- Rstudio versión 2025.9.2.418
+- Linux Mint 22.2
+
+## 🤖 Uso de IA en el curso
+
+. . . 
+
+<br/><br/>
+
+ 🤠 adelante
+
+
+## Este curso
+
+- Técnicas eficientes para trabajar con hojas de cálculo en R
+- Importar y exportar archivos
+- Trabajar con múltiples hojas o archivos
+- Archivos en la nube (Google Sheets)
+- Soluciones a problemas comunes
+
+## ¿Qué necesitamos?
+
+### Software
+
+- R v.4.4.0 o mayor
+- RStudio 2024.04 o mayor
+
+### Paquetes
+
+:::::: columns
+::: {.column width="50%"}
+- `readxl`
+- `fs`
+- `readODS`
+
+:::
+
+::: {.column width="50%"}
+- `writexl`
+- `dplyr`
+- `tidyr`
+:::
+::::
+
+## Mi máquina
+
+- R versión 4.5.2 (2025-10-31)
+- Rstudio versión 2025.9.2.418
+- Linux Mint 22.2
+
+## 🤖 Uso de IA en el curso
+
+. . . 
+
+<br/><br/>
+
+ 🤠 adelante
+
+# 📊 Hojas de cálculo
+
+## 🌍 Hojas de cálculo
+
+### En 2018
+
+- \> 800,000,000 usuarios de Excel 
+- ~170,000,000 usuarios de Google Sheets 
+
+::::{.rightref}
+:::{.refbox}
+Rebman et al. ([2023](https://files.eric.ed.gov/fulltext/EJ1409034.pdf))
+:::
+::::
+
+## 
+
+:::: columns
+::: {.column width="50%"}
+**VisiCalc** (1979)
+![](images/Visicalc.png)
+:::
+
+::: {.column width="50%"}
+Registro de préstamos (**1593**)
+![](images/rome.jpg){width="50%"}
+:::
+::::
+
+## El resto es historia
+
+- **Lotus 1-2-3** (1983) 
+- **Microsoft Excel** (1985)
+- Opciones Open Source
+
+### Colaboración en la nube
+
+- Google Spreadsheets (2006) -> **Google Sheets** (2012)
+- Almacenamiento remoto (Dropbox, Drive, OneDrive, etc.)
+
+## Desventajas
+
+:::::: columns
+::: {.column width="50%"}
+
+### Conceptuales
+
+- Proceso manual, repetitivo, difícil de automatizar
+- Libertad para crear datos inutilizables
+- Errores difíciles de detectar
+:::
+
+:::: {.column width="50%"}
+
+### Técnicas
+
+- Límites de filas y columnas
+- Poca trazabilidad
+- Dificultad para compartir datos entre plataformas
+
+:::
+::::::
+
+## ✅ Ventajas
+
+:::::: columns
+::: {.column width="50%"}
+
+### Conceptuales
+
+- Interfaz gráfica intuitiva
+- Cálculos inmediatos y visibles
+- Barrera de entrada baja
+:::
+
+:::: {.column width="50%"}
+
+### Técnicas
+
+- Visualizaciones incorporadas
+- No hace falta saber programar
+- Reactividad para análisis inmediatos
+:::
+::::::
+
+
+# 🔄 Flujo de trabajo
+
+## 
+
+<br/><br/>
+
+::: {.big-text}
+- Importancia de scripts y código
+- Sistemas de archivos & proyectos
+- Datos organizados
+:::
+
+## 📝 Scripts y código fuente
+
+Trabajando con scripts ordenados, podemos:
+
+:::: columns
+::: {.column width="40%"}
+
+![](images/pancks.png){width="80%"}
+
+:::
+
+::: {.column width="60%"}
+
+- Reproducir y modificar pasos
+- Encontrar errores
+- Documentar el proceso
+- Examinar código ajeno
+
+:::
+::::
+
+## 📁 Proyectos y sistemas de archivos
+
+![](images/filesdmp.png){fig-align="center"}
+
+## Proyecto
+
+Directorio con todo los archivos relevantes para algún trabajo
+
+### Separar:
+
+📁 Datos\
+📁 Código\
+📁 Salidas (figuras, informes, datos intermedios, etc.)\
+  
+::::{.rightref}
+:::{.refbox}
+::: columns
+::: {.column width="50%"}
+Jenny Bryan (2017)\
+[Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)
+:::
+
+::: {.column width="50%"}
+Maëlle Salmon (2021)\
+[Draw me a project](https://masalmon.eu/2021/06/30/r-projects/)
+:::
+:::
+:::
+::::
+
+
+## 
+
+![](images/ubereats.png){fig-align="center"}
+
+## ✏️ Ejercicio - Proyecto para el curso {background="#fff0f3"} 
+
+Es momento de crear un proyecto o carpeta para este curso:
+
+<br/>
+- Manualmente o desde RStudio  
+- Ubicación accesible  
+- Evitar OneDrive  
+- Descargar archivos y descomprimir
+
+## 📊 Organización de datos
+
+![](images/bromanwoo.png){fig-align="center"}
+
+::::{.rightref}
+:::{.refbox}
+Broman & Woo (2018)  
+[Data Organization in Spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
+:::
+::::
+
+## Recomendaciones
+
+:::: columns
+::: {.column width="20%"}
+![](images/tetris.png)
+:::
+
+::: {.column width="80%"}
+- Una sola fila para encabezados
+- No combinar celdas
+- Evitar espacios en blanco como separadores o decoración
+- Evitar notas en celdas de datos  
+- No almacenar información en el formato
+:::
+::::
+
+
+## 📦 `fs`
+
+### Trabajando con el sistema de archivos
+
+`fs` trabaja con rutas que siempre funcionan en cualquier plataforma. Sirve para:
+
+<br/>
+
+Crear directorios\
+Mover archivos\
+Copiar archivos\
+Cambiar nombres
+
+## ✏️ Ejercicio - Sistema de Archivos {background="#fff0f3"} 
+
+Carguemos el paquete `fs` y exploremos los archivos proporcionados
+
+```{r}
+#| eval: false
+#| echo: true
+
+library(fs)
+dir_ls("mi_proyecto/datos/")
+
+```
+
+# 📥 Importando hojas de cálculo a R
+
+## 📋 Formatos Comunes
+
+### xls
+
+Excel 2003 - Archivo binario, patentado por Microsoft. Permite macros.
+
+### xlsx
+
+Excel 2007 en adelante - Formato XML. Con compresión. No permite macros. Almacena más filas y columnas que `.xls`.
+
+### ods
+
+OpenOffice, StarOffice & LibreOffice - Formato XML libre similar a xlsx. Licencia CC.
+
+## Paquetes para importar datos
+
+`readxl` y `readODS`
+
+```{r}
+#| eval: false
+#| echo: true
+library(readxl)
+library(readODS)
+
+read_excel("archivo.xlsx")
+read_ods("archivo.ods")
+```
+
+## Importando datos
+
+### Argumentos útiles
+
+- `sheet`
+- `skip`
+- `trim_ws`
+
+<br/>
+
+Probemos el script `importar.R`
+
+## Importando datos
+
+Podemos importar hojas por nombre o por posición
+
+```{r}
+#| eval: false
+#| echo: true
+
+excel_sheets("archivo.xlsx")
+
+ruta <- "archivo.xlsx"
+
+ruta |> 
+  read_excel(sheet = "nombre de la primer hoja")
+ruta |> 
+  read_excel(sheet = 1)
+```
+
+## Libros de trabajo vs dataframes
+
+:::::: columns
+::: {.column width="48%"}
+### Libro de trabajo
+- Múltiples hojas
+- Celdas con fórmulas
+- Formato (colores, bordes)
+- Mezcla de datos y análisis
+:::
+
+:::: {.column width="4%"}
+:::
+
+:::: {.column width="48%"}
+### data frame
+- Rectangular
+- En memoria
+- Operaciones programáticas
+- Separación de datos y análisis
+:::
+::::::
+
+## 
+
+### Ventajas de usar R con hojas de cálculo
+
+- Automatización de tareas repetitivas
+- Reproducibilidad del análisis
+- Manejo de grandes volúmenes de datos
+- Documentación del proceso
+- Control de versiones del código
+- Herramientas estadísticas avanzadas
+
+## 🔜 Próximo encuentro
+
+- Exploraremos listas e iteración para trabajar con múltiples archivos
+- Aprenderemos operaciones comunes de manipulación
+- Veremos cómo exportar objetos de R a hojas de cálculo
+

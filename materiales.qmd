@@ -1,0 +1,23 @@
+---
+title: "Materiales del Curso"
+---
+
+## Presentaciones y archivos
+
+### Primer encuentro (11 de Noviembre)
+
+[Introducción y fundamentos](encuentro1.qmd){.external target="_blank"}
+
+[[Ejemplos 1er encuentro](ejemplos/enc1.zip)]{style="font-size: 1.2rem; background-color: #fff0f3; padding: 1px;	border-radius: 6px; text-align: center;"}
+
+
+### Segundo encuentro (18 de Noviembre)
+<!--[Listas, iteración y exportación](encuentro2.qmd){.external target="_blank"}-->
+
+### Tercer encuentro (25 de Noviembre)
+<!--[Archivos en la nube y formato](encuentro3.qmd){.external target="_blank"}-->
+
+### Cuarto encuentro (2 de Diciembre)
+<!--[Problemas comunes y ejemplos prácticos](encuentro4.qmd){.external target="_blank"}-->
+
+

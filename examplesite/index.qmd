@@ -1,0 +1,16 @@
+---
+title: "Course Website"
+toc: false
+---
+
+# Integrating Large Language Model tools to our R workflows
+
+All slides and materials live here.
+
+This site will be updated after each day during the course to correct any issues, or to add links or interesting topics that came up during the sessions.
+
+
+Instructor: Luis D. Verde Arregoitia  
+
+<span class='code'>📆 &ensp; 5 & 12 November, 2025</span>\
+<span class='code'>⏰ &ensp; 13:00-18:00 (Berlin Time)</span>\

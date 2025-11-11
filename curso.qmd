@@ -1,0 +1,35 @@
+---
+title: "Contenido y horario"
+---
+
+## Primer encuentro (11 de Noviembre, 2025)
+- Presentaciones e Introducción 
+- Antecedentes sobre hojas de cálculo
+- Buenas prácticas para la organización de datos
+- Importando hojas de cálculo a R
+  - Formatos y paquetes
+  - Libros de trabajo vs dataframes 
+
+## Segundo encuentro (18 de Noviembre, 2025)
+- Listas e iteración aplicadas a archivos y pestañas 
+  - Trabajo con el sistema de archivos desde R
+  - Importar multiples archivos o pestañas
+  - Dividir datos agrupados en pestañas o archivos separados
+  - Operaciones comunes (ordenar filas, reacomodar columnas, subconjuntos de datos, filtros, etc.)
+- Exportando objetos de R a hojas de cálculo
+
+## Tercer encuentro (25 de Noviembre, 2025)
+- Trabajo con archivos en la nube (Google Sheets)
+  - Inicio de sesión y conexión con la API de Google 
+  - Archivos en Sheets y Drive
+- Trabajando con formato en celdas o texto
+  - Importando hojas con formato
+
+## Cuarto encuentro (2 de Diciembre, 2025)
+- Resolviendo problemas comunes
+  - Fechas
+  - Encabezados problemáticos
+  - Disposiciones irregulares de los datos
+- Ejemplos reales
+- Recursos útiles
+- Discusión
