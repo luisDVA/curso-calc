@@ -305,3 +305,13 @@ crear_informe_estilo <- function(datos, nombre_archivo) {
 
 ### Ejercicio sugerido
 Conecten R con una hoja de Google Sheets y practiquen la lectura/escritura de datos.
+
+
+
+
+## Errores comunes en hojas de cálculo
+
+- Celdas en blanco con significado implícito
+- Varias tablas en una misma hoja
+- Valores codificados con colores sin columna explicativa
+- Datos y metadatos mezclados
