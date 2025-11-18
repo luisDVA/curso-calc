@@ -10,6 +10,7 @@
   <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="Luis D. Verde Arregoitia">
+  <meta name="dcterms.date" content="2025-11-18">
   <title>R para el tratamiento de Hojas de Cálculo</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -95,7 +96,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-106f6f9a533e5732130577e63c13a109.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-e99faeb1294de528e2724344c2758c89.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -194,7 +195,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">R para el tratamiento de Hojas de Cálculo</h1>
-  <p class="subtitle">Segundo encuentro: Listas, iteración y exportación</p>
+  <p class="subtitle">Segundo encuentro: Listas, iteración y cómo exportar tablas</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -204,244 +205,288 @@ Luis D. Verde Arregoitia
 </div>
 </div>
 
-  <p class="date">Invalid Date</p>
+  <p class="date">2025-11-18</p>
 </section>
 <section id="resumen-del-encuentro-anterior" class="slide level2">
 <h2>Resumen del encuentro anterior</h2>
 <ul>
 <li>Buenas prácticas para organizar datos</li>
 <li>Fundamentos de hojas de cálculo</li>
-<li>Importación básica de archivos Excel y CSV</li>
+<li>Importando archivos</li>
 </ul>
+</section>
+<section id="hoy" class="slide level2">
+<h2>Hoy</h2>
+<ul>
+<li>Listas &amp; iteración para trabajar con múltiples archivos</li>
+<li>Operaciones comunes de manipulación de datos</li>
+<li>Exportar objetos de R a hojas de cálculo</li>
+</ul>
+</section>
+<section id="hoy-1" class="slide level2">
+<h2>Hoy</h2>
+<p>Paquetes para el encuentro</p>
+<ul>
+<li><code>purrr</code></li>
+<li><code>dplyr</code></li>
+<li><code>writexl</code></li>
+<li><code>fs</code></li>
+</ul>
+</section>
+<section>
+<section id="listas-iteración" class="title-slide slide level1 center">
+<h1>Listas &amp; iteración</h1>
+
 </section>
 <section id="listas-en-r" class="slide level2">
 <h2>Listas en R</h2>
-<p>Las listas son estructuras de datos versátiles que pueden contener diferentes tipos de objetos:</p>
+<p>Las listas son estructuras de datos versátiles que pueden guardar objetos de clases diferentes:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Crear una lista con diferentes tipos de datos</span></span>
 <span id="cb1-2"><a></a>mi_lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
 <span id="cb1-3"><a></a>  <span class="at">numeros =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb1-4"><a></a>  <span class="at">texto =</span> <span class="st">"Hoja de cálculo"</span>,</span>
-<span id="cb1-5"><a></a>  <span class="at">logico =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-4"><a></a>  <span class="at">texto =</span> <span class="st">"Estación R"</span>,</span>
+<span id="cb1-5"><a></a>  <span class="at">logico =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>,<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>),</span>
 <span id="cb1-6"><a></a>  <span class="at">data =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>))</span>
-<span id="cb1-7"><a></a>)</span>
-<span id="cb1-8"><a></a></span>
-<span id="cb1-9"><a></a><span class="co"># Acceder a elementos de la lista</span></span>
-<span id="cb1-10"><a></a>mi_lista<span class="sc">$</span>numeros</span>
-<span id="cb1-11"><a></a>mi_lista[[<span class="st">"texto"</span>]]</span>
-<span id="cb1-12"><a></a>mi_lista[[<span class="dv">3</span>]]  <span class="co"># Elemento logico</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="por-qué-usar-listas-con-hojas-de-cálculo" class="slide level2">
-<h2>¿Por qué usar listas con hojas de cálculo?</h2>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>mi_lista</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$numeros
+[1] 1 2 3 4 5
+
+$texto
+[1] "Estación R"
+
+$logico
+[1]  TRUE  TRUE FALSE  TRUE
+
+$data
+  x y
+1 1 a
+2 2 b
+3 3 c</code></pre>
+</div>
+</div>
+</section>
+<section id="accedediendo-a-los-elementos-de-la-lista" class="slide level2">
+<h2>Accedediendo a los elementos de la lista</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>mi_lista<span class="sc">$</span>numeros</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3 4 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>mi_lista[[<span class="st">"texto"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Estación R"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>mi_lista[[<span class="dv">4</span>]]  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  x y
+1 1 a
+2 2 b
+3 3 c</code></pre>
+</div>
+</div>
+</section>
+<section id="listas-hojas-de-cálculo" class="slide level2">
+<h2>Listas + hojas de cálculo</h2>
 <ul>
-<li>Almacenar múltiples dataframes (pestañas de Excel)</li>
-<li>Mantener metadatos junto con los datos</li>
-<li>Organizar resultados de operaciones sobre múltiples archivos</li>
-<li>Preservar la estructura de archivos Excel con múltiples hojas</li>
+<li>Almacenar múltiples dataframes derivados de pestañas/hojas</li>
+<li>Trabajar con múltiples archivos en simultáneo</li>
+<li>Cada elemento de una lista puede tener nombre</li>
 </ul>
 </section>
-<section id="iteración-aplicando-funciones-a-múltiples-elementos" class="slide level2">
-<h2>Iteración: Aplicando funciones a múltiples elementos</h2>
+<section id="ejercicio---lista-de-tablas" class="slide level2" data-background="#fff0f3">
+<h2>Ejercicio - Lista de tablas</h2>
+<p>Con el archivo <code>cafeteria.xlsx</code>:</p>
+<ul>
+<li>Crear una lista con un elemento (data frame) para cada una de las dos primeras hojas (Bebidas y Panadería)</li>
+<li>Crear una carpeta nueva para salidas con <code>fs</code></li>
+<li>Exportar cada elemento de la lista a un archivo de texto plano</li>
+</ul>
+</section>
+<section id="de-data-frame-a-archivo-xlsx" class="slide level2">
+<h2>De data frame a archivo xlsx</h2>
+<p>El paquete <code>writexl</code> permite exportar data frames o listas de data frames a plantillas xlsx</p>
+<p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Usando lapply para aplicar una función a cada elemento de una lista</span></span>
-<span id="cb2-2"><a></a>archivos_csv <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">pattern =</span> <span class="st">"*.csv"</span>)</span>
-<span id="cb2-3"><a></a>datos_lista <span class="ot">&lt;-</span> <span class="fu">lapply</span>(archivos_csv, read.csv)</span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a><span class="co"># Usando un bucle for</span></span>
-<span id="cb2-6"><a></a>datos_lista2 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb2-7"><a></a><span class="cf">for</span> (archivo <span class="cf">in</span> archivos_csv) {</span>
-<span id="cb2-8"><a></a>  datos_lista2[[archivo]] <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(archivo)</span>
-<span id="cb2-9"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(writexl)</span>
+<span id="cb10-2"><a></a>writexl<span class="sc">::</span><span class="fu">write_xlsx</span>(<span class="at">x=</span> <span class="st">"mi_tabla"</span>,</span>
+<span id="cb10-3"><a></a>                    <span class="at">path=</span><span class="st">"mipantilla.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="trabajo-con-el-sistema-de-archivos-desde-r" class="slide level2">
-<h2>Trabajo con el sistema de archivos desde R</h2>
+<section id="writexl" class="slide level2">
+<h2><code>writexl</code></h2>
+<p>Si usamos listas (incluso listas de longitud 1) los nombres de los elementos se usan como nombres de las pestañas/hojas</p>
+<p><br></p>
+<p><code>write_xlsx(x=list(mi_hoja = mi_tabla))</code></p>
+</section>
+<section id="ejercicio---exportando" class="slide level2" data-background="#fff0f3">
+<h2>Ejercicio - Exportando</h2>
+<ul>
+<li>Exportar cada elemento de la lista a su propio archivo xlsx</li>
+<li>Exportar la lista a un solo archivo con nombres para cada pestaña</li>
+<li>¿Cómo cambiaríamos los nombres de las pestañas?</li>
+</ul>
+</section>
+<section id="aplicando-una-función-varias-veces" class="slide level2">
+<h2>Aplicando una función varias veces</h2>
+<p>Copiar/pegar código para editarlo en análisis repetitivos agrega pasos innecesarios, pierde tiempo, y aumenta el riesgo de introducir errores</p>
+</section>
+<section id="aplicando-funciones-a-múltiples-elementos" class="slide level2">
+<h2>Aplicando funciones a múltiples elementos</h2>
+<p>Para: cada elemento de <strong>x</strong><br>
+Aplicar la función <strong>f</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Listar archivos</span></span>
-<span id="cb3-2"><a></a>archivos <span class="ot">&lt;-</span> <span class="fu">list.files</span>()</span>
-<span id="cb3-3"><a></a>archivos_excel <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">pattern =</span> <span class="st">"*.xlsx"</span>)</span>
-<span id="cb3-4"><a></a></span>
-<span id="cb3-5"><a></a><span class="co"># Comprobar si un archivo existe</span></span>
-<span id="cb3-6"><a></a><span class="fu">file.exists</span>(<span class="st">"datos.xlsx"</span>)</span>
-<span id="cb3-7"><a></a></span>
-<span id="cb3-8"><a></a><span class="co"># Obtener información de un archivo</span></span>
-<span id="cb3-9"><a></a><span class="fu">file.info</span>(<span class="st">"datos.xlsx"</span>)</span>
-<span id="cb3-10"><a></a></span>
-<span id="cb3-11"><a></a><span class="co"># Crear un directorio</span></span>
-<span id="cb3-12"><a></a><span class="fu">dir.create</span>(<span class="st">"resultados"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="cf">for</span> (x <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>){</span>
+<span id="cb11-2"><a></a>  <span class="fu">print</span>(x)</span>
+<span id="cb11-3"><a></a>} </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7</code></pre>
+</div>
 </div>
 </section>
-<section id="importación-de-múltiples-archivos-o-pestañas" class="slide level2">
-<h2>Importación de múltiples archivos o pestañas</h2>
-<h3 id="múltiples-archivos-csv">Múltiples archivos CSV</h3>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p><code>x</code> puede ser una lista o vector de rutas, y <code>f</code> una función para leer archivos</p>
+<p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># Obtener lista de archivos CSV en un directorio</span></span>
-<span id="cb4-2"><a></a>archivos_csv <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> <span class="st">"datos"</span>, </span>
-<span id="cb4-3"><a></a>                          <span class="at">pattern =</span> <span class="st">"*.csv"</span>, </span>
-<span id="cb4-4"><a></a>                          <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb4-5"><a></a></span>
-<span id="cb4-6"><a></a><span class="co"># Leer todos los archivos y combinarlos</span></span>
-<span id="cb4-7"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb4-8"><a></a>datos_combinados <span class="ot">&lt;-</span> archivos_csv <span class="sc">%&gt;%</span></span>
-<span id="cb4-9"><a></a>  <span class="fu">map_df</span>(read_csv, <span class="at">.id =</span> <span class="st">"archivo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">library</span>(purrr)</span>
+<span id="cb13-2"><a></a><span class="fu">library</span>(fs)</span>
+<span id="cb13-3"><a></a>archivos_csv <span class="ot">&lt;-</span> <span class="fu">dir_ls</span>(<span class="at">glob =</span> <span class="st">"*.csv"</span>)</span>
+<span id="cb13-4"><a></a>todos <span class="ot">&lt;-</span> <span class="fu">map</span>(archivos_csv, read.csv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="importación-de-múltiples-pestañas-de-excel" class="slide level2">
-<h2>Importación de múltiples pestañas de Excel</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Leer todas las pestañas de un archivo Excel</span></span>
-<span id="cb5-2"><a></a><span class="fu">library</span>(readxl)</span>
-<span id="cb5-3"><a></a>pestanas <span class="ot">&lt;-</span> <span class="fu">excel_sheets</span>(<span class="st">"archivo.xlsx"</span>)</span>
-<span id="cb5-4"><a></a></span>
-<span id="cb5-5"><a></a><span class="co"># Método 1: Usar lapply</span></span>
-<span id="cb5-6"><a></a>datos_pestanas <span class="ot">&lt;-</span> <span class="fu">lapply</span>(pestanas, <span class="cf">function</span>(sheet) {</span>
-<span id="cb5-7"><a></a>  <span class="fu">read_excel</span>(<span class="st">"archivo.xlsx"</span>, <span class="at">sheet =</span> sheet)</span>
-<span id="cb5-8"><a></a>})</span>
-<span id="cb5-9"><a></a><span class="fu">names</span>(datos_pestanas) <span class="ot">&lt;-</span> pestanas</span>
-<span id="cb5-10"><a></a></span>
-<span id="cb5-11"><a></a><span class="co"># Método 2: Usando purrr</span></span>
-<span id="cb5-12"><a></a><span class="fu">library</span>(purrr)</span>
-<span id="cb5-13"><a></a>datos_pestanas2 <span class="ot">&lt;-</span> pestanas <span class="sc">%&gt;%</span></span>
-<span id="cb5-14"><a></a>  <span class="fu">set_names</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb5-15"><a></a>  <span class="fu">map</span>(<span class="sc">~</span><span class="fu">read_excel</span>(<span class="st">"archivo.xlsx"</span>, <span class="at">sheet =</span> .x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="purrr" class="slide level2">
+<h2>purrr?</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><img data-src="images/purrr.jpeg"></p>
+</div><div class="column" style="width:75%;">
+<p>📦 <strong><code>purrr</code></strong> - Herramientas para programación funcional</p>
+<ul>
+<li><p>funciones <code>map</code> que aplican una función a cada elemento de una lista o vector y devuelve un resultado de la misma longitud que la entrada</p></li>
+<li><p>trabaja bien con <strong>listas</strong></p></li>
+<li><p>código legible y conciso</p></li>
+</ul>
+</div></div>
+<div class="rightref">
+<div class="refbox">
+<p>Thomas Mock (2018)<br>
+<a href="https://towardsdatascience.com/functional-programming-in-r-with-purrr-469e597d0229">Functional Programming in R with purrr</a></p>
 </div>
+</div>
+</section>
+<section id="ejercicio---purrr-para-múltiples-archivos-csv" class="slide level2" data-background="#fff0f3">
+<h2>Ejercicio - purrr para múltiples archivos CSV</h2>
+<ul>
+<li><p>Usa el código de hace dos diapositivas para importar los archivos csv generados en el ejercicio anterior usando la función <code>map</code> de <code>purrr</code>.</p></li>
+<li><p>Combinemos las tablas en una sola</p></li>
+</ul>
+</section>
+<section id="importando-múltiples-pestañas" class="slide level2">
+<h2>Importando múltiples pestañas</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co"># Leer todas las pestañas de un archivo Excel</span></span>
+<span id="cb14-2"><a></a><span class="fu">library</span>(readxl)</span>
+<span id="cb14-3"><a></a>pestanas <span class="ot">&lt;-</span> <span class="fu">excel_sheets</span>(<span class="st">"ejemplos/cafeteria.xlsx"</span>)</span>
+<span id="cb14-4"><a></a>pestanas</span>
+<span id="cb14-5"><a></a><span class="co"># purrr</span></span>
+<span id="cb14-6"><a></a><span class="fu">library</span>(purrr)</span>
+<span id="cb14-7"><a></a><span class="fu">map</span>(pestanas, \(x) <span class="fu">read_excel</span>(<span class="st">"ejemplos/cafeteria.xlsx"</span>, <span class="at">sheet =</span> x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<blockquote>
+<p>¿Cómo acotamos el proceso a las dos primeras hojas?</p>
+</blockquote>
+</section>
+<section id="funciones-anónimas-notación-actual" class="slide level2">
+<h2>Funciones anónimas, notación actual</h2>
+<p><strong>Funciones para llevar</strong> (se crean y se ejecutan pero nunca se asignan a un objeto con nombre)</p>
+<h3 id="sintaxis">Sintaxis</h3>
+<div class="big-code">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>(\(x) x <span class="sc">+</span> <span class="dv">3</span>)(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 13</code></pre>
+</div>
+</div>
+</div>
+<p>La definición va entre paréntesis para separar la función de sus argumentos</p>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p><code>map(pestanas, \(x) read_excel("ejemplos/cafeteria.xlsx", sheet = x))</code></p>
+<p><br></p>
+<p>equivale a</p>
+<p><code>read_excel("ejemplos/cafeteria.xlslx", sheet="Bebidas")</code> luego<br>
+<code>read_excel("ejemplos/cafeteria.xlslx", sheet="Panaderia")</code> etc…</p>
+</section>
+<section id="datos-agrupados" class="slide level2">
+<h2>Datos agrupados</h2>
+<p>La mayoría de nuestras tareas se pueden desarrollar siguiendo el paradigma “<em>dividir - aplicar - combinar</em>” ( <span style="color: purple">“split-apply-combine”</span>):</p>
+<ul>
+<li>dividir los datos en grupos</li>
+<li>aplicar alguna función a cada grupo</li>
+<li>combinar los resultados</li>
+</ul>
+<div class="rightref">
+<div class="refbox">
+<p>Data Carpentry (2018)<br>
+<a href="https://datacarpentry.org/R-genomics/04-dplyr.html">Aggregating and analyzing data with dplyr</a></p>
+<p>Hadley Wickham (2011)<br>
+<a href="https://doi.org/10.18637/jss.v040.i01">The split-apply-combine strategy for data analysis</a></p>
+</div>
+</div>
+</section>
+<section id="dplyrgroup_by" class="slide level2">
+<h2><code>dplyr::group_by()</code></h2>
+<ul>
+<li>Define grupos según una o más variables<br>
+</li>
+<li>Estratifica un data frame<br>
+</li>
+<li>equivalente a <code>aggregate()</code> y al argumento ‘<code>by =</code>’ de <code>data.table</code></li>
+</ul>
+
+<img data-src="images/groupby.PNG" style="width:64.0%" class="r-stretch quarto-figure-center"><p class="caption">Manipulación de datos en R con dplyr - Rubén Sánchez</p></section>
+<section id="trabajando-con-datos-agrupados" class="slide level2">
+<h2>Trabajando con datos agrupados</h2>
+<p>Con la versión agrupada de nuestra tabla, las funciones de <code>dplyr</code> trabajan sobre cada grupo por separado y después se combinan los resultados.</p>
+<p><br></p>
+<div class="rightref">
+<div class="refbox">
+<p>RStudio (2021)<br>
+<a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf">Data transformation with dplyr cheatsheet</a></p>
+</div>
+</div>
+</section>
+<section id="opciones-para-datos-agrupados" class="slide level2">
+<h2>Opciones para datos agrupados</h2>
+<ul>
+<li>resumir valores (media, mediana, etc. por grupo)</li>
+<li>extraer las primeras o últimas <em>n</em> filas por grupo</li>
+<li>identificar valores máximos o mínimos</li>
+<li>eliminar filas repetidas</li>
+<li>contar observaciones, etc.</li>
+</ul>
 </section>
 <section id="dividir-datos-en-pestañas-o-archivos-separados" class="slide level2">
 <h2>Dividir datos en pestañas o archivos separados</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># Dividir un dataframe por una variable categórica</span></span>
-<span id="cb6-2"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb6-3"><a></a>datos_divididos <span class="ot">&lt;-</span> <span class="fu">split</span>(datos, datos<span class="sc">$</span>categoria)</span>
-<span id="cb6-4"><a></a></span>
-<span id="cb6-5"><a></a><span class="co"># Guardar cada grupo como un archivo CSV separado</span></span>
-<span id="cb6-6"><a></a><span class="cf">for</span> (nombre <span class="cf">in</span> <span class="fu">names</span>(datos_divididos)) {</span>
-<span id="cb6-7"><a></a>  <span class="fu">write.csv</span>(datos_divididos[[nombre]], </span>
-<span id="cb6-8"><a></a>            <span class="fu">paste0</span>(<span class="st">"grupo_"</span>, nombre, <span class="st">".csv"</span>),</span>
-<span id="cb6-9"><a></a>            <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb6-10"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="operaciones-comunes-con-dataframes" class="slide level2">
-<h2>Operaciones comunes con dataframes</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="ordenar-filas">Ordenar filas</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Base R</span></span>
-<span id="cb7-2"><a></a>datos[<span class="fu">order</span>(datos<span class="sc">$</span>fecha), ]</span>
-<span id="cb7-3"><a></a></span>
-<span id="cb7-4"><a></a><span class="co"># dplyr</span></span>
-<span id="cb7-5"><a></a>datos <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(fecha)</span>
-<span id="cb7-6"><a></a>datos <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(ventas))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<h3 id="reacomodar-columnas">Reacomodar columnas</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Seleccionar columnas específicas</span></span>
-<span id="cb8-2"><a></a>datos <span class="sc">%&gt;%</span> <span class="fu">select</span>(id, nombre, valor)</span>
-<span id="cb8-3"><a></a></span>
-<span id="cb8-4"><a></a><span class="co"># Reordenar todas las columnas</span></span>
-<span id="cb8-5"><a></a>datos <span class="sc">%&gt;%</span> <span class="fu">select</span>(fecha, id, <span class="fu">everything</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div></div>
-</section>
-<section id="operaciones-comunes-continuación" class="slide level2">
-<h2>Operaciones comunes (continuación)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="subconjuntos-de-datos">Subconjuntos de datos</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Base R</span></span>
-<span id="cb9-2"><a></a>datos[datos<span class="sc">$</span>ventas <span class="sc">&gt;</span> <span class="dv">1000</span>, ]</span>
-<span id="cb9-3"><a></a></span>
-<span id="cb9-4"><a></a><span class="co"># dplyr</span></span>
-<span id="cb9-5"><a></a>datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(ventas <span class="sc">&gt;</span> <span class="dv">1000</span>)</span>
-<span id="cb9-6"><a></a>datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"Norte"</span>, </span>
-<span id="cb9-7"><a></a>                año <span class="sc">==</span> <span class="dv">2025</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<h3 id="filtros">Filtros</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># Filtrar datos faltantes</span></span>
-<span id="cb10-2"><a></a>datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ventas))</span>
-<span id="cb10-3"><a></a></span>
-<span id="cb10-4"><a></a><span class="co"># Filtrar por patrón en texto</span></span>
-<span id="cb10-5"><a></a>datos <span class="sc">%&gt;%</span> </span>
-<span id="cb10-6"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(producto, <span class="st">"Excel"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div></div>
-</section>
-<section id="exportando-objetos-de-r-a-hojas-de-cálculo" class="slide level2">
-<h2>Exportando objetos de R a hojas de cálculo</h2>
-<h3 id="archivos-csv">Archivos CSV</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># Base R</span></span>
-<span id="cb11-2"><a></a><span class="fu">write.csv</span>(datos, <span class="st">"resultados.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb11-3"><a></a></span>
-<span id="cb11-4"><a></a><span class="co"># readr (tidyverse)</span></span>
-<span id="cb11-5"><a></a><span class="fu">write_csv</span>(datos, <span class="st">"resultados.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<h3 id="archivos-excel-con-openxlsx">Archivos Excel (con openxlsx)</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">library</span>(openxlsx)</span>
-<span id="cb12-2"><a></a></span>
-<span id="cb12-3"><a></a><span class="co"># Crear un libro de trabajo</span></span>
-<span id="cb12-4"><a></a>wb <span class="ot">&lt;-</span> <span class="fu">createWorkbook</span>()</span>
-<span id="cb12-5"><a></a></span>
-<span id="cb12-6"><a></a><span class="co"># Agregar una hoja</span></span>
-<span id="cb12-7"><a></a><span class="fu">addWorksheet</span>(wb, <span class="st">"Datos"</span>)</span>
-<span id="cb12-8"><a></a><span class="fu">writeData</span>(wb, <span class="st">"Datos"</span>, datos)</span>
-<span id="cb12-9"><a></a></span>
-<span id="cb12-10"><a></a><span class="co"># Guardar el libro</span></span>
-<span id="cb12-11"><a></a><span class="fu">saveWorkbook</span>(wb, <span class="st">"resultados.xlsx"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="exportando-múltiples-dataframes-a-excel" class="slide level2">
-<h2>Exportando múltiples dataframes a Excel</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># Lista de dataframes</span></span>
-<span id="cb13-2"><a></a>lista_datos <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb13-3"><a></a>  <span class="at">Ventas =</span> datos_ventas,</span>
-<span id="cb13-4"><a></a>  <span class="at">Clientes =</span> datos_clientes,</span>
-<span id="cb13-5"><a></a>  <span class="at">Productos =</span> datos_productos</span>
-<span id="cb13-6"><a></a>)</span>
-<span id="cb13-7"><a></a></span>
-<span id="cb13-8"><a></a><span class="co"># Crear un libro con múltiples hojas</span></span>
-<span id="cb13-9"><a></a>wb <span class="ot">&lt;-</span> <span class="fu">createWorkbook</span>()</span>
-<span id="cb13-10"><a></a></span>
-<span id="cb13-11"><a></a><span class="co"># Agregar cada dataframe como una hoja</span></span>
-<span id="cb13-12"><a></a><span class="cf">for</span> (nombre <span class="cf">in</span> <span class="fu">names</span>(lista_datos)) {</span>
-<span id="cb13-13"><a></a>  <span class="fu">addWorksheet</span>(wb, nombre)</span>
-<span id="cb13-14"><a></a>  <span class="fu">writeData</span>(wb, nombre, lista_datos[[nombre]])</span>
-<span id="cb13-15"><a></a>}</span>
-<span id="cb13-16"><a></a></span>
-<span id="cb13-17"><a></a><span class="co"># Guardar el libro</span></span>
-<span id="cb13-18"><a></a><span class="fu">saveWorkbook</span>(wb, <span class="st">"informe_completo.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="añadiendo-formato-a-las-hojas-exportadas" class="slide level2">
-<h2>Añadiendo formato a las hojas exportadas</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co"># Crear estilos</span></span>
-<span id="cb14-2"><a></a>estilo_encabezado <span class="ot">&lt;-</span> <span class="fu">createStyle</span>(</span>
-<span id="cb14-3"><a></a>  <span class="at">fontSize =</span> <span class="dv">12</span>, <span class="at">textDecoration =</span> <span class="st">"bold"</span>,</span>
-<span id="cb14-4"><a></a>  <span class="at">fgFill =</span> <span class="st">"#8BC34A"</span>, <span class="at">fontColour =</span> <span class="st">"white"</span></span>
-<span id="cb14-5"><a></a>)</span>
-<span id="cb14-6"><a></a></span>
-<span id="cb14-7"><a></a>estilo_numero <span class="ot">&lt;-</span> <span class="fu">createStyle</span>(<span class="at">numFmt =</span> <span class="st">"#,##0.00"</span>)</span>
-<span id="cb14-8"><a></a></span>
-<span id="cb14-9"><a></a><span class="co"># Aplicar estilos</span></span>
-<span id="cb14-10"><a></a><span class="fu">addWorksheet</span>(wb, <span class="st">"Datos"</span>)</span>
-<span id="cb14-11"><a></a><span class="fu">writeData</span>(wb, <span class="st">"Datos"</span>, datos)</span>
-<span id="cb14-12"><a></a></span>
-<span id="cb14-13"><a></a><span class="co"># Aplicar estilo a encabezados</span></span>
-<span id="cb14-14"><a></a><span class="fu">addStyle</span>(wb, <span class="st">"Datos"</span>, estilo_encabezado, </span>
-<span id="cb14-15"><a></a>         <span class="at">rows =</span> <span class="dv">1</span>, <span class="at">cols =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(datos))</span>
-<span id="cb14-16"><a></a></span>
-<span id="cb14-17"><a></a><span class="co"># Aplicar estilo a columnas numéricas</span></span>
-<span id="cb14-18"><a></a><span class="fu">addStyle</span>(wb, <span class="st">"Datos"</span>, estilo_numero, </span>
-<span id="cb14-19"><a></a>         <span class="at">cols =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>), <span class="at">rows =</span> <span class="dv">2</span><span class="sc">:</span>(<span class="fu">nrow</span>(datos) <span class="sc">+</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># Dividir un dataframe por una variable categórica</span></span>
+<span id="cb17-2"><a></a>chatarra <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"ejemplos/fastfood.xls"</span>)</span>
+<span id="cb17-3"><a></a>chatarra <span class="sc">|&gt;</span> <span class="fu">group_by</span>(restaurant) <span class="sc">|&gt;</span> <span class="fu">group_split</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="para-el-próximo-encuentro" class="slide level2">
@@ -451,11 +496,9 @@ Luis D. Verde Arregoitia
 <li>Aprenderemos a conectarnos con la API de Google</li>
 <li>Veremos cómo trabajar con formato en celdas o texto</li>
 </ul>
-<h3 id="ejercicio-sugerido">Ejercicio sugerido</h3>
-<p>Practiquen importar múltiples hojas de Excel y exportar los resultados con formato básico.</p>
 
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

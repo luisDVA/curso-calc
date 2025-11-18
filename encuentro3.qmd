@@ -10,29 +10,150 @@ format:
 editor: visual
 ---
 
+## Operaciones comunes con dataframes
+
+:::: columns
+::: {.column width="50%"}
+### Ordenar filas
+```{r}
+#| eval: false
+#| echo: true
+
+# dplyr
+datos %>% arrange(fecha)
+datos %>% arrange(desc(ventas))
+```
+:::
+
+::: {.column width="50%"}
+### Reacomodar columnas
+```{r}
+#| eval: false
+#| echo: true
+# Seleccionar columnas específicas
+datos %>% select(id, nombre, valor)
+
+# Reordenar todas las columnas
+datos %>% select(fecha, id, everything())
+```
+:::
+::::
+
+## Operaciones comunes (continuación)
+
+:::: columns
+::: {.column width="50%"}
+### Subconjuntos de datos
+```{r}
+#| eval: false
+#| echo: true
+# Base R
+datos[datos$ventas > 1000, ]
+
+# dplyr
+datos %>% filter(ventas > 1000)
+datos %>% filter(region == "Norte", 
+                año == 2025)
+```
+:::
+
+::: {.column width="50%"}
+### Filtros
+```{r}
+#| eval: false
+#| echo: true
+# Filtrar datos faltantes
+datos %>% filter(!is.na(ventas))
+
+# Filtrar por patrón en texto
+datos %>% 
+  filter(str_detect(producto, "Excel"))
+```
+:::
+::::
+
+## Exportando objetos de R a hojas de cálculo
+
+### Archivos CSV
+
+```{r}
+#| eval: false
+#| echo: true
+# Base R
+write.csv(datos, "resultados.csv", row.names = FALSE)
+
+# readr (tidyverse)
+write_csv(datos, "resultados.csv")
+```
+
+### Archivos Excel (con openxlsx)
+
+```{r}
+#| eval: false
+#| echo: true
+library(openxlsx)
+
+# Crear un libro de trabajo
+wb <- createWorkbook()
+
+# Agregar una hoja
+addWorksheet(wb, "Datos")
+writeData(wb, "Datos", datos)
+
+# Guardar el libro
+saveWorkbook(wb, "resultados.xlsx", overwrite = TRUE)
+```
+
+## Exportando múltiples dataframes a Excel
+
+```{r}
+#| eval: false
+#| echo: true
+# Lista de dataframes
+lista_datos <- list(
+  Ventas = datos_ventas,
+  Clientes = datos_clientes,
+  Productos = datos_productos
+)
+
+# Crear un libro con múltiples hojas
+wb <- createWorkbook()
+
+# Agregar cada dataframe como una hoja
+for (nombre in names(lista_datos)) {
+  addWorksheet(wb, nombre)
+  writeData(wb, nombre, lista_datos[[nombre]])
+}
+
+# Guardar el libro
+saveWorkbook(wb, "informe_completo.xlsx")
+```
+
+
+
 ## Resumen del encuentro anterior
 
-- Listas e iteración en R
-- Trabajo con múltiples archivos o pestañas
-- Exportación de datos a Excel
-- Operaciones comunes con dataframes
+-   Listas e iteración en R
+-   Trabajo con múltiples archivos o pestañas
+-   Exportación de datos a Excel
+-   Operaciones comunes con dataframes
 
 ## Objetivos de hoy
 
-- Conectar R con Google Sheets
-- Leer y escribir datos en hojas de cálculo en la nube
-- Trabajar con formato de celdas
-- Importar hojas con formato conservando su estructura
+-   Conectar R con Google Sheets
+-   Leer y escribir datos en hojas de cálculo en la nube
+-   Trabajar con formato de celdas
+-   Importar hojas con formato conservando su estructura
 
 ## Trabajo con archivos en la nube (Google Sheets)
 
 ### Ventajas
 
-- Acceso desde cualquier dispositivo
-- Colaboración en tiempo real
-- Control de versiones
-- Integración con otros servicios de Google
-- Automatización de tareas
+-   Acceso desde cualquier dispositivo
+-   Colaboración en tiempo real
+-   Control de versiones
+-   Integración con otros servicios de Google
+-   Automatización de tareas
 
 ## Inicio de sesión y conexión con la API de Google
 
@@ -164,11 +285,11 @@ write_sheet(resultados, ss = id_sheet, sheet = "Resultados")
 
 ### Desafíos comunes con formato
 
-- Colores de fondo o texto que representan información
-- Celdas combinadas
-- Alineación específica de datos
-- Fuentes o tamaños de texto significativos
-- Bordes que denotan agrupaciones
+-   Colores de fondo o texto que representan información
+-   Celdas combinadas
+-   Alineación específica de datos
+-   Fuentes o tamaños de texto significativos
+-   Bordes que denotan agrupaciones
 
 ## Importando hojas con formato
 
@@ -296,22 +417,20 @@ crear_informe_estilo <- function(datos, nombre_archivo) {
 
 ## Para el próximo encuentro...
 
-- Resolveremos problemas comunes con hojas de cálculo:
-  - Manejo de fechas
-  - Encabezados problemáticos
-  - Disposiciones irregulares de datos
-- Analizaremos ejemplos reales
-- Discutiremos recursos útiles y mejores prácticas
+-   Resolveremos problemas comunes con hojas de cálculo:
+    -   Manejo de fechas
+    -   Encabezados problemáticos
+    -   Disposiciones irregulares de datos
+-   Analizaremos ejemplos reales
+-   Discutiremos recursos útiles y mejores prácticas
 
 ### Ejercicio sugerido
+
 Conecten R con una hoja de Google Sheets y practiquen la lectura/escritura de datos.
-
-
-
 
 ## Errores comunes en hojas de cálculo
 
-- Celdas en blanco con significado implícito
-- Varias tablas en una misma hoja
-- Valores codificados con colores sin columna explicativa
-- Datos y metadatos mezclados
+-   Celdas en blanco con significado implícito
+-   Varias tablas en una misma hoja
+-   Valores codificados con colores sin columna explicativa
+-   Datos y metadatos mezclados
