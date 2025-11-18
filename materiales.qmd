@@ -12,7 +12,7 @@ title: "Materiales del Curso"
 
 
 ### Segundo encuentro (18 de Noviembre)
-<!--[Listas, iteración y exportación](encuentro2.qmd){.external target="_blank"}-->
+[Listas, iteración y exportación](encuentro2.qmd){.external target="_blank"}
 
 ### Tercer encuentro (25 de Noviembre)
 <!--[Archivos en la nube y formato](encuentro3.qmd){.external target="_blank"}-->
