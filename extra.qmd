@@ -1,0 +1,75 @@
+---
+title: "Untitled"
+format: html
+---
+
+## Errores comunes en hojas de cálculo
+
+-   Celdas en blanco con significado implícito
+-   Varias tablas en una misma hoja
+-   Valores codificados con colores sin columna explicativa
+-   Datos y metadatos mezclados
+
+
+
+## Operaciones comunes con dataframes
+
+:::: columns
+::: {.column width="50%"}
+### Ordenar filas
+```{r}
+#| eval: false
+#| echo: true
+
+# dplyr
+datos %>% arrange(fecha)
+datos %>% arrange(desc(ventas))
+```
+:::
+
+::: {.column width="50%"}
+### Reacomodar columnas
+```{r}
+#| eval: false
+#| echo: true
+# Seleccionar columnas específicas
+datos %>% select(id, nombre, valor)
+
+# Reordenar todas las columnas
+datos %>% select(fecha, id, everything())
+```
+:::
+::::
+
+## Operaciones comunes (continuación)
+
+:::: columns
+::: {.column width="50%"}
+### Subconjuntos de datos
+```{r}
+#| eval: false
+#| echo: true
+# Base R
+datos[datos$ventas > 1000, ]
+
+# dplyr
+datos %>% filter(ventas > 1000)
+datos %>% filter(region == "Norte", 
+                año == 2025)
+```
+:::
+
+::: {.column width="50%"}
+### Filtros
+```{r}
+#| eval: false
+#| echo: true
+# Filtrar datos faltantes
+datos %>% filter(!is.na(ventas))
+
+# Filtrar por patrón en texto
+datos %>% 
+  filter(str_detect(producto, "Excel"))
+```
+:::
+::::

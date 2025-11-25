@@ -1,73 +1,73 @@
 [
   {
-    "objectID": "encuentro1.html#presentaciones-e-introducción",
-    "href": "encuentro1.html#presentaciones-e-introducción",
+    "objectID": "encuentro1.html#hola",
+    "href": "encuentro1.html#hola",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Presentaciones e Introducción",
-    "text": "Presentaciones e Introducción\n\nBienvenida al curso\nObjetivos y estructura del curso\nPresentación del instructor y participantes"
+    "section": "👋 ¡Hola!",
+    "text": "👋 ¡Hola!\n\n\n\n @LuisDVA\n liomys.mx\n luis@liomys.mx\n\n\nMamíferos, ecología, conservación\n\nInstructor certificado - Posit(RStudio) & The Carpentries\n\nmentor rOpenSci 2023-2026\nDesarrollo de paquetes\n\nColaborador R-Ladies (St. Louis 🇺🇸; Buenos Aires 🇦🇷; Gaborone 🇧🇼)"
   },
   {
-    "objectID": "encuentro1.html#qué-veremos-en-este-curso",
-    "href": "encuentro1.html#qué-veremos-en-este-curso",
+    "objectID": "encuentro1.html#este-curso",
+    "href": "encuentro1.html#este-curso",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "¿Qué veremos en este curso?",
-    "text": "¿Qué veremos en este curso?\n\nTécnicas eficientes para trabajar con hojas de cálculo en R\nImportación y exportación de diferentes formatos\nManipulación de datos de múltiples hojas o archivos\nTrabajo con archivos en la nube (Google Sheets)\nSoluciones a problemas comunes"
+    "section": "📚 Este curso",
+    "text": "📚 Este curso\n\nTécnicas eficientes para trabajar con hojas de cálculo en R\nImportar y exportar archivos\nTrabajar con múltiples hojas o archivos\nArchivos en la nube (Google Sheets)\nSoluciones a problemas comunes"
   },
   {
-    "objectID": "encuentro1.html#antecedentes-sobre-hojas-de-cálculo",
-    "href": "encuentro1.html#antecedentes-sobre-hojas-de-cálculo",
+    "objectID": "encuentro1.html#qué-necesitamos",
+    "href": "encuentro1.html#qué-necesitamos",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Antecedentes sobre hojas de cálculo",
-    "text": "Antecedentes sobre hojas de cálculo\nHistoria y evolución\n\nVisiCalc (1979) - La primera hoja de cálculo para computadoras personales\nLotus 1-2-3 (1983) - Popularizó las hojas de cálculo\nMicrosoft Excel (1985) - El estándar de facto\nGoogle Sheets (2006) - Colaboración en la nube"
+    "section": "💻 ¿Qué necesitamos?",
+    "text": "💻 ¿Qué necesitamos?\nSoftware\n\nR v.4.4.0 o mayor\nRStudio 2024.04 o mayor\n\nPaquetes\n\n\n\nreadxl\nfs\nreadODS\n\n\n\nwritexl\ndplyr\ntidyr"
   },
   {
-    "objectID": "encuentro1.html#limitaciones-de-las-hojas-de-cálculo-tradicionales",
-    "href": "encuentro1.html#limitaciones-de-las-hojas-de-cálculo-tradicionales",
+    "objectID": "encuentro1.html#mi-máquina",
+    "href": "encuentro1.html#mi-máquina",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Limitaciones de las hojas de cálculo tradicionales",
-    "text": "Limitaciones de las hojas de cálculo tradicionales\n\n\n\nCapacidad limitada (filas, columnas)\nProceso manual y repetitivo\nDificultad para automatizar tareas\nProblemas de reproducibilidad\nErrores difíciles de detectar\n\n\n\nMezcla de datos y análisis\nFormatos inconsistentes\nFalta de control de versiones\nIncompatibilidad entre plataformas"
+    "section": "🖥️ Mi máquina",
+    "text": "🖥️ Mi máquina\n\nR versión 4.5.2 (2025-10-31)\nRstudio versión 2025.9.2.418\nLinux Mint 22.2"
   },
   {
-    "objectID": "encuentro1.html#buenas-prácticas-para-la-organización-de-datos",
-    "href": "encuentro1.html#buenas-prácticas-para-la-organización-de-datos",
+    "objectID": "encuentro1.html#uso-de-ia-en-el-curso",
+    "href": "encuentro1.html#uso-de-ia-en-el-curso",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Buenas prácticas para la organización de datos",
-    "text": "Buenas prácticas para la organización de datos\n\n\n\nBroman & Woo (2018)\nData Organization in Spreadsheets"
+    "section": "🤖 Uso de IA en el curso",
+    "text": "🤖 Uso de IA en el curso\n\n\n🤠 adelante"
   },
   {
-    "objectID": "encuentro1.html#estructura-recomendada-para-datos-en-hojas-de-cálculo",
-    "href": "encuentro1.html#estructura-recomendada-para-datos-en-hojas-de-cálculo",
+    "objectID": "encuentro1.html#este-curso-1",
+    "href": "encuentro1.html#este-curso-1",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Estructura recomendada para datos en hojas de cálculo",
-    "text": "Estructura recomendada para datos en hojas de cálculo\n\nUna fila para encabezados\nSin celdas combinadas\nEvitar espacios en blanco como separadores\nUna observación por fila\nEvitar notas en celdas de datos\nConsistencia en formatos y unidades"
+    "section": "Este curso",
+    "text": "Este curso\n\nTécnicas eficientes para trabajar con hojas de cálculo en R\nImportar y exportar archivos\nTrabajar con múltiples hojas o archivos\nArchivos en la nube (Google Sheets)\nSoluciones a problemas comunes"
   },
   {
-    "objectID": "encuentro1.html#errores-comunes-en-hojas-de-cálculo",
-    "href": "encuentro1.html#errores-comunes-en-hojas-de-cálculo",
+    "objectID": "encuentro1.html#qué-necesitamos-1",
+    "href": "encuentro1.html#qué-necesitamos-1",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Errores comunes en hojas de cálculo",
-    "text": "Errores comunes en hojas de cálculo\n\nCeldas en blanco con significado implícito\nVarias tablas en una misma hoja\nValores codificados con colores sin columna explicativa\nDatos y metadatos mezclados"
+    "section": "¿Qué necesitamos?",
+    "text": "¿Qué necesitamos?\nSoftware\n\nR v.4.4.0 o mayor\nRStudio 2024.04 o mayor\n\nPaquetes\n\n\n\nreadxl\nfs\nreadODS\n\n\n\nwritexl\ndplyr\ntidyr"
   },
   {
-    "objectID": "encuentro1.html#importando-hojas-de-cálculo-a-r",
-    "href": "encuentro1.html#importando-hojas-de-cálculo-a-r",
+    "objectID": "encuentro1.html#mi-máquina-1",
+    "href": "encuentro1.html#mi-máquina-1",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Importando hojas de cálculo a R",
-    "text": "Importando hojas de cálculo a R"
+    "section": "Mi máquina",
+    "text": "Mi máquina\n\nR versión 4.5.2 (2025-10-31)\nRstudio versión 2025.9.2.418\nLinux Mint 22.2"
   },
   {
-    "objectID": "encuentro1.html#paquetes-para-importar-datos",
-    "href": "encuentro1.html#paquetes-para-importar-datos",
+    "objectID": "encuentro1.html#uso-de-ia-en-el-curso-1",
+    "href": "encuentro1.html#uso-de-ia-en-el-curso-1",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Paquetes para importar datos",
-    "text": "Paquetes para importar datos\nreadxl y readODS\n\nlibrary(readxl)\nlibrary(readODS)\n\nread_excel(\"archivo.xlsx\")\nread_ods(\"archivo.ods\")"
+    "section": "🤖 Uso de IA en el curso",
+    "text": "🤖 Uso de IA en el curso\n\n\n🤠 adelante"
   },
   {
-    "objectID": "encuentro1.html#comparación-libros-de-trabajo-vs-dataframes",
-    "href": "encuentro1.html#comparación-libros-de-trabajo-vs-dataframes",
+    "objectID": "encuentro1.html#hojas-de-cálculo-1",
+    "href": "encuentro1.html#hojas-de-cálculo-1",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Comparación: Libros de trabajo vs dataframes",
-    "text": "Comparación: Libros de trabajo vs dataframes\n\n\nLibro de trabajo (Excel)\n\nMúltiples hojas\nCeldas con fórmulas\nFormato visual (colores, bordes)\nRelaciones implícitas entre hojas\nMezcla de datos y análisis\n\n\n\n\nDataframe (R)\n\nEstructura tabular simple\nTipos de datos consistentes\nMetadatos explícitos\nOperaciones programáticas\nSeparación de datos y análisis"
+    "section": "🌍 Hojas de cálculo",
+    "text": "🌍 Hojas de cálculo\nEn 2018\n\n&gt; 800,000,000 usuarios de Excel\n~170,000,000 usuarios de Google Sheets\n\n\n\nRebman et al. (2023)"
   },
   {
     "objectID": "encuentro1.html#section",
@@ -77,32 +77,151 @@
     "text": "VisiCalc (1979) \n\nRegistro de préstamos (1593)"
   },
   {
-    "objectID": "encuentro1.html#para-el-próximo-encuentro",
-    "href": "encuentro1.html#para-el-próximo-encuentro",
+    "objectID": "encuentro1.html#el-resto-es-historia",
+    "href": "encuentro1.html#el-resto-es-historia",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Para el próximo encuentro…",
-    "text": "Para el próximo encuentro…\n\nExploraremos listas e iteración para trabajar con múltiples archivos\nAprenderemos operaciones comunes de manipulación\nVeremos cómo exportar objetos de R a hojas de cálculo\n\n\nRecomendación\nTraigan ejemplos de hojas de cálculo con las que trabajen habitualmente"
+    "section": "El resto es historia",
+    "text": "El resto es historia\n\nLotus 1-2-3 (1983)\nMicrosoft Excel (1985)\nOpciones Open Source\n\nColaboración en la nube\n\nGoogle Spreadsheets (2006) -&gt; Google Sheets (2012)\nAlmacenamiento remoto (Dropbox, Drive, OneDrive, etc.)"
+  },
+  {
+    "objectID": "encuentro1.html#desventajas",
+    "href": "encuentro1.html#desventajas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Desventajas",
+    "text": "Desventajas\n\n\nConceptuales\n\nProceso manual, repetitivo, difícil de automatizar\nLibertad para crear datos inutilizables\nErrores difíciles de detectar\n\n\nTécnicas\n\nLímites de filas y columnas\nPoca trazabilidad\nDificultad para compartir datos entre plataformas"
+  },
+  {
+    "objectID": "encuentro1.html#ventajas",
+    "href": "encuentro1.html#ventajas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "✅ Ventajas",
+    "text": "✅ Ventajas\n\n\nConceptuales\n\nInterfaz gráfica intuitiva\nCálculos inmediatos y visibles\nBarrera de entrada baja\n\n\nTécnicas\n\nVisualizaciones incorporadas\nNo hace falta saber programar\nReactividad para análisis inmediatos"
+  },
+  {
+    "objectID": "encuentro1.html#section-1",
+    "href": "encuentro1.html#section-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "Importancia de scripts y código\nSistemas de archivos & proyectos\nDatos organizados"
+  },
+  {
+    "objectID": "encuentro1.html#scripts-y-código-fuente",
+    "href": "encuentro1.html#scripts-y-código-fuente",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "📝 Scripts y código fuente",
+    "text": "📝 Scripts y código fuente\nTrabajando con scripts ordenados, podemos:\n\n\n\n\n\nReproducir y modificar pasos\nEncontrar errores\nDocumentar el proceso\nExaminar código ajeno"
+  },
+  {
+    "objectID": "encuentro1.html#proyectos-y-sistemas-de-archivos",
+    "href": "encuentro1.html#proyectos-y-sistemas-de-archivos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "📁 Proyectos y sistemas de archivos",
+    "text": "📁 Proyectos y sistemas de archivos"
+  },
+  {
+    "objectID": "encuentro1.html#proyecto",
+    "href": "encuentro1.html#proyecto",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Proyecto",
+    "text": "Proyecto\nDirectorio con todo los archivos relevantes para algún trabajo\nSeparar:\n📁 Datos\n📁 Código\n📁 Salidas (figuras, informes, datos intermedios, etc.)\n\n\n\n\n\nJenny Bryan (2017)\nProject-oriented workflow\n\nMaëlle Salmon (2021)\nDraw me a project"
+  },
+  {
+    "objectID": "encuentro1.html#ejercicio---proyecto-para-el-curso",
+    "href": "encuentro1.html#ejercicio---proyecto-para-el-curso",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "✏️ Ejercicio - Proyecto para el curso",
+    "text": "✏️ Ejercicio - Proyecto para el curso\nEs momento de crear un proyecto o carpeta para este curso:\n - Manualmente o desde RStudio\n- Ubicación accesible\n- Evitar OneDrive\n- Descargar archivos y descomprimir"
+  },
+  {
+    "objectID": "encuentro1.html#organización-de-datos",
+    "href": "encuentro1.html#organización-de-datos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "📊 Organización de datos",
+    "text": "📊 Organización de datos\n\n\n\nBroman & Woo (2018)\nData Organization in Spreadsheets"
+  },
+  {
+    "objectID": "encuentro1.html#recomendaciones",
+    "href": "encuentro1.html#recomendaciones",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Recomendaciones",
+    "text": "Recomendaciones\n\n\n\n\n\nUna sola fila para encabezados\nNo combinar celdas\nEvitar espacios en blanco como separadores o decoración\nEvitar notas en celdas de datos\n\nNo almacenar información en el formato"
+  },
+  {
+    "objectID": "encuentro1.html#fs",
+    "href": "encuentro1.html#fs",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "📦 fs",
+    "text": "📦 fs\nTrabajando con el sistema de archivos\nfs trabaja con rutas que siempre funcionan en cualquier plataforma. Sirve para:\n\nCrear directorios\nMover archivos\nCopiar archivos\nCambiar nombres"
+  },
+  {
+    "objectID": "encuentro1.html#ejercicio---sistema-de-archivos",
+    "href": "encuentro1.html#ejercicio---sistema-de-archivos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "✏️ Ejercicio - Sistema de Archivos",
+    "text": "✏️ Ejercicio - Sistema de Archivos\nCarguemos el paquete fs y exploremos los archivos proporcionados\n\nlibrary(fs)\ndir_ls(\"mi_proyecto/datos/\")"
+  },
+  {
+    "objectID": "encuentro1.html#formatos-comunes",
+    "href": "encuentro1.html#formatos-comunes",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "📋 Formatos Comunes",
+    "text": "📋 Formatos Comunes\nxls\nExcel 2003 - Archivo binario, patentado por Microsoft. Permite macros.\nxlsx\nExcel 2007 en adelante - Formato XML. Con compresión. No permite macros. Almacena más filas y columnas que .xls.\nods\nOpenOffice, StarOffice & LibreOffice - Formato XML libre similar a xlsx. Licencia CC."
+  },
+  {
+    "objectID": "encuentro1.html#paquetes-para-importar-datos",
+    "href": "encuentro1.html#paquetes-para-importar-datos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Paquetes para importar datos",
+    "text": "Paquetes para importar datos\nreadxl y readODS\n\nlibrary(readxl)\nlibrary(readODS)\n\nread_excel(\"archivo.xlsx\")\nread_ods(\"archivo.ods\")"
+  },
+  {
+    "objectID": "encuentro1.html#importando-datos",
+    "href": "encuentro1.html#importando-datos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Importando datos",
+    "text": "Importando datos\nArgumentos útiles\n\nsheet\nskip\ntrim_ws\n\n\nProbemos el script importar.R"
+  },
+  {
+    "objectID": "encuentro1.html#importando-datos-1",
+    "href": "encuentro1.html#importando-datos-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Importando datos",
+    "text": "Importando datos\nPodemos importar hojas por nombre o por posición\n\nexcel_sheets(\"archivo.xlsx\")\n\nruta &lt;- \"archivo.xlsx\"\n\nruta |&gt; \n  read_excel(sheet = \"nombre de la primer hoja\")\nruta |&gt; \n  read_excel(sheet = 1)"
+  },
+  {
+    "objectID": "encuentro1.html#libros-de-trabajo-vs-dataframes",
+    "href": "encuentro1.html#libros-de-trabajo-vs-dataframes",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Libros de trabajo vs dataframes",
+    "text": "Libros de trabajo vs dataframes\n\n\nLibro de trabajo\n\nMúltiples hojas\nCeldas con fórmulas\nFormato (colores, bordes)\nMezcla de datos y análisis\n\n\n\n\ndata frame\n\nRectangular\nEn memoria\nOperaciones programáticas\nSeparación de datos y análisis"
+  },
+  {
+    "objectID": "encuentro1.html#section-3",
+    "href": "encuentro1.html#section-3",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "Ventajas de usar R con hojas de cálculo\n\nAutomatización de tareas repetitivas\nReproducibilidad del análisis\nManejo de grandes volúmenes de datos\nDocumentación del proceso\nControl de versiones del código\nHerramientas estadísticas avanzadas"
+  },
+  {
+    "objectID": "encuentro1.html#próximo-encuentro",
+    "href": "encuentro1.html#próximo-encuentro",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "🔜 Próximo encuentro",
+    "text": "🔜 Próximo encuentro\n\nExploraremos listas e iteración para trabajar con múltiples archivos\nAprenderemos operaciones comunes de manipulación\nVeremos cómo exportar objetos de R a hojas de cálculo"
   },
   {
     "objectID": "materiales.html",
     "href": "materiales.html",
     "title": "Materiales del Curso",
     "section": "",
-    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación"
+    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\nEjemplos 3er encuentro"
   },
   {
-    "objectID": "materiales.html#presentaciones",
-    "href": "materiales.html#presentaciones",
+    "objectID": "materiales.html#presentaciones-y-archivos",
+    "href": "materiales.html#presentaciones-y-archivos",
     "title": "Materiales del Curso",
     "section": "",
-    "text": "Introducción y fundamentos\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\n\n\n\nProblemas comunes y ejemplos prácticos"
-  },
-  {
-    "objectID": "materiales.html#datos-y-scripts",
-    "href": "materiales.html#datos-y-scripts",
-    "title": "Materiales del Curso",
-    "section": "Datos y scripts",
-    "text": "Datos y scripts\nLos recursos adicionales se añadirán durante el curso."
+    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\nEjemplos 3er encuentro"
   },
   {
     "objectID": "examplesite/course.html",
@@ -553,6 +672,20 @@
     "text": "Resumen del encuentro anterior\n\nBuenas prácticas para organizar datos\nFundamentos de hojas de cálculo\nImportando archivos"
   },
   {
+    "objectID": "encuentro2.html#hoy",
+    "href": "encuentro2.html#hoy",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Hoy",
+    "text": "Hoy\n\nListas & iteración para trabajar con múltiples archivos\nOperaciones comunes de manipulación de datos\nExportar objetos de R a hojas de cálculo"
+  },
+  {
+    "objectID": "encuentro2.html#hoy-1",
+    "href": "encuentro2.html#hoy-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Hoy",
+    "text": "Hoy\nPaquetes para el encuentro\n\npurrr\ndplyr\nwritexl\nfs"
+  },
+  {
     "objectID": "encuentro2.html#listas-en-r",
     "href": "encuentro2.html#listas-en-r",
     "title": "R para el tratamiento de Hojas de Cálculo",
@@ -560,39 +693,137 @@
     "text": "Listas en R\nLas listas son estructuras de datos versátiles que pueden guardar objetos de clases diferentes:\n\n# Crear una lista con diferentes tipos de datos\nmi_lista &lt;- list(\n  numeros = 1:5,\n  texto = \"Estación R\",\n  logico = c(TRUE,TRUE,FALSE,TRUE),\n  data = data.frame(x = 1:3, y = c(\"a\", \"b\", \"c\"))\n)"
   },
   {
-    "objectID": "encuentro2.html#por-qué-usar-listas-con-hojas-de-cálculo",
-    "href": "encuentro2.html#por-qué-usar-listas-con-hojas-de-cálculo",
+    "objectID": "encuentro2.html#section",
+    "href": "encuentro2.html#section",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "¿Por qué usar listas con hojas de cálculo?",
-    "text": "¿Por qué usar listas con hojas de cálculo?\n\nAlmacenar múltiples dataframes (pestañas de Excel)\nMantener metadatos junto con los datos\nOrganizar resultados de operaciones sobre múltiples archivos\nPreservar la estructura de archivos Excel con múltiples hojas"
+    "section": "",
+    "text": "mi_lista\n\n$numeros\n[1] 1 2 3 4 5\n\n$texto\n[1] \"Estación R\"\n\n$logico\n[1]  TRUE  TRUE FALSE  TRUE\n\n$data\n  x y\n1 1 a\n2 2 b\n3 3 c"
   },
   {
-    "objectID": "encuentro2.html#iteración-aplicando-funciones-a-múltiples-elementos",
-    "href": "encuentro2.html#iteración-aplicando-funciones-a-múltiples-elementos",
+    "objectID": "encuentro2.html#accedediendo-a-los-elementos-de-la-lista",
+    "href": "encuentro2.html#accedediendo-a-los-elementos-de-la-lista",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Iteración: Aplicando funciones a múltiples elementos",
-    "text": "Iteración: Aplicando funciones a múltiples elementos\nPara: cada elemento de x\nAplicar la función f\n\nfor (x in 1:7){\n  print(x)\n} \n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n[1] 6\n[1] 7"
+    "section": "Accedediendo a los elementos de la lista",
+    "text": "Accedediendo a los elementos de la lista\n\nmi_lista$numeros\n\n[1] 1 2 3 4 5\n\nmi_lista[[\"texto\"]]\n\n[1] \"Estación R\"\n\nmi_lista[[4]]  \n\n  x y\n1 1 a\n2 2 b\n3 3 c"
   },
   {
-    "objectID": "encuentro2.html#trabajo-con-el-sistema-de-archivos-desde-r",
-    "href": "encuentro2.html#trabajo-con-el-sistema-de-archivos-desde-r",
+    "objectID": "encuentro2.html#listas-hojas-de-cálculo",
+    "href": "encuentro2.html#listas-hojas-de-cálculo",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Trabajo con el sistema de archivos desde R",
-    "text": "Trabajo con el sistema de archivos desde R\n\n# Listar archivos\narchivos &lt;- list.files()\narchivos_excel &lt;- list.files(pattern = \"*.xlsx\")\n\n# Comprobar si un archivo existe\nfile.exists(\"datos.xlsx\")\n\n# Obtener información de un archivo\nfile.info(\"datos.xlsx\")\n\n# Crear un directorio\ndir.create(\"resultados\")"
+    "section": "Listas + hojas de cálculo",
+    "text": "Listas + hojas de cálculo\n\nAlmacenar múltiples dataframes derivados de pestañas/hojas\nTrabajar con múltiples archivos en simultáneo\nCada elemento de una lista puede tener nombre"
   },
   {
-    "objectID": "encuentro2.html#importación-de-múltiples-archivos-o-pestañas",
-    "href": "encuentro2.html#importación-de-múltiples-archivos-o-pestañas",
+    "objectID": "encuentro2.html#ejercicio---lista-de-tablas",
+    "href": "encuentro2.html#ejercicio---lista-de-tablas",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Importación de múltiples archivos o pestañas",
-    "text": "Importación de múltiples archivos o pestañas\nMúltiples archivos CSV\n\n# Obtener lista de archivos CSV en un directorio\narchivos_csv &lt;- list.files(path = \"datos\", \n                          pattern = \"*.csv\", \n                          full.names = TRUE)\n\n# Leer todos los archivos y combinarlos\nlibrary(tidyverse)\ndatos_combinados &lt;- archivos_csv %&gt;%\n  map_df(read_csv, .id = \"archivo\")"
+    "section": "Ejercicio - Lista de tablas",
+    "text": "Ejercicio - Lista de tablas\nCon el archivo cafeteria.xlsx:\n\nCrear una lista con un elemento (data frame) para cada una de las dos primeras hojas (Bebidas y Panadería)\nCrear una carpeta nueva para salidas con fs\nExportar cada elemento de la lista a un archivo de texto plano"
   },
   {
-    "objectID": "encuentro2.html#importación-de-múltiples-pestañas-de-excel",
-    "href": "encuentro2.html#importación-de-múltiples-pestañas-de-excel",
+    "objectID": "encuentro2.html#de-data-frame-a-archivo-xlsx",
+    "href": "encuentro2.html#de-data-frame-a-archivo-xlsx",
     "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Importación de múltiples pestañas de Excel",
-    "text": "Importación de múltiples pestañas de Excel\n\n# Leer todas las pestañas de un archivo Excel\nlibrary(readxl)\npestanas &lt;- excel_sheets(\"archivo.xlsx\")\n\n\n# purrr\nlibrary(purrr)\ndatos_pestanas2 &lt;- pestanas %&gt;%\n  set_names() %&gt;%\n  map(~read_excel(\"archivo.xlsx\", sheet = .x))"
+    "section": "De data frame a archivo xlsx",
+    "text": "De data frame a archivo xlsx\nEl paquete writexl permite exportar data frames o listas de data frames a plantillas xlsx\n\n\nlibrary(writexl)\nwritexl::write_xlsx(x= \"mi_tabla\",\n                    path=\"mipantilla.xlsx\")"
+  },
+  {
+    "objectID": "encuentro2.html#writexl",
+    "href": "encuentro2.html#writexl",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "writexl",
+    "text": "writexl\nSi usamos listas (incluso listas de longitud 1) los nombres de los elementos se usan como nombres de las pestañas/hojas\n\nwrite_xlsx(x=list(mi_hoja = mi_tabla))"
+  },
+  {
+    "objectID": "encuentro2.html#ejercicio---exportando",
+    "href": "encuentro2.html#ejercicio---exportando",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Ejercicio - Exportando",
+    "text": "Ejercicio - Exportando\n\nExportar cada elemento de la lista a su propio archivo xlsx\nExportar la lista a un solo archivo con nombres para cada pestaña\n¿Cómo cambiaríamos los nombres de las pestañas?"
+  },
+  {
+    "objectID": "encuentro2.html#aplicando-una-función-varias-veces",
+    "href": "encuentro2.html#aplicando-una-función-varias-veces",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Aplicando una función varias veces",
+    "text": "Aplicando una función varias veces\nCopiar/pegar código para editarlo en análisis repetitivos agrega pasos innecesarios, pierde tiempo, y aumenta el riesgo de introducir errores"
+  },
+  {
+    "objectID": "encuentro2.html#aplicando-funciones-a-múltiples-elementos",
+    "href": "encuentro2.html#aplicando-funciones-a-múltiples-elementos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Aplicando funciones a múltiples elementos",
+    "text": "Aplicando funciones a múltiples elementos\nPara: cada elemento de x\nAplicar la función f\n\nfor (x in 1:7){\n  print(x)\n} \n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n[1] 6\n[1] 7"
+  },
+  {
+    "objectID": "encuentro2.html#section-1",
+    "href": "encuentro2.html#section-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "x puede ser una lista o vector de rutas, y f una función para leer archivos\n\n\nlibrary(purrr)\nlibrary(fs)\narchivos_csv &lt;- dir_ls(glob = \"*.csv\")\ntodos &lt;- map(archivos_csv, read.csv)"
+  },
+  {
+    "objectID": "encuentro2.html#purrr",
+    "href": "encuentro2.html#purrr",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "purrr?",
+    "text": "purrr?\n\n\n\n\n📦 purrr - Herramientas para programación funcional\n\nfunciones map que aplican una función a cada elemento de una lista o vector y devuelve un resultado de la misma longitud que la entrada\ntrabaja bien con listas\ncódigo legible y conciso\n\n\n\n\nThomas Mock (2018)\nFunctional Programming in R with purrr"
+  },
+  {
+    "objectID": "encuentro2.html#ejercicio---purrr-para-múltiples-archivos-csv",
+    "href": "encuentro2.html#ejercicio---purrr-para-múltiples-archivos-csv",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Ejercicio - purrr para múltiples archivos CSV",
+    "text": "Ejercicio - purrr para múltiples archivos CSV\n\nUsa el código de hace dos diapositivas para importar los archivos csv generados en el ejercicio anterior usando la función map de purrr.\nCombinemos las tablas en una sola"
+  },
+  {
+    "objectID": "encuentro2.html#importando-múltiples-pestañas",
+    "href": "encuentro2.html#importando-múltiples-pestañas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Importando múltiples pestañas",
+    "text": "Importando múltiples pestañas\n\n# Leer todas las pestañas de un archivo Excel\nlibrary(readxl)\npestanas &lt;- excel_sheets(\"ejemplos/cafeteria.xlsx\")\npestanas\n# purrr\nlibrary(purrr)\nmap(pestanas, \\(x) read_excel(\"ejemplos/cafeteria.xlsx\", sheet = x))\n\n\n¿Cómo acotamos el proceso a las dos primeras hojas?"
+  },
+  {
+    "objectID": "encuentro2.html#funciones-anónimas-notación-actual",
+    "href": "encuentro2.html#funciones-anónimas-notación-actual",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Funciones anónimas, notación actual",
+    "text": "Funciones anónimas, notación actual\nFunciones para llevar (se crean y se ejecutan pero nunca se asignan a un objeto con nombre)\nSintaxis\n\n\n(\\(x) x + 3)(10)\n\n[1] 13\n\n\n\nLa definición va entre paréntesis para separar la función de sus argumentos"
+  },
+  {
+    "objectID": "encuentro2.html#section-2",
+    "href": "encuentro2.html#section-2",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "map(pestanas, \\(x) read_excel(\"ejemplos/cafeteria.xlsx\", sheet = x))\n\nequivale a\nread_excel(\"ejemplos/cafeteria.xlslx\", sheet=\"Bebidas\") luego\nread_excel(\"ejemplos/cafeteria.xlslx\", sheet=\"Panaderia\") etc…"
+  },
+  {
+    "objectID": "encuentro2.html#datos-agrupados",
+    "href": "encuentro2.html#datos-agrupados",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Datos agrupados",
+    "text": "Datos agrupados\nLa mayoría de nuestras tareas se pueden desarrollar siguiendo el paradigma “dividir - aplicar - combinar” ( “split-apply-combine”):\n\ndividir los datos en grupos\naplicar alguna función a cada grupo\ncombinar los resultados\n\n\n\nData Carpentry (2018)\nAggregating and analyzing data with dplyr\nHadley Wickham (2011)\nThe split-apply-combine strategy for data analysis"
+  },
+  {
+    "objectID": "encuentro2.html#dplyrgroup_by",
+    "href": "encuentro2.html#dplyrgroup_by",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "dplyr::group_by()",
+    "text": "dplyr::group_by()\n\nDefine grupos según una o más variables\n\nEstratifica un data frame\n\nequivalente a aggregate() y al argumento ‘by =’ de data.table\n\n\nManipulación de datos en R con dplyr - Rubén Sánchez"
+  },
+  {
+    "objectID": "encuentro2.html#trabajando-con-datos-agrupados",
+    "href": "encuentro2.html#trabajando-con-datos-agrupados",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Trabajando con datos agrupados",
+    "text": "Trabajando con datos agrupados\nCon la versión agrupada de nuestra tabla, las funciones de dplyr trabajan sobre cada grupo por separado y después se combinan los resultados.\n\n\n\nRStudio (2021)\nData transformation with dplyr cheatsheet"
+  },
+  {
+    "objectID": "encuentro2.html#opciones-para-datos-agrupados",
+    "href": "encuentro2.html#opciones-para-datos-agrupados",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Opciones para datos agrupados",
+    "text": "Opciones para datos agrupados\n\nresumir valores (media, mediana, etc. por grupo)\nextraer las primeras o últimas n filas por grupo\nidentificar valores máximos o mínimos\neliminar filas repetidas\ncontar observaciones, etc."
   },
   {
     "objectID": "encuentro2.html#dividir-datos-en-pestañas-o-archivos-separados",
@@ -600,41 +831,6 @@
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Dividir datos en pestañas o archivos separados",
     "text": "Dividir datos en pestañas o archivos separados\n\n# Dividir un dataframe por una variable categórica\nchatarra &lt;- read_excel(\"ejemplos/fastfood.xls\")\nchatarra |&gt; group_by(restaurant) |&gt; group_split()"
-  },
-  {
-    "objectID": "encuentro2.html#operaciones-comunes-con-dataframes",
-    "href": "encuentro2.html#operaciones-comunes-con-dataframes",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Operaciones comunes con dataframes",
-    "text": "Operaciones comunes con dataframes\n\n\nOrdenar filas\n\n# dplyr\ndatos %&gt;% arrange(fecha)\ndatos %&gt;% arrange(desc(ventas))\n\n\nReacomodar columnas\n\n# Seleccionar columnas específicas\ndatos %&gt;% select(id, nombre, valor)\n\n# Reordenar todas las columnas\ndatos %&gt;% select(fecha, id, everything())"
-  },
-  {
-    "objectID": "encuentro2.html#operaciones-comunes-continuación",
-    "href": "encuentro2.html#operaciones-comunes-continuación",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Operaciones comunes (continuación)",
-    "text": "Operaciones comunes (continuación)\n\n\nSubconjuntos de datos\n\n# Base R\ndatos[datos$ventas &gt; 1000, ]\n\n# dplyr\ndatos %&gt;% filter(ventas &gt; 1000)\ndatos %&gt;% filter(region == \"Norte\", \n                año == 2025)\n\n\nFiltros\n\n# Filtrar datos faltantes\ndatos %&gt;% filter(!is.na(ventas))\n\n# Filtrar por patrón en texto\ndatos %&gt;% \n  filter(str_detect(producto, \"Excel\"))"
-  },
-  {
-    "objectID": "encuentro2.html#exportando-objetos-de-r-a-hojas-de-cálculo",
-    "href": "encuentro2.html#exportando-objetos-de-r-a-hojas-de-cálculo",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Exportando objetos de R a hojas de cálculo",
-    "text": "Exportando objetos de R a hojas de cálculo\nArchivos CSV\n\n# Base R\nwrite.csv(datos, \"resultados.csv\", row.names = FALSE)\n\n# readr (tidyverse)\nwrite_csv(datos, \"resultados.csv\")\n\nArchivos Excel (con openxlsx)\n\nlibrary(openxlsx)\n\n# Crear un libro de trabajo\nwb &lt;- createWorkbook()\n\n# Agregar una hoja\naddWorksheet(wb, \"Datos\")\nwriteData(wb, \"Datos\", datos)\n\n# Guardar el libro\nsaveWorkbook(wb, \"resultados.xlsx\", overwrite = TRUE)"
-  },
-  {
-    "objectID": "encuentro2.html#exportando-múltiples-dataframes-a-excel",
-    "href": "encuentro2.html#exportando-múltiples-dataframes-a-excel",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Exportando múltiples dataframes a Excel",
-    "text": "Exportando múltiples dataframes a Excel\n\n# Lista de dataframes\nlista_datos &lt;- list(\n  Ventas = datos_ventas,\n  Clientes = datos_clientes,\n  Productos = datos_productos\n)\n\n# Crear un libro con múltiples hojas\nwb &lt;- createWorkbook()\n\n# Agregar cada dataframe como una hoja\nfor (nombre in names(lista_datos)) {\n  addWorksheet(wb, nombre)\n  writeData(wb, nombre, lista_datos[[nombre]])\n}\n\n# Guardar el libro\nsaveWorkbook(wb, \"informe_completo.xlsx\")"
-  },
-  {
-    "objectID": "encuentro2.html#añadiendo-formato-a-las-hojas-exportadas",
-    "href": "encuentro2.html#añadiendo-formato-a-las-hojas-exportadas",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Añadiendo formato a las hojas exportadas",
-    "text": "Añadiendo formato a las hojas exportadas\n\n# Crear estilos\nestilo_encabezado &lt;- createStyle(\n  fontSize = 12, textDecoration = \"bold\",\n  fgFill = \"#8BC34A\", fontColour = \"white\"\n)\n\nestilo_numero &lt;- createStyle(numFmt = \"#,##0.00\")\n\n# Aplicar estilos\naddWorksheet(wb, \"Datos\")\nwriteData(wb, \"Datos\", datos)\n\n# Aplicar estilo a encabezados\naddStyle(wb, \"Datos\", estilo_encabezado, \n         rows = 1, cols = 1:ncol(datos))\n\n# Aplicar estilo a columnas numéricas\naddStyle(wb, \"Datos\", estilo_numero, \n         cols = c(3, 5), rows = 2:(nrow(datos) + 1))"
   },
   {
     "objectID": "encuentro2.html#para-el-próximo-encuentro",
@@ -889,32 +1085,60 @@
     "text": "Resolviendo problemas comunes\n\nFechas\nEncabezados problemáticos\nDisposiciones irregulares de los datos ## Ejemplos reales ## Recursos útiles ## Discusión"
   },
   {
+    "objectID": "encuentro3.html#operaciones-comunes-con-dataframes",
+    "href": "encuentro3.html#operaciones-comunes-con-dataframes",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Operaciones comunes con dataframes",
+    "text": "Operaciones comunes con dataframes\n\n\nOrdenar filas\n\n# dplyr\ndatos %&gt;% arrange(fecha)\ndatos %&gt;% arrange(desc(ventas))\n\n\nReacomodar columnas\n\n# Seleccionar columnas específicas\ndatos %&gt;% select(id, nombre, valor)\n\n# Reordenar todas las columnas\ndatos %&gt;% select(fecha, id, everything())"
+  },
+  {
+    "objectID": "encuentro3.html#operaciones-comunes-continuación",
+    "href": "encuentro3.html#operaciones-comunes-continuación",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Operaciones comunes (continuación)",
+    "text": "Operaciones comunes (continuación)\n\n\nSubconjuntos de datos\n\n# Base R\ndatos[datos$ventas &gt; 1000, ]\n\n# dplyr\ndatos %&gt;% filter(ventas &gt; 1000)\ndatos %&gt;% filter(region == \"Norte\", \n                año == 2025)\n\n\nFiltros\n\n# Filtrar datos faltantes\ndatos %&gt;% filter(!is.na(ventas))\n\n# Filtrar por patrón en texto\ndatos %&gt;% \n  filter(str_detect(producto, \"Excel\"))"
+  },
+  {
+    "objectID": "encuentro3.html#exportando-objetos-de-r-a-hojas-de-cálculo",
+    "href": "encuentro3.html#exportando-objetos-de-r-a-hojas-de-cálculo",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Exportando objetos de R a hojas de cálculo",
+    "text": "Exportando objetos de R a hojas de cálculo\nArchivos CSV\n\n# Base R\nwrite.csv(datos, \"resultados.csv\", row.names = FALSE)\n\n# readr (tidyverse)\nwrite_csv(datos, \"resultados.csv\")\n\nArchivos Excel (con openxlsx)\n\nlibrary(openxlsx)\n\n# Crear un libro de trabajo\nwb &lt;- createWorkbook()\n\n# Agregar una hoja\naddWorksheet(wb, \"Datos\")\nwriteData(wb, \"Datos\", datos)\n\n# Guardar el libro\nsaveWorkbook(wb, \"resultados.xlsx\", overwrite = TRUE)"
+  },
+  {
+    "objectID": "encuentro3.html#exportando-múltiples-dataframes-a-excel",
+    "href": "encuentro3.html#exportando-múltiples-dataframes-a-excel",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Exportando múltiples dataframes a Excel",
+    "text": "Exportando múltiples dataframes a Excel\n\n# Lista de dataframes\nlista_datos &lt;- list(\n  Ventas = datos_ventas,\n  Clientes = datos_clientes,\n  Productos = datos_productos\n)\n\n# Crear un libro con múltiples hojas\nwb &lt;- createWorkbook()\n\n# Agregar cada dataframe como una hoja\nfor (nombre in names(lista_datos)) {\n  addWorksheet(wb, nombre)\n  writeData(wb, nombre, lista_datos[[nombre]])\n}\n\n# Guardar el libro\nsaveWorkbook(wb, \"informe_completo.xlsx\")"
+  },
+  {
     "objectID": "encuentro3.html#resumen-del-encuentro-anterior",
     "href": "encuentro3.html#resumen-del-encuentro-anterior",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Resumen del encuentro anterior",
-    "text": "Resumen del encuentro anterior\n\nListas e iteración en R\nTrabajo con múltiples archivos o pestañas\nExportación de datos a Excel\nOperaciones comunes con dataframes"
+    "text": "Resumen del encuentro anterior\n\nPipes\nListas e iteración en R\nTrabajo con múltiples archivos o pestañas\nExportando objetos"
   },
   {
     "objectID": "encuentro3.html#objetivos-de-hoy",
     "href": "encuentro3.html#objetivos-de-hoy",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Objetivos de hoy",
-    "text": "Objetivos de hoy\n\nConectar R con Google Sheets\nLeer y escribir datos en hojas de cálculo en la nube\nTrabajar con formato de celdas\nImportar hojas con formato conservando su estructura"
+    "text": "Objetivos de hoy\n\nOperaciones comunes con dataframes\nConectar R con Google Sheets\nLeer y escribir datos en hojas de cálculo en la nube\nTrabajar con formato de celdas\nImportar hojas con formato conservando su estructura"
   },
   {
     "objectID": "encuentro3.html#trabajo-con-archivos-en-la-nube-google-sheets",
     "href": "encuentro3.html#trabajo-con-archivos-en-la-nube-google-sheets",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Trabajo con archivos en la nube (Google Sheets)",
-    "text": "Trabajo con archivos en la nube (Google Sheets)\n\nVentajas\n\nAcceso desde cualquier dispositivo\nColaboración en tiempo real\nControl de versiones\nIntegración con otros servicios de Google\nAutomatización de tareas"
+    "text": "Trabajo con archivos en la nube (Google Sheets)\nVentajas\n\nAcceso desde cualquier máquina\nColaboración en tiempo real\nControl de versiones\nIntegración con otros servicios de Google"
   },
   {
     "objectID": "encuentro3.html#inicio-de-sesión-y-conexión-con-la-api-de-google",
     "href": "encuentro3.html#inicio-de-sesión-y-conexión-con-la-api-de-google",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Inicio de sesión y conexión con la API de Google",
-    "text": "Inicio de sesión y conexión con la API de Google\n\nInstalación de paquetes necesarios\n\n# Instalar paquetes\ninstall.packages(c(\"googlesheets4\", \"googledrive\"))\n\n# Cargar paquetes\nlibrary(googlesheets4)\nlibrary(googledrive)"
+    "text": "Inicio de sesión y conexión con la API de Google\nInstalación de paquetes necesarios\n\n# Instalar paquetes\ninstall.packages(c(\"googlesheets4\", \"googledrive\"))\n\n# Cargar paquetes\nlibrary(googlesheets4)\nlibrary(googledrive)"
   },
   {
     "objectID": "encuentro3.html#autenticación-con-google",
@@ -928,7 +1152,7 @@
     "href": "encuentro3.html#accediendo-a-hojas-de-google-sheets",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Accediendo a hojas de Google Sheets",
-    "text": "Accediendo a hojas de Google Sheets\n\n# Listar hojas de cálculo disponibles\nmis_sheets &lt;- gs4_find()\n\n# Acceder por URL\ndatos &lt;- read_sheet(\"https://docs.google.com/spreadsheets/d/abc123...\")\n\n# Acceder por ID\nid_sheet &lt;- \"abc123...\"\ndatos &lt;- read_sheet(id_sheet)\n\n# Acceder a una hoja específica\ndatos &lt;- read_sheet(id_sheet, sheet = \"Ventas\")"
+    "text": "Accediendo a hojas de Google Sheets\n\n# Lista de hojas de cálculo disponibles\nmis_sheets &lt;- gs4_find()"
   },
   {
     "objectID": "encuentro3.html#trabajando-con-pestañas-específicas",
@@ -942,14 +1166,14 @@
     "href": "encuentro3.html#escribiendo-datos-a-google-sheets",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Escribiendo datos a Google Sheets",
-    "text": "Escribiendo datos a Google Sheets\n\n# Crear una nueva hoja de cálculo\nnuevo_sheet &lt;- gs4_create(\"Nuevo análisis\")\n\n# Escribir datos a una hoja existente\nwrite_sheet(datos, ss = id_sheet, sheet = \"Nueva pestaña\")\n\n# Actualizar datos existentes\nsheet_write(datos_actualizados, \n            ss = id_sheet, \n            sheet = \"Datos\")"
+    "text": "Escribiendo datos a Google Sheets\n\n# Crear una nueva hoja de cálculo\nnuevo_sheet &lt;- gs4_create(\"Nuevo análisis\")\n\n# Escribir datos a una hoja existente\nwrite_sheet(datos, \n            ss = identificador, \n            sheet = \"Nueva pestaña\")"
   },
   {
     "objectID": "encuentro3.html#archivos-en-sheets-y-drive",
     "href": "encuentro3.html#archivos-en-sheets-y-drive",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Archivos en Sheets y Drive",
-    "text": "Archivos en Sheets y Drive\n\n# Listar archivos en Drive\nmis_archivos &lt;- drive_find(type = \"spreadsheet\")\n\n# Buscar un archivo específico\narchivo &lt;- drive_find(pattern = \"Ventas 2025\")\n\n# Descargar un archivo\ndrive_download(archivo, path = \"ventas_local.xlsx\")\n\n# Compartir un archivo\ndrive_share(archivo, role = \"reader\", \n            type = \"anyone\", emailAddress = \"usuario@example.com\")"
+    "text": "Archivos en Sheets y Drive\n\n# Listar archivos en Drive\nmis_archivos &lt;- drive_find(type = \"spreadsheet\")\n\n# Buscar un archivo específico\narchivo &lt;- drive_find(pattern = \"Ventas 2025\")"
   },
   {
     "objectID": "encuentro3.html#integración-de-sheets-con-dplyr",
@@ -963,14 +1187,14 @@
     "href": "encuentro3.html#trabajando-con-formato-en-celdas-o-texto",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Trabajando con formato en celdas o texto",
-    "text": "Trabajando con formato en celdas o texto\n\nDesafíos comunes con formato\n\nColores de fondo o texto que representan información\nCeldas combinadas\nAlineación específica de datos\nFuentes o tamaños de texto significativos\nBordes que denotan agrupaciones"
+    "text": "Trabajando con formato en celdas o texto\n\nColores de fondo o texto *que representan información\nCeldas combinadas\nAlineación específica de datos\nFuentes o tamaños de texto significativos\nBordes que denotan agrupaciones"
   },
   {
     "objectID": "encuentro3.html#importando-hojas-con-formato",
     "href": "encuentro3.html#importando-hojas-con-formato",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Importando hojas con formato",
-    "text": "Importando hojas con formato\nEl paquete openxlsx permite conservar y manipular formato:\n\nlibrary(openxlsx)\n\n# Leer un archivo Excel preservando el formato\nwb &lt;- loadWorkbook(\"datos_con_formato.xlsx\")\n\n# Obtener hojas disponibles\nsheets &lt;- getSheetNames(\"datos_con_formato.xlsx\")\n\n# Leer una hoja específica como dataframe\ndatos &lt;- read.xlsx(wb, sheet = 1)"
+    "text": "Importando hojas con formato"
   },
   {
     "objectID": "encuentro3.html#detectando-celdas-con-formato-en-excel",
@@ -991,7 +1215,7 @@
     "href": "encuentro3.html#extrayendo-información-de-celdas-con-formato",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Extrayendo información de celdas con formato",
-    "text": "Extrayendo información de celdas con formato\n\nlibrary(tidyxl)\nlibrary(unpivotr)\n\n# Importar Excel preservando formato\nceldas &lt;- xlsx_cells(\"datos_con_formato.xlsx\", sheets = \"Hoja1\")\n\n# Examinar celdas con formato específico\nceldas_con_color &lt;- celdas %&gt;%\n  filter(!is.na(fill_color))\n\n# Extraer datos estructurados de celdas con formato\ndatos_estructurados &lt;- celdas %&gt;%\n  filter(row &gt;= 5, col &gt;= 3, col &lt;= 7) %&gt;%\n  select(row, col, character, numeric, formula, is_blank) %&gt;%\n  behead(\"up\", header) %&gt;%\n  behead(\"left\", categoria)"
+    "text": "Extrayendo información de celdas con formato\n\nlibrary(tidyxl)\nlibrary(unpivotr)\n\n# Importar Excel preservando formato\nceldas &lt;- xlsx_cells(\"hojs/pets.xlsx\")\n\n# Examinar celdas con formato específico (colores de fuente)\nceldas_con_color &lt;- celdas %&gt;%\n  filter(!is.na(font_color))"
   },
   {
     "objectID": "encuentro3.html#generando-informes-con-estilo-consistente",
@@ -1005,462 +1229,7 @@
     "href": "encuentro3.html#para-el-próximo-encuentro",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Para el próximo encuentro…",
-    "text": "Para el próximo encuentro…\n\nResolveremos problemas comunes con hojas de cálculo:\n\nManejo de fechas\nEncabezados problemáticos\nDisposiciones irregulares de datos\n\nAnalizaremos ejemplos reales\nDiscutiremos recursos útiles y mejores prácticas\n\n\nEjercicio sugerido\nConecten R con una hoja de Google Sheets y practiquen la lectura/escritura de datos."
-  },
-  {
-    "objectID": "encuentro1.html#hola",
-    "href": "encuentro1.html#hola",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "👋 ¡Hola!",
-    "text": "👋 ¡Hola!\n\n\n\n @LuisDVA\n liomys.mx\n luis@liomys.mx\n\n\nMamíferos, ecología, conservación\n\nInstructor certificado - Posit(RStudio) & The Carpentries\n\nmentor rOpenSci 2023-2026\nDesarrollo de paquetes\n\nColaborador R-Ladies (St. Louis 🇺🇸; Buenos Aires 🇦🇷; Gaborone 🇧🇼)"
-  },
-  {
-    "objectID": "encuentro1.html#este-curso",
-    "href": "encuentro1.html#este-curso",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "📚 Este curso",
-    "text": "📚 Este curso\n\nTécnicas eficientes para trabajar con hojas de cálculo en R\nImportar y exportar archivos\nTrabajar con múltiples hojas o archivos\nArchivos en la nube (Google Sheets)\nSoluciones a problemas comunes"
-  },
-  {
-    "objectID": "encuentro1.html#qué-necesitamos",
-    "href": "encuentro1.html#qué-necesitamos",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "💻 ¿Qué necesitamos?",
-    "text": "💻 ¿Qué necesitamos?\nSoftware\n\nR v.4.4.0 o mayor\nRStudio 2024.04 o mayor\n\nPaquetes\n\n\n\nreadxl\nfs\nreadODS\n\n\n\nwritexl\ndplyr\ntidyr"
-  },
-  {
-    "objectID": "encuentro1.html#mi-máquina",
-    "href": "encuentro1.html#mi-máquina",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "🖥️ Mi máquina",
-    "text": "🖥️ Mi máquina\n\nR versión 4.5.2 (2025-10-31)\nRstudio versión 2025.9.2.418\nLinux Mint 22.2"
-  },
-  {
-    "objectID": "encuentro1.html#uso-de-ia-en-el-curso",
-    "href": "encuentro1.html#uso-de-ia-en-el-curso",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "🤖 Uso de IA en el curso",
-    "text": "🤖 Uso de IA en el curso\n\n\n🤠 adelante"
-  },
-  {
-    "objectID": "encuentro1.html#hojas-de-cálculo",
-    "href": "encuentro1.html#hojas-de-cálculo",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "🌎 Hojas de cálculo",
-    "text": "🌎 Hojas de cálculo\n\n&gt; 800,000,000 usuarios de Excel\n~170,000,000 usuarios de Google Sheets\n\n\n\nRebman et al. (2023)"
-  },
-  {
-    "objectID": "encuentro1.html#section-1",
-    "href": "encuentro1.html#section-1",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "",
-    "text": "Importancia de scripts y código\nSistemas de archivos & proyectos\nDatos organizados"
-  },
-  {
-    "objectID": "encuentro1.html#hojas-de-cálculo-en-disco",
-    "href": "encuentro1.html#hojas-de-cálculo-en-disco",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Hojas de cálculo en disco",
-    "text": "Hojas de cálculo en disco\nxls\nExcel 2003 - Archivo binario, patentado por Microsoft. Permite macros.\nxlsx\nExcel 2007 en adelante - Formato XML. Con compresión. No permite macros. Almacena más filas y columnas que .xls.\nods\nOpenOffice, StarOffice & LibreOffice - Formato XML libre similar a xlsx. Licencia CC."
-  },
-  {
-    "objectID": "encuentro1.html#hojas-de-cálculo-1",
-    "href": "encuentro1.html#hojas-de-cálculo-1",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "🌍 Hojas de cálculo",
-    "text": "🌍 Hojas de cálculo\nEn 2018\n\n&gt; 800,000,000 usuarios de Excel\n~170,000,000 usuarios de Google Sheets\n\n\n\nRebman et al. (2023)"
-  },
-  {
-    "objectID": "encuentro1.html#ventajas-de-las-hojas-de-cálculo",
-    "href": "encuentro1.html#ventajas-de-las-hojas-de-cálculo",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Ventajas de las hojas de cálculo",
-    "text": "Ventajas de las hojas de cálculo\n\n\n\nInterfaz gráfica intuitiva\nFácil de aprender y usar\nCálculos inmediatos y visibles\nAmpliamente disponibles\nBarrera de entrada baja\n\n\n\nFunciones predefinidas útiles\nVisualizaciones básicas incorporadas\nNo requiere conocimientos de programación\nIdeal para conjuntos pequeños de datos\nRápido para análisis simples"
-  },
-  {
-    "objectID": "encuentro1.html#scripts-y-código-fuente",
-    "href": "encuentro1.html#scripts-y-código-fuente",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "📝 Scripts y código fuente",
-    "text": "📝 Scripts y código fuente\nTrabajando con scripts ordenados, podemos:\n\n\n\n\n\nReproducir y modificar pasos\nEncontrar errores\nDocumentar el proceso\nExaminar código ajeno"
-  },
-  {
-    "objectID": "encuentro1.html#fs",
-    "href": "encuentro1.html#fs",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "📦 fs",
-    "text": "📦 fs\nTrabajando con el sistema de archivos\nfs trabaja con rutas que siempre funcionan en cualquier plataforma. Sirve para:\n\nCrear directorios\nMover archivos\nCopiar archivos\nCambiar nombres"
-  },
-  {
-    "objectID": "encuentro1.html#section-4",
-    "href": "encuentro1.html#section-4",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "",
-    "text": "Ventajas de usar R con hojas de cálculo\n\nAutomatización de tareas repetitivas\nReproducibilidad del análisis\nManejo de grandes volúmenes de datos\nDocumentación del proceso\nControl de versiones del código\nHerramientas estadísticas avanzadas"
-  },
-  {
-    "objectID": "encuentro1.html#el-resto-es-historia",
-    "href": "encuentro1.html#el-resto-es-historia",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "El resto es historia",
-    "text": "El resto es historia\n\nLotus 1-2-3 (1983)\nMicrosoft Excel (1985)\nOpciones Open Source\n\nColaboración en la nube\n\nGoogle Spreadsheets (2006) -&gt; Google Sheets (2012)\nAlmacenamiento remoto (Dropbox, Drive, OneDrive, etc.)"
-  },
-  {
-    "objectID": "encuentro1.html#section-3",
-    "href": "encuentro1.html#section-3",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "",
-    "text": "Ventajas de usar R con hojas de cálculo\n\nAutomatización de tareas repetitivas\nReproducibilidad del análisis\nManejo de grandes volúmenes de datos\nDocumentación del proceso\nControl de versiones del código\nHerramientas estadísticas avanzadas"
-  },
-  {
-    "objectID": "encuentro1.html#desventajas",
-    "href": "encuentro1.html#desventajas",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Desventajas",
-    "text": "Desventajas\n\n\nConceptuales\n\nProceso manual, repetitivo, difícil de automatizar\nLibertad para crear datos inutilizables\nErrores difíciles de detectar\n\n\nTécnicas\n\nLímites de filas y columnas\nPoca trazabilidad\nDificultad para compartir datos entre plataformas"
-  },
-  {
-    "objectID": "encuentro1.html#ventajas",
-    "href": "encuentro1.html#ventajas",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "✅ Ventajas",
-    "text": "✅ Ventajas\n\n\nConceptuales\n\nInterfaz gráfica intuitiva\nCálculos inmediatos y visibles\nBarrera de entrada baja\n\n\nTécnicas\n\nVisualizaciones incorporadas\nNo hace falta saber programar\nReactividad para análisis inmediatos"
-  },
-  {
-    "objectID": "encuentro1.html#técnicas-1",
-    "href": "encuentro1.html#técnicas-1",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Técnicas",
-    "text": "Técnicas\n\nVisualizaciones incorporadas\nNo hace falta saber programar\nReactividad para análisis inmediatos"
-  },
-  {
-    "objectID": "encuentro1.html#flujo-de-trabajo-1",
-    "href": "encuentro1.html#flujo-de-trabajo-1",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Flujo de trabajo",
-    "text": "Flujo de trabajo\n\nImportancia de scripts y código\nSistemas de archivos & proyecto\nDatos organizados"
-  },
-  {
-    "objectID": "encuentro1.html#recomendaciones",
-    "href": "encuentro1.html#recomendaciones",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Recomendaciones",
-    "text": "Recomendaciones\n\n\n\n\n\nUna sola fila para encabezados\nNo combinar celdas\nEvitar espacios en blanco como separadores o decoración\nEvitar notas en celdas de datos\n\nNo almacenar información en el formato"
-  },
-  {
-    "objectID": "encuentro1.html#section-2",
-    "href": "encuentro1.html#section-2",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "",
-    "text": "Ventajas de usar R con hojas de cálculo\n\nAutomatización de tareas repetitivas\nReproducibilidad del análisis\nManejo de grandes volúmenes de datos\nDocumentación del proceso\nControl de versiones del código\nHerramientas estadísticas avanzadas"
-  },
-  {
-    "objectID": "encuentro1.html#proyectos-y-sistemas-de-archivos",
-    "href": "encuentro1.html#proyectos-y-sistemas-de-archivos",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "📁 Proyectos y sistemas de archivos",
-    "text": "📁 Proyectos y sistemas de archivos"
-  },
-  {
-    "objectID": "encuentro1.html#organización-de-datos",
-    "href": "encuentro1.html#organización-de-datos",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "📊 Organización de datos",
-    "text": "📊 Organización de datos\n\n\n\nBroman & Woo (2018)\nData Organization in Spreadsheets"
-  },
-  {
-    "objectID": "encuentro1.html#proyecto",
-    "href": "encuentro1.html#proyecto",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Proyecto",
-    "text": "Proyecto\nDirectorio con todo los archivos relevantes para algún trabajo\nSeparar:\n📁 Datos\n📁 Código\n📁 Salidas (figuras, informes, datos intermedios, etc.)\n\n\n\n\n\nJenny Bryan (2017)\nProject-oriented workflow\n\nMaëlle Salmon (2021)\nDraw me a project"
-  },
-  {
-    "objectID": "encuentro1.html#ejercicio---proyecto-para-el-curso",
-    "href": "encuentro1.html#ejercicio---proyecto-para-el-curso",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "✏️ Ejercicio - Proyecto para el curso",
-    "text": "✏️ Ejercicio - Proyecto para el curso\nEs momento de crear un proyecto o carpeta para este curso:\n - Manualmente o desde RStudio\n- Ubicación accesible\n- Evitar OneDrive\n- Descargar archivos y descomprimir"
-  },
-  {
-    "objectID": "encuentro1.html#ejercicio---sistema-de-archivos",
-    "href": "encuentro1.html#ejercicio---sistema-de-archivos",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "✏️ Ejercicio - Sistema de Archivos",
-    "text": "✏️ Ejercicio - Sistema de Archivos\nCarguemos el paquete fs y exploremos los archivos proporcionados\n\nlibrary(fs)\ndir_ls(\"mi_proyecto/datos/\")"
-  },
-  {
-    "objectID": "encuentro1.html#formatos-comunes",
-    "href": "encuentro1.html#formatos-comunes",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "📋 Formatos Comunes",
-    "text": "📋 Formatos Comunes\nxls\nExcel 2003 - Archivo binario, patentado por Microsoft. Permite macros.\nxlsx\nExcel 2007 en adelante - Formato XML. Con compresión. No permite macros. Almacena más filas y columnas que .xls.\nods\nOpenOffice, StarOffice & LibreOffice - Formato XML libre similar a xlsx. Licencia CC."
-  },
-  {
-    "objectID": "encuentro1.html#importando-datos",
-    "href": "encuentro1.html#importando-datos",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Importando datos",
-    "text": "Importando datos\nArgumentos útiles\n\nsheet\nskip\ntrim_ws\n\n\nProbemos el script importar.R"
-  },
-  {
-    "objectID": "encuentro1.html#importando-datos-1",
-    "href": "encuentro1.html#importando-datos-1",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Importando datos",
-    "text": "Importando datos\nPodemos importar hojas por nombre o por posición\n\nexcel_sheets(\"archivo.xlsx\")\n\nruta &lt;- \"archivo.xlsx\"\n\nruta |&gt; \n  read_excel(sheet = \"nombre de la primer hoja\")\nruta |&gt; \n  read_excel(sheet = 1)"
-  },
-  {
-    "objectID": "encuentro1.html#libros-de-trabajo-vs-dataframes",
-    "href": "encuentro1.html#libros-de-trabajo-vs-dataframes",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Libros de trabajo vs dataframes",
-    "text": "Libros de trabajo vs dataframes\n\n\nLibro de trabajo\n\nMúltiples hojas\nCeldas con fórmulas\nFormato (colores, bordes)\nMezcla de datos y análisis\n\n\n\n\ndata frame\n\nRectangular\nEn memoria\nOperaciones programáticas\nSeparación de datos y análisis"
-  },
-  {
-    "objectID": "encuentro1.html#próximo-encuentro",
-    "href": "encuentro1.html#próximo-encuentro",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "🔜 Próximo encuentro",
-    "text": "🔜 Próximo encuentro\n\nExploraremos listas e iteración para trabajar con múltiples archivos\nAprenderemos operaciones comunes de manipulación\nVeremos cómo exportar objetos de R a hojas de cálculo"
-  },
-  {
-    "objectID": "materiales.html#presentaciones-y-archivos",
-    "href": "materiales.html#presentaciones-y-archivos",
-    "title": "Materiales del Curso",
-    "section": "",
-    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación"
-  },
-  {
-    "objectID": "encuentro1.html",
-    "href": "encuentro1.html",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "",
-    "text": "@LuisDVA\n liomys.mx\n luis@liomys.mx\n\n\nMamíferos, ecología, conservación\n\nInstructor certificado - Posit(RStudio) & The Carpentries\n\nmentor rOpenSci 2023-2026\nDesarrollo de paquetes\n\nColaborador R-Ladies (St. Louis 🇺🇸; Buenos Aires 🇦🇷; Gaborone 🇧🇼)"
-  },
-  {
-    "objectID": "encuentro1.html#este-curso-1",
-    "href": "encuentro1.html#este-curso-1",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Este curso",
-    "text": "Este curso\n\nTécnicas eficientes para trabajar con hojas de cálculo en R\nImportar y exportar archivos\nTrabajar con múltiples hojas o archivos\nArchivos en la nube (Google Sheets)\nSoluciones a problemas comunes"
-  },
-  {
-    "objectID": "encuentro1.html#qué-necesitamos-1",
-    "href": "encuentro1.html#qué-necesitamos-1",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "¿Qué necesitamos?",
-    "text": "¿Qué necesitamos?\nSoftware\n\nR v.4.4.0 o mayor\nRStudio 2024.04 o mayor\n\nPaquetes\n\n\n\nreadxl\nfs\nreadODS\n\n\n\nwritexl\ndplyr\ntidyr"
-  },
-  {
-    "objectID": "encuentro1.html#mi-máquina-1",
-    "href": "encuentro1.html#mi-máquina-1",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Mi máquina",
-    "text": "Mi máquina\n\nR versión 4.5.2 (2025-10-31)\nRstudio versión 2025.9.2.418\nLinux Mint 22.2"
-  },
-  {
-    "objectID": "encuentro1.html#uso-de-ia-en-el-curso-1",
-    "href": "encuentro1.html#uso-de-ia-en-el-curso-1",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "🤖 Uso de IA en el curso",
-    "text": "🤖 Uso de IA en el curso\n\n\n🤠 adelante"
-  },
-  {
-    "objectID": "encuentro2.html#hoy",
-    "href": "encuentro2.html#hoy",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Hoy",
-    "text": "Hoy\n\nListas & iteración para trabajar con múltiples archivos\nOperaciones comunes de manipulación de datos\nExportar objetos de R a hojas de cálculo"
-  },
-  {
-    "objectID": "encuentro2.html#listas-iteración",
-    "href": "encuentro2.html#listas-iteración",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Listas & iteración",
-    "text": "Listas & iteración"
-  },
-  {
-    "objectID": "encuentro2.html#section",
-    "href": "encuentro2.html#section",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "",
-    "text": "mi_lista\n\n$numeros\n[1] 1 2 3 4 5\n\n$texto\n[1] \"Estación R\"\n\n$logico\n[1]  TRUE  TRUE FALSE  TRUE\n\n$data\n  x y\n1 1 a\n2 2 b\n3 3 c"
-  },
-  {
-    "objectID": "encuentro2.html#listas-hojas-de-cálculo",
-    "href": "encuentro2.html#listas-hojas-de-cálculo",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Listas + hojas de cálculo",
-    "text": "Listas + hojas de cálculo\n\nAlmacenar múltiples dataframes derivados de pestañas/hojas\nTrabajar con múltiples archivos en simultáneo\nCada elemento de una lista puede tener nombre"
-  },
-  {
-    "objectID": "encuentro2.html#accedediendo-a-los-elementos-de-la-lista",
-    "href": "encuentro2.html#accedediendo-a-los-elementos-de-la-lista",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Accedediendo a los elementos de la lista",
-    "text": "Accedediendo a los elementos de la lista\n\nmi_lista$numeros\n\n[1] 1 2 3 4 5\n\nmi_lista[[\"texto\"]]\n\n[1] \"Estación R\"\n\nmi_lista[[4]]  \n\n  x y\n1 1 a\n2 2 b\n3 3 c"
-  },
-  {
-    "objectID": "encuentro2.html#ejercicio---lista-de-tablas",
-    "href": "encuentro2.html#ejercicio---lista-de-tablas",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Ejercicio - Lista de tablas",
-    "text": "Ejercicio - Lista de tablas\nCon el archivo cafeteria.xlsx:\n\nCrear una lista con un elemento (data frame) para cada una de las dos primeras hojas (Bebidas y Panadería)\nCrear una carpeta nueva para salidas con fs\nExportar cada elemento de la lista a un archivo de texto plano"
-  },
-  {
-    "objectID": "encuentro2.html#aplicando-una-función-varias-veces",
-    "href": "encuentro2.html#aplicando-una-función-varias-veces",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Aplicando una función varias veces",
-    "text": "Aplicando una función varias veces\nCopiar/pegar código para editarlo en análisis repetitivos agrega pasos innecesarios, pierde tiempo, y aumenta el riesgo de introducir errores"
-  },
-  {
-    "objectID": "encuentro2.html#section-1",
-    "href": "encuentro2.html#section-1",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "",
-    "text": "x puede ser una lista o vector de rutas, y f una función para leer archivos\n\n\nlibrary(purrr)\nlibrary(fs)\narchivos_csv &lt;- dir_ls(glob = \"*.csv\")\ntodos &lt;- map(archivos_csv, read.csv)"
-  },
-  {
-    "objectID": "encuentro2.html#importando-múltiples-archivos-o-pestañas",
-    "href": "encuentro2.html#importando-múltiples-archivos-o-pestañas",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Importando múltiples archivos o pestañas",
-    "text": "Importando múltiples archivos o pestañas\nMúltiples archivos CSV\n\n# Obtener lista de archivos CSV en un directorio\narchivos_csv &lt;- list.files(path = \"datos\", \n                          pattern = \"*.csv\", \n                          full.names = TRUE)\n\n# Leer todos los archivos y combinarlos\nlibrary(tidyverse)\ndatos_combinados &lt;- archivos_csv %&gt;%\n  map_df(read_csv, .id = \"archivo\")"
-  },
-  {
-    "objectID": "encuentro2.html#importando-múltiples-pestañas",
-    "href": "encuentro2.html#importando-múltiples-pestañas",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Importando múltiples pestañas",
-    "text": "Importando múltiples pestañas\n\n# Leer todas las pestañas de un archivo Excel\nlibrary(readxl)\npestanas &lt;- excel_sheets(\"ejemplos/cafeteria.xlsx\")\npestanas\n# purrr\nlibrary(purrr)\nmap(pestanas, \\(x) read_excel(\"ejemplos/cafeteria.xlsx\", sheet = x))\n\n\n¿Cómo acotamos el proceso a las dos primeras hojas?"
-  },
-  {
-    "objectID": "encuentro2.html#de-data-frame-a-archivo-xlsx",
-    "href": "encuentro2.html#de-data-frame-a-archivo-xlsx",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "De data frame a archivo xlsx",
-    "text": "De data frame a archivo xlsx\nEl paquete writexl permite exportar data frames o listas de data frames a plantillas xlsx\n\n\nlibrary(writexl)\nwritexl::write_xlsx(x= \"mi_tabla\",\n                    path=\"mipantilla.xlsx\")"
-  },
-  {
-    "objectID": "encuentro2.html#writexl",
-    "href": "encuentro2.html#writexl",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "writexl",
-    "text": "writexl\nSi usamos listas (incluso listas de longitud 1) los nombres de los elementos se usan como nombres de las pestañas/hojas\n\nwrite_xlsx(x=list(mi_hoja = mi_tabla))"
-  },
-  {
-    "objectID": "encuentro2.html#ejercicio---exportando",
-    "href": "encuentro2.html#ejercicio---exportando",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Ejercicio - Exportando",
-    "text": "Ejercicio - Exportando\n\nExportar cada elemento de la lista a su propio archivo xlsx\nExportar la lista a un solo archivo con nombres para cada pestaña\n¿Cómo cambiaríamos los nombres de las pestañas?"
-  },
-  {
-    "objectID": "encuentro2.html#datos-agrupados",
-    "href": "encuentro2.html#datos-agrupados",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Datos agrupados",
-    "text": "Datos agrupados\nLa mayoría de nuestras tareas se pueden desarrollar siguiendo el paradigma “dividir - aplicar - combinar” ( “split-apply-combine”):\n\ndividir los datos en grupos\naplicar alguna función a cada grupo\ncombinar los resultados\n\n\n\nData Carpentry (2018)\nAggregating and analyzing data with dplyr\nHadley Wickham (2011)\nThe split-apply-combine strategy for data analysis"
-  },
-  {
-    "objectID": "encuentro2.html#dplyrgroup_by",
-    "href": "encuentro2.html#dplyrgroup_by",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "dplyr::group_by()",
-    "text": "dplyr::group_by()\n\nDefine grupos según una o más variables\n\nEstratifica un data frame\n\nequivalente a aggregate() y al argumento ‘by =’ de data.table\n\n\nManipulación de datos en R con dplyr - Rubén Sánchez"
-  },
-  {
-    "objectID": "encuentro2.html#trabajando-con-datos-agrupados",
-    "href": "encuentro2.html#trabajando-con-datos-agrupados",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Trabajando con datos agrupados",
-    "text": "Trabajando con datos agrupados\nCon la versión agrupada de nuestra tabla, las funciones de dplyr trabajan sobre cada grupo por separado y después se combinan los resultados.\n\n\n\nRStudio (2021)\nData transformation with dplyr cheatsheet"
-  },
-  {
-    "objectID": "encuentro2.html#opciones-para-datos-agrupados",
-    "href": "encuentro2.html#opciones-para-datos-agrupados",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Opciones para datos agrupados",
-    "text": "Opciones para datos agrupados\n\nresumir valores (media, mediana, etc. por grupo)\nextraer las primeras o últimas n filas por grupo\nidentificar valores máximos o mínimos\neliminar filas repetidas\ncontar observaciones, etc."
-  },
-  {
-    "objectID": "encuentro2.html#aplicando-funciones-a-múltiples-elementos",
-    "href": "encuentro2.html#aplicando-funciones-a-múltiples-elementos",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Aplicando funciones a múltiples elementos",
-    "text": "Aplicando funciones a múltiples elementos\nPara: cada elemento de x\nAplicar la función f\n\nfor (x in 1:7){\n  print(x)\n} \n\n[1] 1\n[1] 2\n[1] 3\n[1] 4\n[1] 5\n[1] 6\n[1] 7"
-  },
-  {
-    "objectID": "encuentro2.html#purrr",
-    "href": "encuentro2.html#purrr",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "purrr?",
-    "text": "purrr?\n\n\n\n\n📦 purrr - Herramientas para programación funcional\n\nfunciones map que aplican una función a cada elemento de una lista o vector y devuelve un resultado de la misma longitud que la entrada\ntrabaja bien con listas\ncódigo legible y conciso\n\n\n\n\nThomas Mock (2018)\nFunctional Programming in R with purrr"
-  },
-  {
-    "objectID": "encuentro2.html#ejercicio---purrr-para-múltiples-archivos-csv",
-    "href": "encuentro2.html#ejercicio---purrr-para-múltiples-archivos-csv",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Ejercicio - purrr para múltiples archivos CSV",
-    "text": "Ejercicio - purrr para múltiples archivos CSV\n\nUsa el código de hace dos diapositivas para importar los archivos csv generados en el ejercicio anterior usando la función map de purrr.\nCombinemos las tablas en una sola"
-  },
-  {
-    "objectID": "encuentro2.html#funciones-anónimas-notación-actual",
-    "href": "encuentro2.html#funciones-anónimas-notación-actual",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Funciones anónimas, notación actual",
-    "text": "Funciones anónimas, notación actual\nFunciones para llevar (se crean y se ejecutan pero nunca se asignan a un objeto con nombre)\nSintaxis\n\n\n(\\(x) x + 3)(10)\n\n[1] 13\n\n\n\nLa definición va entre paréntesis para separar la función de sus argumentos"
-  },
-  {
-    "objectID": "encuentro2.html#section-2",
-    "href": "encuentro2.html#section-2",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "",
-    "text": "map(pestanas, \\(x) read_excel(\"ejemplos/cafeteria.xlsx\", sheet = x))\n\nequivale a\nread_excel(\"ejemplos/cafeteria.xlslx\", sheet=\"Bebidas\") luego\nread_excel(\"ejemplos/cafeteria.xlslx\", sheet=\"Panaderia\") etc…"
-  },
-  {
-    "objectID": "encuentro2.html#hoy-1",
-    "href": "encuentro2.html#hoy-1",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Hoy",
-    "text": "Hoy\nPaquetes para el encuentro\n\npurrr\ndplyr\nwritexl\nfs"
-  },
-  {
-    "objectID": "encuentro3.html",
-    "href": "encuentro3.html",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "",
-    "text": "# dplyr\ndatos %&gt;% arrange(fecha)\ndatos %&gt;% arrange(desc(ventas))\n\n\n\n\n\n\n# Seleccionar columnas específicas\ndatos %&gt;% select(id, nombre, valor)\n\n# Reordenar todas las columnas\ndatos %&gt;% select(fecha, id, everything())"
-  },
-  {
-    "objectID": "encuentro3.html#operaciones-comunes-con-dataframes",
-    "href": "encuentro3.html#operaciones-comunes-con-dataframes",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "",
-    "text": "# dplyr\ndatos %&gt;% arrange(fecha)\ndatos %&gt;% arrange(desc(ventas))\n\n\n\n\n\n\n# Seleccionar columnas específicas\ndatos %&gt;% select(id, nombre, valor)\n\n# Reordenar todas las columnas\ndatos %&gt;% select(fecha, id, everything())"
-  },
-  {
-    "objectID": "encuentro3.html#operaciones-comunes-continuación",
-    "href": "encuentro3.html#operaciones-comunes-continuación",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Operaciones comunes (continuación)",
-    "text": "Operaciones comunes (continuación)\n\n\n\nSubconjuntos de datos\n\n# Base R\ndatos[datos$ventas &gt; 1000, ]\n\n# dplyr\ndatos %&gt;% filter(ventas &gt; 1000)\ndatos %&gt;% filter(region == \"Norte\", \n                año == 2025)\n\n\n\n\nFiltros\n\n# Filtrar datos faltantes\ndatos %&gt;% filter(!is.na(ventas))\n\n# Filtrar por patrón en texto\ndatos %&gt;% \n  filter(str_detect(producto, \"Excel\"))"
-  },
-  {
-    "objectID": "encuentro3.html#exportando-objetos-de-r-a-hojas-de-cálculo",
-    "href": "encuentro3.html#exportando-objetos-de-r-a-hojas-de-cálculo",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Exportando objetos de R a hojas de cálculo",
-    "text": "Exportando objetos de R a hojas de cálculo\n\nArchivos CSV\n\n# Base R\nwrite.csv(datos, \"resultados.csv\", row.names = FALSE)\n\n# readr (tidyverse)\nwrite_csv(datos, \"resultados.csv\")\n\n\n\nArchivos Excel (con openxlsx)\n\nlibrary(openxlsx)\n\n# Crear un libro de trabajo\nwb &lt;- createWorkbook()\n\n# Agregar una hoja\naddWorksheet(wb, \"Datos\")\nwriteData(wb, \"Datos\", datos)\n\n# Guardar el libro\nsaveWorkbook(wb, \"resultados.xlsx\", overwrite = TRUE)"
-  },
-  {
-    "objectID": "encuentro3.html#exportando-múltiples-dataframes-a-excel",
-    "href": "encuentro3.html#exportando-múltiples-dataframes-a-excel",
-    "title": "R para el tratamiento de Hojas de Cálculo",
-    "section": "Exportando múltiples dataframes a Excel",
-    "text": "Exportando múltiples dataframes a Excel\n\n# Lista de dataframes\nlista_datos &lt;- list(\n  Ventas = datos_ventas,\n  Clientes = datos_clientes,\n  Productos = datos_productos\n)\n\n# Crear un libro con múltiples hojas\nwb &lt;- createWorkbook()\n\n# Agregar cada dataframe como una hoja\nfor (nombre in names(lista_datos)) {\n  addWorksheet(wb, nombre)\n  writeData(wb, nombre, lista_datos[[nombre]])\n}\n\n# Guardar el libro\nsaveWorkbook(wb, \"informe_completo.xlsx\")"
+    "text": "Para el próximo encuentro…\n\nResolveremos problemas comunes con hojas de cálculo:\n\nManejo de fechas\nEncabezados problemáticos\nDisposiciones irregulares de datos\n\nAnalizaremos ejemplos reales\nDiscutiremos recursos útiles y mejores prácticas"
   },
   {
     "objectID": "encuentro3.html#errores-comunes-en-hojas-de-cálculo",
@@ -1468,5 +1237,180 @@
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Errores comunes en hojas de cálculo",
     "text": "Errores comunes en hojas de cálculo\n\nCeldas en blanco con significado implícito\nVarias tablas en una misma hoja\nValores codificados con colores sin columna explicativa\nDatos y metadatos mezclados"
+  },
+  {
+    "objectID": "encuentro3.html#paquetes-para-hoy",
+    "href": "encuentro3.html#paquetes-para-hoy",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Paquetes para hoy",
+    "text": "Paquetes para hoy\n\n\n\n\ngooglesheets4\n\n\n\n\ngoogledrive"
+  },
+  {
+    "objectID": "encuentro3.html#solo-lectura-archivos-públicos",
+    "href": "encuentro3.html#solo-lectura-archivos-públicos",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Solo lectura, archivos públicos",
+    "text": "Solo lectura, archivos públicos\nPara acceder a recursos públicos en modalidad solo lectura, usamos gs4_deauth() (sin argumentos).\n\n\nlibrary(googlesheets4)\ngs4_deauth()"
+  },
+  {
+    "objectID": "encuentro3.html#imporando-hojas-con-googlesheets4",
+    "href": "encuentro3.html#imporando-hojas-con-googlesheets4",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Imporando hojas con googlesheets4",
+    "text": "Imporando hojas con googlesheets4\nUsamos read_sheet() y nos referimos a los archivos por URL o ID. \n\nlibrary(googlesheets4)\nread_sheet(\"https://docs.google.com/spreadsheets/d/1iuFDsNK3VHysX0zja3NpNb_f3xK3ny5Y_BlO9XuIZRQ/edit?usp=sharing\"\n)\nread_sheet(\"1iuFDsNK3VHysX0zja3NpNb_f3xK3ny5Y_BlO9XuIZRQ\")"
+  },
+  {
+    "objectID": "encuentro3.html#inició-de-autenticación-con-google",
+    "href": "encuentro3.html#inició-de-autenticación-con-google",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Inició de Autenticación con Google",
+    "text": "Inició de Autenticación con Google\n\n# Autenticación interactiva\ngs4_auth()\ndrive_auth()\n\nTambién podemos usar un archivo de credenciales o tokens existentes gs4_auth(path = \"tu_archivo_credenciales.json\") gs4_auth(token = \"token.rds\")"
+  },
+  {
+    "objectID": "encuentro3.html#trabajo-con-archivos-en-la-nube",
+    "href": "encuentro3.html#trabajo-con-archivos-en-la-nube",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Trabajo con archivos en la nube",
+    "text": "Trabajo con archivos en la nube\n\nAcceso desde cualquier máquina\nColaboración en tiempo real\nControl de versiones\nIntegración con otros servicios de Google (en caso de Google Sheets)"
+  },
+  {
+    "objectID": "encuentro3.html#inició-de-sesión-con-google",
+    "href": "encuentro3.html#inició-de-sesión-con-google",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Inició de sesión con Google",
+    "text": "Inició de sesión con Google\nPara poder trabajar con archivos privados y/o modificar las hojas, necesitamos una cuenta de Google para iniciar sesión.\n\n\n# Autenticación interactiva\ngs4_auth()\ndrive_auth()\n\nTambién podemos usar un archivo de credenciales o tokens existentes\ngs4_auth(path = \"tu_archivo_credenciales.json\")\ngs4_auth(token = \"token.rds\")"
+  },
+  {
+    "objectID": "encuentro3.html#section",
+    "href": "encuentro3.html#section",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "Revisemos el archivo gwater.xlsx \n\nreadxl::read_excel(\"hojs/gwater.xlsx\")\n\n# A tibble: 6 × 3\n  Sitio `Cambio permeabilidad` `Litros extraidos`\n  &lt;chr&gt;                  &lt;dbl&gt;              &lt;dbl&gt;\n1 A                        120                814\n2 A                        139                561\n3 B                        331                 77\n4 C                        267                613\n5 C                        133                 89\n6 D                        157                756"
+  },
+  {
+    "objectID": "encuentro3.html#datos-críticos-de-agua-subterránea-municipal",
+    "href": "encuentro3.html#datos-críticos-de-agua-subterránea-municipal",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Datos críticos de agua subterránea municipal",
+    "text": "Datos críticos de agua subterránea municipal\n\n\n\n\n\n\n\n\nSitio\nCambio permeabilidad1\nLitros extraidos2\n\n\n\n\nA\n120\n814\n\n\nA\n139\n561\n\n\nB\n331\n77\n\n\nC\n267\n613\n\n\nC\n133\n89\n\n\nD\n157\n756\n\n\n\n1 Valores negativos en negritas\n\n\n2 Sitios aprobados en amarillo"
+  },
+  {
+    "objectID": "encuentro3.html#veterinaria",
+    "href": "encuentro3.html#veterinaria",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Veterinaria",
+    "text": "Veterinaria\n\n\n\n\n\n\n\n\nNombre\nTipo\nPeso1\nChip2\n\n\n\n\nMax\ngato\n8.2\nsi\n\n\nBear\nperro\n68.9\nsi\n\n\nLuna\nperro\n33.0\nsi\n\n\nCooper\ngato\n4.1\nsi\n\n\nBanjo\nperro\n36.5\nsi\n\n\nPebbles\ngato\n10.7\nno\n\n\nBrutus\nperro\n81.0\nsi\n\n\n\n1 Negro = libras, Azul = kilos\n\n\n2 Naranja = falta revisar"
+  },
+  {
+    "objectID": "encuentro3.html#section-1",
+    "href": "encuentro3.html#section-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "# A tibble: 7 × 4\n  Nombre  Tipo   Peso Chip \n  &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;\n1 Max     gato    8.2 si   \n2 Bear    perro  68.9 si   \n3 Luna    perro  33   si   \n4 Cooper  gato    4.1 si   \n5 Banjo   perro  36.5 si   \n6 Pebbles gato   10.7 no   \n7 Brutus  perro  81   si"
+  },
+  {
+    "objectID": "encuentro3.html#section-2",
+    "href": "encuentro3.html#section-2",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "unheadr\n\nSitio official \n\n\nFunciones para limpar datos\nCombina readxl y tidyxl para desenterrar los valores de formato en hojas de cálculo y los pega a los valores de celda"
+  },
+  {
+    "objectID": "encuentro3.html#desenmascarando-el-formato",
+    "href": "encuentro3.html#desenmascarando-el-formato",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Desenmascarando el formato",
+    "text": "Desenmascarando el formato\n\n\n\n\n\nEl formato en una hoja de cálculo puede contener información valiosa que no se captura al importar los datos como un data frame tradicional.\nCambiemos la extensión de alguna hoja con formato a .zip y exploremos su contenido."
+  },
+  {
+    "objectID": "encuentro3.html#ejemplo-caracoles",
+    "href": "encuentro3.html#ejemplo-caracoles",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Ejemplo caracoles",
+    "text": "Ejemplo caracoles\n\n\n\n\n\n“los días de muestreo se indican en amarillo”"
+  },
+  {
+    "objectID": "encuentro3.html#section-3",
+    "href": "encuentro3.html#section-3",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "# Extraer datos estructurados preservando información de formato\ndatos_con_formato &lt;- celdas %&gt;%\n  filter(row &gt;= 2, !is.na(character) | !is.na(numeric)) %&gt;%\n  select(row, col, character, numeric, font_color) %&gt;%\n  behead(\"up\", \"variable\") %&gt;%\n  select(row, variable, character, numeric, font_color)"
+  },
+  {
+    "objectID": "encuentro3.html#ejercicio---traslados",
+    "href": "encuentro3.html#ejercicio---traslados",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Ejercicio - Traslados",
+    "text": "Ejercicio - Traslados\nImporta este archivo público de Google Sheets que contiene datos de traslados durante un congreso, el ID es:\n1v38NIbOj9wAMBmB8MYLIczQjsblrc1g5Ns3ssa05owE\n\n¿Hay alguna columna que nos gustaría modificar para mejorar la estructura de los datos?"
+  },
+  {
+    "objectID": "encuentro3.html#trabajando-con-hojaspestañas-específicas",
+    "href": "encuentro3.html#trabajando-con-hojaspestañas-específicas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Trabajando con hojas/pestañas específicas",
+    "text": "Trabajando con hojas/pestañas específicas\n\n# Obtener nombres de las pestañas\nsheet_names &lt;- sheet_names(id_sheet)\n\n# Leer múltiples pestañas\nsheet_names %&gt;%\n  purrr::set_names() %&gt;%\n  purrr::map(\\(x) read_sheet(id_sheet, sheet = x))\n\nTambién podemos usar el argumento range para leer rangos específicos (ej, “A1:D20”)"
+  },
+  {
+    "objectID": "encuentro3.html#ejercicio---múltiples-hojas",
+    "href": "encuentro3.html#ejercicio---múltiples-hojas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Ejercicio - Múltiples Hojas",
+    "text": "Ejercicio - Múltiples Hojas\nImportar todas las hojas de este Google Sheets, el ID es:\n1E01TbbwZ4S_RWX5RhkrjKXuyRG1EvT5Iog9QHuhIoms"
+  },
+  {
+    "objectID": "encuentro3.html#archivos-en-sheets-y-drive-1",
+    "href": "encuentro3.html#archivos-en-sheets-y-drive-1",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Archivos en Sheets y Drive",
+    "text": "Archivos en Sheets y Drive\n\n# Descargar un archivo\ndrive_download(archivo, path = \"ventas_local.xlsx\")\n\n# Compartir un archivo\ndrive_share(archivo, role = \"reader\", \n            type = \"anyone\", \n            emailAddress = \"usuario@example.com\")"
+  },
+  {
+    "objectID": "encuentro3.html#formato",
+    "href": "encuentro3.html#formato",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "¿Formato?",
+    "text": "¿Formato?\n\nColores de fondo o texto que representan información\nCeldas combinadas\nAlineación específica de datos\nFuentes o tamaños de texto significativos\nBordes que denotan agrupaciones"
+  },
+  {
+    "objectID": "encuentro3.html#demostración-unheadr",
+    "href": "encuentro3.html#demostración-unheadr",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Demostración unheadr",
+    "text": "Demostración unheadr\nImportemos y procesemos los ejemplos de agua y mascotas usando unheadr"
+  },
+  {
+    "objectID": "encuentro3.html",
+    "href": "encuentro3.html",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "Pipes\nListas e iteración en R\nTrabajo con múltiples archivos o pestañas\nExportando objetos"
+  },
+  {
+    "objectID": "extra.html",
+    "href": "extra.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "Celdas en blanco con significado implícito\nVarias tablas en una misma hoja\nValores codificados con colores sin columna explicativa\nDatos y metadatos mezclados"
+  },
+  {
+    "objectID": "extra.html#errores-comunes-en-hojas-de-cálculo",
+    "href": "extra.html#errores-comunes-en-hojas-de-cálculo",
+    "title": "Untitled",
+    "section": "",
+    "text": "Celdas en blanco con significado implícito\nVarias tablas en una misma hoja\nValores codificados con colores sin columna explicativa\nDatos y metadatos mezclados"
+  },
+  {
+    "objectID": "extra.html#operaciones-comunes-con-dataframes",
+    "href": "extra.html#operaciones-comunes-con-dataframes",
+    "title": "Untitled",
+    "section": "Operaciones comunes con dataframes",
+    "text": "Operaciones comunes con dataframes\n\n\n\nOrdenar filas\n\n# dplyr\ndatos %&gt;% arrange(fecha)\ndatos %&gt;% arrange(desc(ventas))\n\n\n\n\nReacomodar columnas\n\n# Seleccionar columnas específicas\ndatos %&gt;% select(id, nombre, valor)\n\n# Reordenar todas las columnas\ndatos %&gt;% select(fecha, id, everything())"
+  },
+  {
+    "objectID": "extra.html#operaciones-comunes-continuación",
+    "href": "extra.html#operaciones-comunes-continuación",
+    "title": "Untitled",
+    "section": "Operaciones comunes (continuación)",
+    "text": "Operaciones comunes (continuación)\n\n\n\nSubconjuntos de datos\n\n# Base R\ndatos[datos$ventas &gt; 1000, ]\n\n# dplyr\ndatos %&gt;% filter(ventas &gt; 1000)\ndatos %&gt;% filter(region == \"Norte\", \n                año == 2025)\n\n\n\n\nFiltros\n\n# Filtrar datos faltantes\ndatos %&gt;% filter(!is.na(ventas))\n\n# Filtrar por patrón en texto\ndatos %&gt;% \n  filter(str_detect(producto, \"Excel\"))"
   }
 ]

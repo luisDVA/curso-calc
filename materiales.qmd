@@ -12,10 +12,13 @@ title: "Materiales del Curso"
 
 
 ### Segundo encuentro (18 de Noviembre)
+
 [Listas, iteración y exportación](encuentro2.qmd){.external target="_blank"}
 
 ### Tercer encuentro (25 de Noviembre)
-<!--[Archivos en la nube y formato](encuentro3.qmd){.external target="_blank"}-->
+[Archivos en la nube y formato](encuentro3.qmd){.external target="_blank"}
+
+[[Ejemplos 3er encuentro](ejemplos/enc3.zip)]{style="font-size: 1.2rem; background-color: #fff0f3; padding: 1px;	border-radius: 6px; text-align: center;"}
 
 ### Cuarto encuentro (2 de Diciembre)
 <!--[Problemas comunes y ejemplos prácticos](encuentro4.qmd){.external target="_blank"}-->

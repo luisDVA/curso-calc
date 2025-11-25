@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Materiales del Curso – R para el tratamiento de Hojas de Cálculo</title>
+<title>Untitled – R para el tratamiento de Hojas de Cálculo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -96,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Contenido y horario</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./materiales.html" aria-current="page"> 
+    <a class="nav-link" href="./materiales.html"> 
 <span class="menu-text">Materiales del curso</span></a>
   </li>  
 </ul>
@@ -115,13 +150,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#presentaciones-y-archivos" id="toc-presentaciones-y-archivos" class="nav-link active" data-scroll-target="#presentaciones-y-archivos">Presentaciones y archivos</a>
-  <ul class="collapse">
-  <li><a href="#primer-encuentro-11-de-noviembre" id="toc-primer-encuentro-11-de-noviembre" class="nav-link" data-scroll-target="#primer-encuentro-11-de-noviembre">Primer encuentro (11 de Noviembre)</a></li>
-  <li><a href="#segundo-encuentro-18-de-noviembre" id="toc-segundo-encuentro-18-de-noviembre" class="nav-link" data-scroll-target="#segundo-encuentro-18-de-noviembre">Segundo encuentro (18 de Noviembre)</a></li>
-  <li><a href="#tercer-encuentro-25-de-noviembre" id="toc-tercer-encuentro-25-de-noviembre" class="nav-link" data-scroll-target="#tercer-encuentro-25-de-noviembre">Tercer encuentro (25 de Noviembre)</a></li>
-  <li><a href="#cuarto-encuentro-2-de-diciembre" id="toc-cuarto-encuentro-2-de-diciembre" class="nav-link" data-scroll-target="#cuarto-encuentro-2-de-diciembre">Cuarto encuentro (2 de Diciembre)</a></li>
-  </ul></li>
+  <li><a href="#errores-comunes-en-hojas-de-cálculo" id="toc-errores-comunes-en-hojas-de-cálculo" class="nav-link active" data-scroll-target="#errores-comunes-en-hojas-de-cálculo">Errores comunes en hojas de cálculo</a></li>
+  <li><a href="#operaciones-comunes-con-dataframes" id="toc-operaciones-comunes-con-dataframes" class="nav-link" data-scroll-target="#operaciones-comunes-con-dataframes">Operaciones comunes con dataframes</a></li>
+  <li><a href="#operaciones-comunes-continuación" id="toc-operaciones-comunes-continuación" class="nav-link" data-scroll-target="#operaciones-comunes-continuación">Operaciones comunes (continuación)</a></li>
   </ul>
 </nav>
     </div>
@@ -130,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Materiales del Curso</h1>
+<h1 class="title">Untitled</h1>
 </div>
 
 
@@ -147,28 +178,73 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentaciones-y-archivos" class="level2">
-<h2 class="anchored" data-anchor-id="presentaciones-y-archivos">Presentaciones y archivos</h2>
-<section id="primer-encuentro-11-de-noviembre" class="level3">
-<h3 class="anchored" data-anchor-id="primer-encuentro-11-de-noviembre">Primer encuentro (11 de Noviembre)</h3>
-<p><a href="./encuentro1.html" class="external" target="_blank">Introducción y fundamentos</a></p>
-<p><span style="font-size: 1.2rem; background-color: #fff0f3; padding: 1px;    border-radius: 6px; text-align: center;"><a href="ejemplos/enc1.zip">Ejemplos 1er encuentro</a></span></p>
+<section id="errores-comunes-en-hojas-de-cálculo" class="level2">
+<h2 class="anchored" data-anchor-id="errores-comunes-en-hojas-de-cálculo">Errores comunes en hojas de cálculo</h2>
+<ul>
+<li>Celdas en blanco con significado implícito</li>
+<li>Varias tablas en una misma hoja</li>
+<li>Valores codificados con colores sin columna explicativa</li>
+<li>Datos y metadatos mezclados</li>
+</ul>
 </section>
-<section id="segundo-encuentro-18-de-noviembre" class="level3">
-<h3 class="anchored" data-anchor-id="segundo-encuentro-18-de-noviembre">Segundo encuentro (18 de Noviembre)</h3>
-<p><a href="./encuentro2.html" class="external" target="_blank">Listas, iteración y exportación</a></p>
+<section id="operaciones-comunes-con-dataframes" class="level2">
+<h2 class="anchored" data-anchor-id="operaciones-comunes-con-dataframes">Operaciones comunes con dataframes</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="ordenar-filas" class="level3">
+<h3 class="anchored" data-anchor-id="ordenar-filas">Ordenar filas</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dplyr</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(fecha)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(ventas))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="tercer-encuentro-25-de-noviembre" class="level3">
-<h3 class="anchored" data-anchor-id="tercer-encuentro-25-de-noviembre">Tercer encuentro (25 de Noviembre)</h3>
-<p><a href="./encuentro3.html" class="external" target="_blank">Archivos en la nube y formato</a></p>
-<p><span style="font-size: 1.2rem; background-color: #fff0f3; padding: 1px;    border-radius: 6px; text-align: center;"><a href="ejemplos/enc3.zip">Ejemplos 3er encuentro</a></span></p>
+</div><div class="column" style="width:50%;">
+<section id="reacomodar-columnas" class="level3">
+<h3 class="anchored" data-anchor-id="reacomodar-columnas">Reacomodar columnas</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionar columnas específicas</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span> <span class="fu">select</span>(id, nombre, valor)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Reordenar todas las columnas</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span> <span class="fu">select</span>(fecha, id, <span class="fu">everything</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="cuarto-encuentro-2-de-diciembre" class="level3">
-<h3 class="anchored" data-anchor-id="cuarto-encuentro-2-de-diciembre">Cuarto encuentro (2 de Diciembre)</h3>
-<!--[Problemas comunes y ejemplos prácticos](encuentro4.qmd){.external target="_blank"}-->
+</div>
+</div>
+</section>
+<section id="operaciones-comunes-continuación" class="level2">
+<h2 class="anchored" data-anchor-id="operaciones-comunes-continuación">Operaciones comunes (continuación)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="subconjuntos-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="subconjuntos-de-datos">Subconjuntos de datos</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base R</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>datos[datos<span class="sc">$</span>ventas <span class="sc">&gt;</span> <span class="dv">1000</span>, ]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># dplyr</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(ventas <span class="sc">&gt;</span> <span class="dv">1000</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"Norte"</span>, </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                año <span class="sc">==</span> <span class="dv">2025</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="filtros" class="level3">
+<h3 class="anchored" data-anchor-id="filtros">Filtros</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrar datos faltantes</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ventas))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrar por patrón en texto</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(producto, <span class="st">"Excel"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

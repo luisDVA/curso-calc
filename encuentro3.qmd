@@ -1,7 +1,7 @@
 ---
 title: "R para el tratamiento de Hojas de Cálculo"
 subtitle: "Tercer encuentro: Archivos en la nube y formato"
-date: "25 de Noviembre, 2025"
+date: "11/25/2025"
 author: "Luis D. Verde Arregoitia"
 format:
   revealjs:
@@ -10,202 +10,113 @@ format:
 editor: visual
 ---
 
-## Operaciones comunes con dataframes
-
-:::: columns
-::: {.column width="50%"}
-### Ordenar filas
-```{r}
-#| eval: false
-#| echo: true
-
-# dplyr
-datos %>% arrange(fecha)
-datos %>% arrange(desc(ventas))
-```
-:::
-
-::: {.column width="50%"}
-### Reacomodar columnas
-```{r}
-#| eval: false
-#| echo: true
-# Seleccionar columnas específicas
-datos %>% select(id, nombre, valor)
-
-# Reordenar todas las columnas
-datos %>% select(fecha, id, everything())
-```
-:::
-::::
-
-## Operaciones comunes (continuación)
-
-:::: columns
-::: {.column width="50%"}
-### Subconjuntos de datos
-```{r}
-#| eval: false
-#| echo: true
-# Base R
-datos[datos$ventas > 1000, ]
-
-# dplyr
-datos %>% filter(ventas > 1000)
-datos %>% filter(region == "Norte", 
-                año == 2025)
-```
-:::
-
-::: {.column width="50%"}
-### Filtros
-```{r}
-#| eval: false
-#| echo: true
-# Filtrar datos faltantes
-datos %>% filter(!is.na(ventas))
-
-# Filtrar por patrón en texto
-datos %>% 
-  filter(str_detect(producto, "Excel"))
-```
-:::
-::::
-
-## Exportando objetos de R a hojas de cálculo
-
-### Archivos CSV
-
-```{r}
-#| eval: false
-#| echo: true
-# Base R
-write.csv(datos, "resultados.csv", row.names = FALSE)
-
-# readr (tidyverse)
-write_csv(datos, "resultados.csv")
-```
-
-### Archivos Excel (con openxlsx)
-
-```{r}
-#| eval: false
-#| echo: true
-library(openxlsx)
-
-# Crear un libro de trabajo
-wb <- createWorkbook()
-
-# Agregar una hoja
-addWorksheet(wb, "Datos")
-writeData(wb, "Datos", datos)
-
-# Guardar el libro
-saveWorkbook(wb, "resultados.xlsx", overwrite = TRUE)
-```
-
-## Exportando múltiples dataframes a Excel
-
-```{r}
-#| eval: false
-#| echo: true
-# Lista de dataframes
-lista_datos <- list(
-  Ventas = datos_ventas,
-  Clientes = datos_clientes,
-  Productos = datos_productos
-)
-
-# Crear un libro con múltiples hojas
-wb <- createWorkbook()
-
-# Agregar cada dataframe como una hoja
-for (nombre in names(lista_datos)) {
-  addWorksheet(wb, nombre)
-  writeData(wb, nombre, lista_datos[[nombre]])
-}
-
-# Guardar el libro
-saveWorkbook(wb, "informe_completo.xlsx")
-```
-
-
 
 ## Resumen del encuentro anterior
-
+-   Pipes
 -   Listas e iteración en R
 -   Trabajo con múltiples archivos o pestañas
--   Exportación de datos a Excel
--   Operaciones comunes con dataframes
+-   Exportando objetos
 
 ## Objetivos de hoy
 
+-   Operaciones comunes con dataframes
 -   Conectar R con Google Sheets
 -   Leer y escribir datos en hojas de cálculo en la nube
 -   Trabajar con formato de celdas
 -   Importar hojas con formato conservando su estructura
 
-## Trabajo con archivos en la nube (Google Sheets)
+## Trabajo con archivos en la nube
 
-### Ventajas
-
--   Acceso desde cualquier dispositivo
+-   Acceso desde cualquier máquina
 -   Colaboración en tiempo real
 -   Control de versiones
--   Integración con otros servicios de Google
--   Automatización de tareas
+-   Integración con otros servicios de Google (en caso de Google Sheets)
 
-## Inicio de sesión y conexión con la API de Google
+## Paquetes para hoy
 
-### Instalación de paquetes necesarios
+:::: columns
+::: {.column width="50%"}
+![](https://googlesheets4.tidyverse.org/logo.png){width="100"}
+
+- `googlesheets4`
+:::
+
+::: {.column width="50%"}
+![](https://googledrive.tidyverse.org/logo.png){width="100"}
+
+- `googledrive`
+:::
+::::
+
+
+## Solo lectura, archivos públicos
+
+Para acceder a recursos públicos en modalidad solo lectura, usamos `gs4_deauth()` (sin argumentos). 
+
+<br/>
 
 ```{r}
 #| eval: false
 #| echo: true
-# Instalar paquetes
-install.packages(c("googlesheets4", "googledrive"))
 
-# Cargar paquetes
 library(googlesheets4)
-library(googledrive)
+gs4_deauth()
 ```
 
-## Autenticación con Google
 
+## Imporando hojas con googlesheets4
+
+Usamos `read_sheet()` y nos referimos a los archivos por URL o ID.
+<br/>
 ```{r}
 #| eval: false
 #| echo: true
-# Autenticación con interacción del usuario
+
+library(googlesheets4)
+read_sheet("https://docs.google.com/spreadsheets/d/1iuFDsNK3VHysX0zja3NpNb_f3xK3ny5Y_BlO9XuIZRQ/edit?usp=sharing"
+)
+read_sheet("1iuFDsNK3VHysX0zja3NpNb_f3xK3ny5Y_BlO9XuIZRQ")
+```
+
+
+## Ejercicio - Traslados {background="#fff0f3"} 
+
+Importa este archivo público de Google Sheets que contiene datos de traslados durante un congreso, el ID es:  
+`1v38NIbOj9wAMBmB8MYLIczQjsblrc1g5Ns3ssa05owE`  
+
+<br/>
+
+_¿Hay alguna columna que nos gustaría modificar para mejorar la estructura de los datos?_
+
+## Inició de sesión con Google
+
+Para poder trabajar con archivos privados y/o modificar las hojas, necesitamos una cuenta de Google para iniciar sesión.
+
+<br/>
+```{r}
+#| eval: false
+#| echo: true
+# Autenticación interactiva
 gs4_auth()
 drive_auth()
 
-# También es posible autenticar con un archivo de credenciales
-gs4_auth(path = "tu_archivo_credenciales.json")
-
-# O usar un token guardado previamente
-gs4_auth(token = "token.rds")
 ```
+
+También podemos usar un archivo de credenciales o tokens existentes  
+`gs4_auth(path = "tu_archivo_credenciales.json")`  
+`gs4_auth(token = "token.rds")`
+
 
 ## Accediendo a hojas de Google Sheets
 
 ```{r}
 #| eval: false
 #| echo: true
-# Listar hojas de cálculo disponibles
+# Lista de hojas de cálculo disponibles
 mis_sheets <- gs4_find()
-
-# Acceder por URL
-datos <- read_sheet("https://docs.google.com/spreadsheets/d/abc123...")
-
-# Acceder por ID
-id_sheet <- "abc123..."
-datos <- read_sheet(id_sheet)
-
-# Acceder a una hoja específica
-datos <- read_sheet(id_sheet, sheet = "Ventas")
 ```
 
-## Trabajando con pestañas específicas
+## Trabajando con hojas/pestañas específicas
 
 ```{r}
 #| eval: false
@@ -214,15 +125,18 @@ datos <- read_sheet(id_sheet, sheet = "Ventas")
 sheet_names <- sheet_names(id_sheet)
 
 # Leer múltiples pestañas
-all_sheets <- sheet_names %>%
+sheet_names %>%
   purrr::set_names() %>%
-  purrr::map(~read_sheet(id_sheet, sheet = .x))
-
-# Leer rangos específicos
-datos_rango <- read_sheet(id_sheet, 
-                         sheet = "Ventas",
-                         range = "A1:D20")
+  purrr::map(\(x) read_sheet(id_sheet, sheet = x))
 ```
+
+También podemos usar el argumento `range` para leer rangos específicos (ej, "A1:D20") 
+
+## Ejercicio - Múltiples Hojas {background="#fff0f3"} 
+
+Importar todas las hojas de este Google Sheets, el ID es:  
+
+`1E01TbbwZ4S_RWX5RhkrjKXuyRG1EvT5Iog9QHuhIoms`
 
 ## Escribiendo datos a Google Sheets
 
@@ -233,12 +147,10 @@ datos_rango <- read_sheet(id_sheet,
 nuevo_sheet <- gs4_create("Nuevo análisis")
 
 # Escribir datos a una hoja existente
-write_sheet(datos, ss = id_sheet, sheet = "Nueva pestaña")
+write_sheet(datos, 
+            ss = identificador, 
+            sheet = "Nueva pestaña")
 
-# Actualizar datos existentes
-sheet_write(datos_actualizados, 
-            ss = id_sheet, 
-            sheet = "Datos")
 ```
 
 ## Archivos en Sheets y Drive
@@ -251,168 +163,198 @@ mis_archivos <- drive_find(type = "spreadsheet")
 
 # Buscar un archivo específico
 archivo <- drive_find(pattern = "Ventas 2025")
+```
+
+## Archivos en Sheets y Drive
+
+```{r}
+#| eval: false
+#| echo: true
 
 # Descargar un archivo
 drive_download(archivo, path = "ventas_local.xlsx")
 
 # Compartir un archivo
 drive_share(archivo, role = "reader", 
-            type = "anyone", emailAddress = "usuario@example.com")
+            type = "anyone", 
+            emailAddress = "usuario@example.com")
 ```
 
-## Integración de Sheets con dplyr
 
-```{r}
-#| eval: false
-#| echo: true
-library(dplyr)
+# Trabajando con formato en celdas o texto
 
-# Leer datos de Google Sheets
-datos_ventas <- read_sheet(id_sheet, sheet = "Ventas")
+## ¿Formato?
 
-# Aplicar operaciones dplyr
-resultados <- datos_ventas %>%
-  filter(region == "Norte") %>%
-  group_by(producto) %>%
-  summarize(total_ventas = sum(ventas, na.rm = TRUE)) %>%
-  arrange(desc(total_ventas))
-
-# Escribir resultados de vuelta a Google Sheets
-write_sheet(resultados, ss = id_sheet, sheet = "Resultados")
-```
-
-## Trabajando con formato en celdas o texto
-
-### Desafíos comunes con formato
-
--   Colores de fondo o texto que representan información
+-   Colores de fondo o texto **que representan información**
 -   Celdas combinadas
 -   Alineación específica de datos
--   Fuentes o tamaños de texto significativos
+-   Fuentes o tamaños de texto **significativos**
 -   Bordes que denotan agrupaciones
 
-## Importando hojas con formato
+## 
 
-El paquete `openxlsx` permite conservar y manipular formato:
-
+Revisemos el archivo `gwater.xlsx`
+<br/>
 ```{r}
-#| eval: false
+#| eval: true
 #| echo: true
-library(openxlsx)
 
-# Leer un archivo Excel preservando el formato
-wb <- loadWorkbook("datos_con_formato.xlsx")
-
-# Obtener hojas disponibles
-sheets <- getSheetNames("datos_con_formato.xlsx")
-
-# Leer una hoja específica como dataframe
-datos <- read.xlsx(wb, sheet = 1)
+readxl::read_excel("hojs/gwater.xlsx")
 ```
 
-## Detectando celdas con formato en Excel
+## Datos críticos de agua subterránea municipal
 
 ```{r}
-#| eval: false
-#| echo: true
-# Obtener información de estilo de celda
-estilos <- getStyles(wb)
+#| eval: true
+#| echo: false
+library(gt)
+```
+```{r}
+#| eval: true
+#| echo: false
 
-# Verificar celdas con formato específico
-celdas_rojas <- getCellStyle(wb, sheet = 1, rows = 1:10, cols = 1:5)
+forgts::forgts("hojs/gwater.xlsx") |> 
+  tab_footnote(
+    footnote = "Valores negativos en negritas",
+    locations = cells_column_labels(columns = 2)
+  ) |> 
+ tab_footnote(
+     footnote = "Sitios aprobados en amarillo",
+     locations = cells_column_labels(columns = 3)
+   ) |> 
+    tab_style(
+    style = cell_borders(
+      sides = "all",
+      weight = px(1.5),
+      style = "solid"
+    ),
+    locations = list(cells_body(),cells_column_labels())
+  ) |> 
+  opt_table_font(size=36)
 
-# Identificar celdas con fondo rojo (para análisis posterior)
-for (i in 1:length(celdas_rojas)) {
-  if (!is.null(celdas_rojas[[i]]$fill$fillFg) && 
-      celdas_rojas[[i]]$fill$fillFg == "#FF0000") {
-    # Procesar estas celdas de forma especial
-    print(paste("Celda con fondo rojo encontrada en posición:", i))
-  }
-}
 ```
 
-## Creando informes con formato personalizado
+
+## Veterinaria
 
 ```{r}
-#| eval: false
-#| echo: true
-# Crear un libro de trabajo
-wb <- createWorkbook()
-addWorksheet(wb, "Informe")
 
-# Escribir datos
-writeData(wb, "Informe", datos)
+forgts::forgts("hojs/pets.xlsx") |> 
+  tab_footnote(
+    footnote = "Negro = libras, Azul = kilos",
+    locations = cells_column_labels(columns = 3)
+  ) |> 
+tab_footnote(
+    footnote = "Naranja = falta revisar",
+    locations = cells_column_labels(columns = 4)
+  ) |> 
+    tab_style(
+    style = cell_borders(
+      sides = "all",
+      weight = px(1.5),
+      style = "solid"
+    ),
+    locations = list(cells_body(),cells_column_labels())
+  ) |> 
+  
+  opt_table_font(size=30)
 
-# Definir estilos
-estilo_encabezado <- createStyle(
-  fontColour = "#FFFFFF", fontSize = 12,
-  fgFill = "#8BC34A", textDecoration = "bold",
-  halign = "center", border = "TopBottom"
-)
-
-estilo_numerico <- createStyle(
-  numFmt = "#,##0.00", 
-  halign = "right"
-)
-
-# Aplicar estilos
-addStyle(wb, "Informe", estilo_encabezado, 
-         rows = 1, cols = 1:ncol(datos))
-
-# Aplicar formato condicional
-conditionalFormatting(wb, "Informe", 
-                     cols = 3, 
-                     rows = 2:(nrow(datos) + 1),
-                     rule = "$C2>1000", 
-                     style = createStyle(fgFill = "#AED581"))
 ```
+
+##
+
+```{r}
+readxl::read_excel("hojs/pets.xlsx")
+```
+
+# Importando hojas con formato
+
+##
+
+::::: {.r-package}
+::: {.r-package-content}
+<h3 class="r-package-title">unheadr</h3>
+<a href="https://unheadr.liomys.mx" class="r-package-link">Sitio official</a>
+<br/>
+<p class="r-package-description">
+- Funciones para limpar datos
+
+- Combina `readxl` y `tidyxl` para desenterrar los valores de formato en hojas de cálculo y los pega a los valores de celda
+
+</p>
+:::
+
+![](images/unheadrlogo.png){.r-package-logo}
+::::
+
+
+## Desenmascarando el formato
+ 
+:::: columns
+::: {.column width="30%"}
+![](images/scoobyxl.png){width="80%"}
+:::
+::: {.column width="70%"}
+- El formato en una hoja de cálculo puede contener información valiosa que no se captura al importar los datos como un data frame tradicional.
+
+- Cambiemos la extensión de alguna hoja con formato a .zip y exploremos su contenido.
+:::
+::::
+
+
+## Ejemplo caracoles
+
+![](images/snailsheetsmol.png)
+
+. . .
+
+:::: columns
+::: {.column width="70%"}
+
+> "los días de muestreo se indican en amarillo"
+
+:::
+::: {.column width="30%"}
+
+![](images/snailsm.png)
+
+:::
+::::
+
+##  Demostración unheadr {background="#fff0f3"} 
+
+Importemos y procesemos los ejemplos de agua y mascotas usando unheadr
+
 
 ## Extrayendo información de celdas con formato
-
 ```{r}
 #| eval: false
 #| echo: true
+
 library(tidyxl)
 library(unpivotr)
 
 # Importar Excel preservando formato
-celdas <- xlsx_cells("datos_con_formato.xlsx", sheets = "Hoja1")
+celdas <- xlsx_cells("hojs/pets.xlsx")
 
-# Examinar celdas con formato específico
+# Examinar celdas con formato específico (colores de fuente)
 celdas_con_color <- celdas %>%
-  filter(!is.na(fill_color))
+  filter(!is.na(font_color))
 
-# Extraer datos estructurados de celdas con formato
-datos_estructurados <- celdas %>%
-  filter(row >= 5, col >= 3, col <= 7) %>%
-  select(row, col, character, numeric, formula, is_blank) %>%
-  behead("up", header) %>%
-  behead("left", categoria)
 ```
 
-## Generando informes con estilo consistente
+##
 
 ```{r}
 #| eval: false
 #| echo: true
-# Función para aplicar un estilo consistente a informes
-crear_informe_estilo <- function(datos, nombre_archivo) {
-  wb <- createWorkbook()
-  addWorksheet(wb, "Informe")
-  
-  writeData(wb, "Informe", datos)
-  
-  # Aplicar estilos corporativos
-  addStyle(wb, "Informe", estilo_corporativo_header(), 
-           rows = 1, cols = 1:ncol(datos))
-  
-  # Ajustar ancho de columnas
-  setColWidths(wb, "Informe", cols = 1:ncol(datos), 
-               widths = "auto")
-  
-  # Guardar archivo
-  saveWorkbook(wb, nombre_archivo, overwrite = TRUE)
-}
+
+# Extraer datos estructurados preservando información de formato
+datos_con_formato <- celdas %>%
+  filter(row >= 2, !is.na(character) | !is.na(numeric)) %>%
+  select(row, col, character, numeric, font_color) %>%
+  behead("up", "variable") %>%
+  select(row, variable, character, numeric, font_color)
 ```
 
 ## Para el próximo encuentro...
@@ -424,13 +366,5 @@ crear_informe_estilo <- function(datos, nombre_archivo) {
 -   Analizaremos ejemplos reales
 -   Discutiremos recursos útiles y mejores prácticas
 
-### Ejercicio sugerido
+# !Gracias!
 
-Conecten R con una hoja de Google Sheets y practiquen la lectura/escritura de datos.
-
-## Errores comunes en hojas de cálculo
-
--   Celdas en blanco con significado implícito
--   Varias tablas en una misma hoja
--   Valores codificados con colores sin columna explicativa
--   Datos y metadatos mezclados

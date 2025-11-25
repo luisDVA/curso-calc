@@ -1,0 +1,15 @@
+{
+  "hash": "cb59d251272a92a26c96c733fb22e729",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Untitled\"\nformat: html\n---\n\n## Errores comunes en hojas de cálculo\n\n-   Celdas en blanco con significado implícito\n-   Varias tablas en una misma hoja\n-   Valores codificados con colores sin columna explicativa\n-   Datos y metadatos mezclados\n\n\n\n## Operaciones comunes con dataframes\n\n:::: columns\n::: {.column width=\"50%\"}\n### Ordenar filas\n\n::: {.cell}\n\n```{.r .cell-code}\n# dplyr\ndatos %>% arrange(fecha)\ndatos %>% arrange(desc(ventas))\n```\n:::\n\n:::\n\n::: {.column width=\"50%\"}\n### Reacomodar columnas\n\n::: {.cell}\n\n```{.r .cell-code}\n# Seleccionar columnas específicas\ndatos %>% select(id, nombre, valor)\n\n# Reordenar todas las columnas\ndatos %>% select(fecha, id, everything())\n```\n:::\n\n:::\n::::\n\n## Operaciones comunes (continuación)\n\n:::: columns\n::: {.column width=\"50%\"}\n### Subconjuntos de datos\n\n::: {.cell}\n\n```{.r .cell-code}\n# Base R\ndatos[datos$ventas > 1000, ]\n\n# dplyr\ndatos %>% filter(ventas > 1000)\ndatos %>% filter(region == \"Norte\", \n                año == 2025)\n```\n:::\n\n:::\n\n::: {.column width=\"50%\"}\n### Filtros\n\n::: {.cell}\n\n```{.r .cell-code}\n# Filtrar datos faltantes\ndatos %>% filter(!is.na(ventas))\n\n# Filtrar por patrón en texto\ndatos %>% \n  filter(str_detect(producto, \"Excel\"))\n```\n:::\n\n:::\n::::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
