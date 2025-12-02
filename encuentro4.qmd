@@ -152,7 +152,6 @@ Funciones de `dplyr` para manejo de datos. Materiales útiles [aquí](https://lu
 
 * `mutate` para crear columnas nuevas  
 * `str_detect` de stringr para buscar patrones en texto (detectar los indicadores de formato) 
-* Funciones join para juntar tablas  
 
 
 ## Recursos útiles
