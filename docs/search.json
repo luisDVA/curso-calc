@@ -1481,6 +1481,6 @@
     "href": "encuentro4.html#ejemplo-real-veterinaria-continuación",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Ejemplo real: Veterinaria (continuación)",
-    "text": "Ejemplo real: Veterinaria (continuación)\nFunciones de dplyr para manejo de datos. Materiales útiles aquí\n\nmutate para crear columnas nuevas\n\nstr_detect de stringr para buscar patrones en texto (detectar los indicadores de formato)\nFunciones join para juntar tablas"
+    "text": "Ejemplo real: Veterinaria (continuación)\nFunciones de dplyr para manejo de datos. Materiales útiles aquí\n\nmutate para crear columnas nuevas\n\nstr_detect de stringr para buscar patrones en texto (detectar los indicadores de formato)"
   }
 ]
