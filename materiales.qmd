@@ -21,6 +21,8 @@ title: "Materiales del Curso"
 [[Ejemplos 3er encuentro](ejemplos/enc3.zip)]{style="font-size: 1.2rem; background-color: #fff0f3; padding: 1px;	border-radius: 6px; text-align: center;"}
 
 ### Cuarto encuentro (2 de Diciembre)
-<!--[Problemas comunes y ejemplos prácticos](encuentro4.qmd){.external target="_blank"}-->
+[Problemas comunes y ejemplos prácticos](encuentro4.qmd){.external target="_blank"}
+
+[[Archivos 4to encuentro](hojs/hojs.zip)]{style="font-size: 1.2rem; background-color: #fff0f3; padding: 1px;	border-radius: 6px; text-align: center;"}
 
 

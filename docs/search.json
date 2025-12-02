@@ -214,14 +214,14 @@
     "href": "materiales.html",
     "title": "Materiales del Curso",
     "section": "",
-    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\nEjemplos 3er encuentro"
+    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\nEjemplos 3er encuentro\n\n\n\nProblemas comunes y ejemplos prácticos\nArchivos 4to encuentro"
   },
   {
     "objectID": "materiales.html#presentaciones-y-archivos",
     "href": "materiales.html#presentaciones-y-archivos",
     "title": "Materiales del Curso",
     "section": "",
-    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\nEjemplos 3er encuentro"
+    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\nEjemplos 3er encuentro\n\n\n\nProblemas comunes y ejemplos prácticos\nArchivos 4to encuentro"
   },
   {
     "objectID": "examplesite/course.html",
@@ -536,14 +536,14 @@
     "href": "encuentro4.html#resumen-del-curso-hasta-ahora",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Resumen del curso hasta ahora",
-    "text": "Resumen del curso hasta ahora\n\nIntroducción a hojas de cálculo y buenas prácticas\nListas e iteración para trabajar con múltiples archivos\nImportación y exportación de datos\nTrabajo con archivos en la nube y formato"
+    "text": "Resumen del curso hasta ahora\n\nIntroducción a hojas de cálculo y buenas prácticas\nListas e iteración para trabajar con múltiples archivos\nImportar y exportar de datos\nTrabajo con archivos en la nube\nArchivos con formato de celda"
   },
   {
     "objectID": "encuentro4.html#objetivos-de-hoy",
     "href": "encuentro4.html#objetivos-de-hoy",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Objetivos de hoy",
-    "text": "Objetivos de hoy\n\nResolver problemas comunes con hojas de cálculo\nAnalizar ejemplos reales\nExplorar recursos útiles\nDiscutir estrategias avanzadas"
+    "text": "Objetivos de hoy\n\nResolver problemas comunes con hojas de cálculo\nLimpiar ejemplos reales"
   },
   {
     "objectID": "encuentro4.html#resolviendo-problemas-comunes",
@@ -557,7 +557,7 @@
     "href": "encuentro4.html#trabajando-con-fechas",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Trabajando con fechas",
-    "text": "Trabajando con fechas\nLas fechas son notoriamente difíciles de manejar en hojas de cálculo:\n\n# Importar datos con fechas\nlibrary(readxl)\ndatos &lt;- read_excel(\"datos_fechas.xlsx\", \n                    col_types = c(\"date\", \"text\", \"numeric\"))\n\n# Formateo de fechas con lubridate\nlibrary(lubridate)\nfechas_arregladas &lt;- mdy(datos$fecha_texto)  # Mes-día-año\nfechas_arregladas2 &lt;- dmy(datos$fecha_texto) # Día-mes-año\nfechas_arregladas3 &lt;- ymd(datos$fecha_texto) # Año-mes-día"
+    "text": "Trabajando con fechas\nLas fechas suelen causar confusión al manejar hojas de cálculo en R\n\nlibrary(readxl)\nread_excel(\"hojs/fechasx.xlsx\",sheet=2)\n\n# A tibble: 6 × 3\n  Sitio Fecha               FechaNum\n  &lt;chr&gt; &lt;dttm&gt;                 &lt;dbl&gt;\n1 A     2024-12-07 00:00:00    45633\n2 A     2024-10-08 00:00:00    45573\n3 C     2024-11-08 00:00:00    45604\n4 A     2024-10-08 00:00:00    45573\n5 A     2023-07-07 00:00:00    45114\n6 B     2025-07-11 00:00:00    45849"
   },
   {
     "objectID": "encuentro4.html#problemas-comunes-con-fechas",
@@ -571,14 +571,14 @@
     "href": "encuentro4.html#encabezados-problemáticos",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Encabezados problemáticos",
-    "text": "Encabezados problemáticos\nProblemas comunes: - Espacios o caracteres especiales - Múltiples filas de encabezados - Nombres duplicados - Celdas combinadas\n\n# Limpiar nombres de columnas\nlibrary(janitor)\ndatos_limpios &lt;- clean_names(datos)\n\n# Especificar manualmente los nombres\ncolnames(datos) &lt;- c(\"id\", \"nombre\", \"valor\", \"fecha\")\n\n# Saltar filas iniciales y especificar nombres\ndatos &lt;- read_excel(\"archivo.xlsx\", \n                    skip = 3, \n                    col_names = c(\"id\", \"nombre\", \"valor\", \"fecha\"))"
+    "text": "Encabezados problemáticos\nProblemas comunes:\n- Espacios o caracteres especiales\n- Múltiples filas de encabezados\n- Nombres duplicados\n- Celdas combinadas"
   },
   {
     "objectID": "encuentro4.html#manejo-de-múltiples-filas-de-encabezados",
     "href": "encuentro4.html#manejo-de-múltiples-filas-de-encabezados",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Manejo de múltiples filas de encabezados",
-    "text": "Manejo de múltiples filas de encabezados\n\n# Leer encabezados compuestos\nencabezados &lt;- read_excel(\"datos_complejos.xlsx\", \n                         n_max = 2)\n\n# Combinar encabezados\nnombres_combinados &lt;- paste(\n  encabezados[1, ], \n  encabezados[2, ], \n  sep = \"_\"\n)\n\n# Leer el archivo con encabezados combinados\ndatos &lt;- read_excel(\"datos_complejos.xlsx\", \n                    skip = 2, \n                    col_names = nombres_combinados)"
+    "text": "Manejo de múltiples filas de encabezados\n\n\n# A tibble: 6 × 3\n  Especie Peso   Longitud\n  &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;   \n1 &lt;NA&gt;    en     en      \n2 &lt;NA&gt;    gramos mm      \n3 A       34     170     \n4 B       33     182     \n5 C       29     166     \n6 D       31     179     \n\n\nSe introducen NAs y aparecen fragmentos de encabezados en las filas que deberían contener datos."
   },
   {
     "objectID": "encuentro4.html#disposiciones-irregulares-de-los-datos",
@@ -634,21 +634,21 @@
     "href": "encuentro4.html#recursos-útiles",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Recursos útiles",
-    "text": "Recursos útiles\nPaquetes destacados\n\nreadxl, openxlsx: Importación/exportación de Excel\ngooglesheets4: Trabajo con Google Sheets\ntidyxl, unpivotr: Manejo de hojas con formato complejo\njanitor: Limpieza de datos y nombres de columnas\nlubridate: Manejo de fechas\nnaniar: Análisis de datos faltantes"
+    "text": "Recursos útiles\nPaquetes destacados\n\nreadxl Importar desde Excel\ngooglesheets4: Trabajo con Google Sheets\ntidyxl, unpivotr, unheadr: Manejo de hojas con formato\njanitor: Limpieza de datos y nombres de columnas\nlubridate: Manejo de fechas\nnaniar: Análisis de datos faltantes"
   },
   {
     "objectID": "encuentro4.html#recursos-útiles-continuación",
     "href": "encuentro4.html#recursos-útiles-continuación",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Recursos útiles (continuación)",
-    "text": "Recursos útiles (continuación)\nDocumentación y tutoriales\n\nR for Data Science (2e)\nDocumentación de readxl\nImportando datos en tidyverse\nWorking with Spreadsheets\nopenxlsx Vignettes"
+    "text": "Recursos útiles (continuación)\nDocumentación y tutoriales\n\nR for Data Science (2e)\nDocumentación de readxl\nWorking with Spreadsheets, The Carpentries"
   },
   {
     "objectID": "encuentro4.html#consejos-finales",
     "href": "encuentro4.html#consejos-finales",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Consejos finales",
-    "text": "Consejos finales\n\nVerificar siempre los datos importados (primeras y últimas filas)\nDocumentar el procesamiento de datos\nUtilizar funciones para tareas repetitivas\nCrear flujos de trabajo reproducibles\nConsiderar la creación de paquetes para organizaciones"
+    "text": "Consejos finales\n\nVerificar siempre los datos importados (en Excel y en data frame)\nDocumentar el procesamiento de datos\nUtilizar funciones para tareas repetitivas\nCrear flujos de trabajo reproducibles"
   },
   {
     "objectID": "encuentro4.html#discusión",
@@ -1412,5 +1412,75 @@
     "title": "Untitled",
     "section": "Operaciones comunes (continuación)",
     "text": "Operaciones comunes (continuación)\n\n\n\nSubconjuntos de datos\n\n# Base R\ndatos[datos$ventas &gt; 1000, ]\n\n# dplyr\ndatos %&gt;% filter(ventas &gt; 1000)\ndatos %&gt;% filter(region == \"Norte\", \n                año == 2025)\n\n\n\n\nFiltros\n\n# Filtrar datos faltantes\ndatos %&gt;% filter(!is.na(ventas))\n\n# Filtrar por patrón en texto\ndatos %&gt;% \n  filter(str_detect(producto, \"Excel\"))"
+  },
+  {
+    "objectID": "encuentro4.html#paquetes-para-hoy",
+    "href": "encuentro4.html#paquetes-para-hoy",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Paquetes para hoy",
+    "text": "Paquetes para hoy\n\njanitor: Limpieza de datos\nlubridate: Manejo de fechas\ntidyr: Transformación de datos\ndplyr: Manipulación de datos\nunheadr: Manejo de encabezados complejos y formato de celdas\nstringr: Manipulación de cadenas de texto"
+  },
+  {
+    "objectID": "encuentro4.html#qué-pasó",
+    "href": "encuentro4.html#qué-pasó",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "¿Qué pasó?",
+    "text": "¿Qué pasó?\n\nExcel a veces guarda las fechas como números seriales contando el 1ro de enero de 1900 (o a veces 1904) como día 0. Depende del formato de celda en el archivo de interés."
+  },
+  {
+    "objectID": "encuentro4.html#janitor",
+    "href": "encuentro4.html#janitor",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "janitor 🪣",
+    "text": "janitor 🪣\nHerramientas para limpiar tablas desordenadas.\n\nlibrary(janitor)\nexcel_numeric_to_date(45573)\n\n[1] \"2024-10-08\"\n\n\nLas fechas tienen su propia clase en R y se pueden manejar con R base o con el paquete lubridate."
+  },
+  {
+    "objectID": "encuentro4.html#homogenización-de-nombres-de-columnas",
+    "href": "encuentro4.html#homogenización-de-nombres-de-columnas",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Homogenización de nombres de columnas",
+    "text": "Homogenización de nombres de columnas\nclean_names() de janitor nos ayuda a limpiar todos los nombres de las columnas\n\n# Limpiar nombres de columnas\nlibrary(janitor)\nread_excel(\"hojs/gwater.xlsx\") |&gt; clean_names()\n\n# A tibble: 6 × 3\n  sitio cambio_permeabilidad litros_extraidos\n  &lt;chr&gt;                &lt;dbl&gt;            &lt;dbl&gt;\n1 A                      120              814\n2 A                      139              561\n3 B                      331               77\n4 C                      267              613\n5 C                      133               89\n6 D                      157              756"
+  },
+  {
+    "objectID": "encuentro4.html#solución-con-unheadr",
+    "href": "encuentro4.html#solución-con-unheadr",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Solución con unheadr",
+    "text": "Solución con unheadr\nmash_colnames() combina múltiples filas de encabezados en nombres únicos. Especificamos cuántas filas tienen fragmentos de encabezado.\n\nlibrary(unheadr)\nread_excel(\"hojs/encab.xlsx\") |&gt;\n  mash_colnames(n_name_rows =  2)\n\n# A tibble: 4 × 3\n  Especie Peso_en_gramos Longitud_en_mm\n  &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;         \n1 A       34             170           \n2 B       33             182           \n3 C       29             166           \n4 D       31             179"
+  },
+  {
+    "objectID": "encuentro4.html#encabezados-multi-fila",
+    "href": "encuentro4.html#encabezados-multi-fila",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Encabezados multi-fila",
+    "text": "Encabezados multi-fila\n\nread_excel(\"hojs/encab.xlsx\")\n\n# A tibble: 6 × 3\n  Especie Peso   Longitud\n  &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;   \n1 &lt;NA&gt;    en     en      \n2 &lt;NA&gt;    gramos mm      \n3 A       34     170     \n4 B       33     182     \n5 C       29     166     \n6 D       31     179     \n\n\nSe introducen NAs y aparecen fragmentos de encabezados en las filas que deberían contener datos."
+  },
+  {
+    "objectID": "encuentro4.html#valores-faltantes",
+    "href": "encuentro4.html#valores-faltantes",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Valores faltantes",
+    "text": "Valores faltantes\nPor defecto -&gt; celdas vacías o especificar con na= al momento de importar.\n\nread_excel(\"hojs/gwaterNA.xlsx\")\n\n# A tibble: 6 × 3\n  Sitio `Cambio permeabilidad` `Litros extraidos`\n  &lt;chr&gt; &lt;chr&gt;                  &lt;chr&gt;             \n1 A     120                    814               \n2 A     139                    561               \n3 FALTA 331                    77                \n4 C     FALTA                  613               \n5 C     133                    FALTA             \n6 D     157                    756"
+  },
+  {
+    "objectID": "encuentro4.html#section",
+    "href": "encuentro4.html#section",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "read_excel(\"hojs/gwaterNA.xlsx\",na=\"FALTA\")\n\n# A tibble: 6 × 3\n  Sitio `Cambio permeabilidad` `Litros extraidos`\n  &lt;chr&gt;                  &lt;dbl&gt;              &lt;dbl&gt;\n1 A                        120                814\n2 A                        139                561\n3 &lt;NA&gt;                     331                 77\n4 C                         NA                613\n5 C                        133                 NA\n6 D                        157                756\n\n\nA posteriori, podemos usar na_if() de dplyr"
+  },
+  {
+    "objectID": "encuentro4.html#ejemplo-real-veterinaria",
+    "href": "encuentro4.html#ejemplo-real-veterinaria",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Ejemplo real: Veterinaria",
+    "text": "Ejemplo real: Veterinaria\nArchivo: mascotas2.xlsx\nDos hojas, múltiples problemas:\n- Encabezados multi-fila\n- Fechas en formatos inconsistentes\n- Valores faltantes\n- Información guardada únicamente en formato\n- Información relacionada en las dos hojas"
+  },
+  {
+    "objectID": "encuentro4.html#ejemplo-real-veterinaria-continuación",
+    "href": "encuentro4.html#ejemplo-real-veterinaria-continuación",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "Ejemplo real: Veterinaria (continuación)",
+    "text": "Ejemplo real: Veterinaria (continuación)\nFunciones de dplyr para manejo de datos. Materiales útiles aquí\n\nmutate para crear columnas nuevas\n\nstr_detect de stringr para buscar patrones en texto (detectar los indicadores de formato)\nFunciones join para juntar tablas"
   }
 ]

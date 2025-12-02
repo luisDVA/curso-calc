@@ -10,6 +10,7 @@
   <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="Luis D. Verde Arregoitia">
+  <meta name="dcterms.date" content="2025-02-12">
   <title>R para el tratamiento de Hojas de Cálculo</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -95,7 +96,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-e99faeb1294de528e2724344c2758c89.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-bc2c920cd23eed4a2622704dad756200.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -204,24 +205,34 @@ Luis D. Verde Arregoitia
 </div>
 </div>
 
-  <p class="date">Invalid Date</p>
+  <p class="date">2025-02-12</p>
 </section>
 <section id="resumen-del-curso-hasta-ahora" class="slide level2">
 <h2>Resumen del curso hasta ahora</h2>
 <ul>
 <li>Introducción a hojas de cálculo y buenas prácticas</li>
 <li>Listas e iteración para trabajar con múltiples archivos</li>
-<li>Importación y exportación de datos</li>
-<li>Trabajo con archivos en la nube y formato</li>
+<li>Importar y exportar de datos</li>
+<li>Trabajo con archivos en la nube</li>
+<li>Archivos con formato de celda</li>
 </ul>
 </section>
 <section id="objetivos-de-hoy" class="slide level2">
 <h2>Objetivos de hoy</h2>
 <ul>
 <li>Resolver problemas comunes con hojas de cálculo</li>
-<li>Analizar ejemplos reales</li>
-<li>Explorar recursos útiles</li>
-<li>Discutir estrategias avanzadas</li>
+<li>Limpiar ejemplos reales</li>
+</ul>
+</section>
+<section id="paquetes-para-hoy" class="slide level2">
+<h2>Paquetes para hoy</h2>
+<ul>
+<li><code>janitor</code>: Limpieza de datos</li>
+<li><code>lubridate</code>: Manejo de fechas</li>
+<li><code>tidyr</code>: Transformación de datos</li>
+<li><code>dplyr</code>: Manipulación de datos</li>
+<li><code>unheadr</code>: Manejo de encabezados complejos y formato de celdas</li>
+<li><code>stringr</code>: Manipulación de cadenas de texto</li>
 </ul>
 </section>
 <section id="resolviendo-problemas-comunes" class="slide level2">
@@ -237,249 +248,168 @@ Luis D. Verde Arregoitia
 </section>
 <section id="trabajando-con-fechas" class="slide level2">
 <h2>Trabajando con fechas</h2>
-<p>Las fechas son notoriamente difíciles de manejar en hojas de cálculo:</p>
+<p>Las fechas suelen causar confusión al manejar hojas de cálculo en R</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Importar datos con fechas</span></span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(readxl)</span>
-<span id="cb1-3"><a></a>datos <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"datos_fechas.xlsx"</span>, </span>
-<span id="cb1-4"><a></a>                    <span class="at">col_types =</span> <span class="fu">c</span>(<span class="st">"date"</span>, <span class="st">"text"</span>, <span class="st">"numeric"</span>))</span>
-<span id="cb1-5"><a></a></span>
-<span id="cb1-6"><a></a><span class="co"># Formateo de fechas con lubridate</span></span>
-<span id="cb1-7"><a></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb1-8"><a></a>fechas_arregladas <span class="ot">&lt;-</span> <span class="fu">mdy</span>(datos<span class="sc">$</span>fecha_texto)  <span class="co"># Mes-día-año</span></span>
-<span id="cb1-9"><a></a>fechas_arregladas2 <span class="ot">&lt;-</span> <span class="fu">dmy</span>(datos<span class="sc">$</span>fecha_texto) <span class="co"># Día-mes-año</span></span>
-<span id="cb1-10"><a></a>fechas_arregladas3 <span class="ot">&lt;-</span> <span class="fu">ymd</span>(datos<span class="sc">$</span>fecha_texto) <span class="co"># Año-mes-día</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a></a><span class="fu">read_excel</span>(<span class="st">"hojs/fechasx.xlsx"</span>,<span class="at">sheet=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  Sitio Fecha               FechaNum
+  &lt;chr&gt; &lt;dttm&gt;                 &lt;dbl&gt;
+1 A     2024-12-07 00:00:00    45633
+2 A     2024-10-08 00:00:00    45573
+3 C     2024-11-08 00:00:00    45604
+4 A     2024-10-08 00:00:00    45573
+5 A     2023-07-07 00:00:00    45114
+6 B     2025-07-11 00:00:00    45849</code></pre>
+</div>
 </div>
 </section>
-<section id="problemas-comunes-con-fechas" class="slide level2">
-<h2>Problemas comunes con fechas</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Conversión de números de Excel a fechas R</span></span>
-<span id="cb2-2"><a></a>fechas_excel <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(datos<span class="sc">$</span>numero_excel, <span class="at">origin =</span> <span class="st">"1899-12-30"</span>)</span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a><span class="co"># Extracción de componentes de fecha</span></span>
-<span id="cb2-5"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb2-6"><a></a>datos <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> </span>
-<span id="cb2-7"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb2-8"><a></a>    año <span class="ot">=</span> <span class="fu">year</span>(fecha),</span>
-<span id="cb2-9"><a></a>    <span class="at">mes =</span> <span class="fu">month</span>(fecha),</span>
-<span id="cb2-10"><a></a>    <span class="at">dia =</span> <span class="fu">day</span>(fecha),</span>
-<span id="cb2-11"><a></a>    <span class="at">dia_semana =</span> <span class="fu">wday</span>(fecha, <span class="at">label =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb2-12"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="qué-pasó" class="slide level2">
+<h2>¿Qué pasó?</h2>
+<div class="fragment">
+<p>Excel a veces guarda las fechas como números seriales contando el 1ro de enero de 1900 (o a veces 1904) como día 0. Depende del formato de celda en el archivo de interés.</p>
 </div>
+</section>
+<section id="janitor" class="slide level2">
+<h2>janitor 🪣</h2>
+<p>Herramientas para limpiar tablas desordenadas.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(janitor)</span>
+<span id="cb3-2"><a></a><span class="fu">excel_numeric_to_date</span>(<span class="dv">45573</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2024-10-08"</code></pre>
+</div>
+</div>
+<p>Las fechas tienen su propia clase en R y se pueden manejar con R base o con el paquete <code>lubridate</code>.</p>
 </section>
 <section id="encabezados-problemáticos" class="slide level2">
 <h2>Encabezados problemáticos</h2>
-<p>Problemas comunes: - Espacios o caracteres especiales - Múltiples filas de encabezados - Nombres duplicados - Celdas combinadas</p>
+<p>Problemas comunes:<br>
+- Espacios o caracteres especiales<br>
+- Múltiples filas de encabezados<br>
+- Nombres duplicados<br>
+- Celdas combinadas</p>
+</section>
+<section id="homogenización-de-nombres-de-columnas" class="slide level2">
+<h2>Homogenización de nombres de columnas</h2>
+<p><code>clean_names()</code> de <code>janitor</code> nos ayuda a limpiar todos los nombres de las columnas</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Limpiar nombres de columnas</span></span>
-<span id="cb3-2"><a></a><span class="fu">library</span>(janitor)</span>
-<span id="cb3-3"><a></a>datos_limpios <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(datos)</span>
-<span id="cb3-4"><a></a></span>
-<span id="cb3-5"><a></a><span class="co"># Especificar manualmente los nombres</span></span>
-<span id="cb3-6"><a></a><span class="fu">colnames</span>(datos) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"nombre"</span>, <span class="st">"valor"</span>, <span class="st">"fecha"</span>)</span>
-<span id="cb3-7"><a></a></span>
-<span id="cb3-8"><a></a><span class="co"># Saltar filas iniciales y especificar nombres</span></span>
-<span id="cb3-9"><a></a>datos <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"archivo.xlsx"</span>, </span>
-<span id="cb3-10"><a></a>                    <span class="at">skip =</span> <span class="dv">3</span>, </span>
-<span id="cb3-11"><a></a>                    <span class="at">col_names =</span> <span class="fu">c</span>(<span class="st">"id"</span>, <span class="st">"nombre"</span>, <span class="st">"valor"</span>, <span class="st">"fecha"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Limpiar nombres de columnas</span></span>
+<span id="cb5-2"><a></a><span class="fu">library</span>(janitor)</span>
+<span id="cb5-3"><a></a><span class="fu">read_excel</span>(<span class="st">"hojs/gwater.xlsx"</span>) <span class="sc">|&gt;</span> <span class="fu">clean_names</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  sitio cambio_permeabilidad litros_extraidos
+  &lt;chr&gt;                &lt;dbl&gt;            &lt;dbl&gt;
+1 A                      120              814
+2 A                      139              561
+3 B                      331               77
+4 C                      267              613
+5 C                      133               89
+6 D                      157              756</code></pre>
+</div>
 </div>
 </section>
-<section id="manejo-de-múltiples-filas-de-encabezados" class="slide level2">
-<h2>Manejo de múltiples filas de encabezados</h2>
+<section id="encabezados-multi-fila" class="slide level2">
+<h2>Encabezados multi-fila</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># Leer encabezados compuestos</span></span>
-<span id="cb4-2"><a></a>encabezados <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"datos_complejos.xlsx"</span>, </span>
-<span id="cb4-3"><a></a>                         <span class="at">n_max =</span> <span class="dv">2</span>)</span>
-<span id="cb4-4"><a></a></span>
-<span id="cb4-5"><a></a><span class="co"># Combinar encabezados</span></span>
-<span id="cb4-6"><a></a>nombres_combinados <span class="ot">&lt;-</span> <span class="fu">paste</span>(</span>
-<span id="cb4-7"><a></a>  encabezados[<span class="dv">1</span>, ], </span>
-<span id="cb4-8"><a></a>  encabezados[<span class="dv">2</span>, ], </span>
-<span id="cb4-9"><a></a>  <span class="at">sep =</span> <span class="st">"_"</span></span>
-<span id="cb4-10"><a></a>)</span>
-<span id="cb4-11"><a></a></span>
-<span id="cb4-12"><a></a><span class="co"># Leer el archivo con encabezados combinados</span></span>
-<span id="cb4-13"><a></a>datos <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"datos_complejos.xlsx"</span>, </span>
-<span id="cb4-14"><a></a>                    <span class="at">skip =</span> <span class="dv">2</span>, </span>
-<span id="cb4-15"><a></a>                    <span class="at">col_names =</span> nombres_combinados)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">read_excel</span>(<span class="st">"hojs/encab.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  Especie Peso   Longitud
+  &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;   
+1 &lt;NA&gt;    en     en      
+2 &lt;NA&gt;    gramos mm      
+3 A       34     170     
+4 B       33     182     
+5 C       29     166     
+6 D       31     179     </code></pre>
+</div>
+</div>
+<p>Se introducen NAs y aparecen fragmentos de encabezados en las filas que deberían contener datos.</p>
+</section>
+<section id="solución-con-unheadr" class="slide level2">
+<h2>Solución con unheadr</h2>
+<p><code>mash_colnames()</code> combina múltiples filas de encabezados en nombres únicos. Especificamos cuántas filas tienen fragmentos de encabezado.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">library</span>(unheadr)</span>
+<span id="cb9-2"><a></a><span class="fu">read_excel</span>(<span class="st">"hojs/encab.xlsx"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a></a>  <span class="fu">mash_colnames</span>(<span class="at">n_name_rows =</span>  <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+  Especie Peso_en_gramos Longitud_en_mm
+  &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;         
+1 A       34             170           
+2 B       33             182           
+3 C       29             166           
+4 D       31             179           </code></pre>
+</div>
 </div>
 </section>
-<section id="disposiciones-irregulares-de-los-datos" class="slide level2">
-<h2>Disposiciones irregulares de los datos</h2>
-<p>Problemas comunes: - Tablas con filas de subtotales o resúmenes - Múltiples tablas en una hoja - Filas en blanco con significado - Estructuras pivotadas incorrectamente</p>
-</section>
-<section id="manejo-de-datos-con-estructuras-irregulares" class="slide level2">
-<h2>Manejo de datos con estructuras irregulares</h2>
+<section id="valores-faltantes" class="slide level2">
+<h2>Valores faltantes</h2>
+<p>Por defecto -&gt; celdas vacías o especificar con <code>na=</code> al momento de importar.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Eliminar filas de subtotales</span></span>
-<span id="cb5-2"><a></a>datos <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> </span>
-<span id="cb5-3"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(descripcion, <span class="st">"Total|Subtotal"</span>))</span>
-<span id="cb5-4"><a></a></span>
-<span id="cb5-5"><a></a><span class="co"># Extraer una tabla específica de una hoja</span></span>
-<span id="cb5-6"><a></a>tabla1 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"archivo.xlsx"</span>, </span>
-<span id="cb5-7"><a></a>                     <span class="at">range =</span> <span class="st">"A5:F20"</span>)</span>
-<span id="cb5-8"><a></a></span>
-<span id="cb5-9"><a></a>tabla2 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"archivo.xlsx"</span>, </span>
-<span id="cb5-10"><a></a>                     <span class="at">range =</span> <span class="st">"A25:F40"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">read_excel</span>(<span class="st">"hojs/gwaterNA.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  Sitio `Cambio permeabilidad` `Litros extraidos`
+  &lt;chr&gt; &lt;chr&gt;                  &lt;chr&gt;             
+1 A     120                    814               
+2 A     139                    561               
+3 FALTA 331                    77                
+4 C     FALTA                  613               
+5 C     133                    FALTA             
+6 D     157                    756               </code></pre>
+</div>
 </div>
 </section>
-<section id="tratamiento-de-datos-pivotados-incorrectamente" class="slide level2">
-<h2>Tratamiento de datos pivotados incorrectamente</h2>
+<section id="section" class="slide level2">
+<h2></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># Convertir datos de formato ancho a largo</span></span>
-<span id="cb6-2"><a></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb6-3"><a></a>datos_largos <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span></span>
-<span id="cb6-4"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb6-5"><a></a>    <span class="at">cols =</span> <span class="sc">-</span><span class="fu">c</span>(id, categoria),</span>
-<span id="cb6-6"><a></a>    <span class="at">names_to =</span> <span class="st">"mes"</span>,</span>
-<span id="cb6-7"><a></a>    <span class="at">values_to =</span> <span class="st">"valor"</span></span>
-<span id="cb6-8"><a></a>  )</span>
-<span id="cb6-9"><a></a></span>
-<span id="cb6-10"><a></a><span class="co"># Convertir datos de formato largo a ancho</span></span>
-<span id="cb6-11"><a></a>datos_anchos <span class="ot">&lt;-</span> datos_largos <span class="sc">%&gt;%</span></span>
-<span id="cb6-12"><a></a>  <span class="fu">pivot_wider</span>(</span>
-<span id="cb6-13"><a></a>    <span class="at">names_from =</span> mes,</span>
-<span id="cb6-14"><a></a>    <span class="at">values_from =</span> valor</span>
-<span id="cb6-15"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">read_excel</span>(<span class="st">"hojs/gwaterNA.xlsx"</span>,<span class="at">na=</span><span class="st">"FALTA"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  Sitio `Cambio permeabilidad` `Litros extraidos`
+  &lt;chr&gt;                  &lt;dbl&gt;              &lt;dbl&gt;
+1 A                        120                814
+2 A                        139                561
+3 &lt;NA&gt;                     331                 77
+4 C                         NA                613
+5 C                        133                 NA
+6 D                        157                756</code></pre>
 </div>
+</div>
+<p>A posteriori, podemos usar <code>na_if()</code> de <code>dplyr</code></p>
 </section>
-<section id="manejo-de-valores-faltantes" class="slide level2">
-<h2>Manejo de valores faltantes</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Identificar valores faltantes</span></span>
-<span id="cb7-2"><a></a><span class="fu">library</span>(naniar)</span>
-<span id="cb7-3"><a></a><span class="fu">miss_var_summary</span>(datos)</span>
-<span id="cb7-4"><a></a></span>
-<span id="cb7-5"><a></a><span class="co"># Filtrar o reemplazar valores faltantes</span></span>
-<span id="cb7-6"><a></a>datos <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(valor))</span>
-<span id="cb7-7"><a></a></span>
-<span id="cb7-8"><a></a><span class="co"># Imputación de valores faltantes</span></span>
-<span id="cb7-9"><a></a>datos <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span></span>
-<span id="cb7-10"><a></a>  <span class="fu">mutate</span>(<span class="at">valor =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(valor), </span>
-<span id="cb7-11"><a></a>                         <span class="fu">mean</span>(valor, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
-<span id="cb7-12"><a></a>                         valor))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="ejemplo-real-veterinaria" class="slide level2">
+<h2>Ejemplo real: Veterinaria</h2>
+<p>Archivo: <code>mascotas2.xlsx</code></p>
+<p>Dos hojas, múltiples problemas:<br>
+- Encabezados multi-fila<br>
+- Fechas en formatos inconsistentes<br>
+- Valores faltantes<br>
+- Información guardada únicamente en formato<br>
+- Información relacionada en las dos hojas</p>
 </section>
-<section id="ejemplos-reales-caso-1---datos-de-ventas" class="slide level2">
-<h2>Ejemplos reales: Caso 1 - Datos de ventas</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Problema: Archivo de ventas con múltiples pestañas mensuales</span></span>
-<span id="cb8-2"><a></a><span class="co"># y formatos inconsistentes</span></span>
-<span id="cb8-3"><a></a></span>
-<span id="cb8-4"><a></a><span class="co"># Solución:</span></span>
-<span id="cb8-5"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb8-6"><a></a><span class="fu">library</span>(readxl)</span>
-<span id="cb8-7"><a></a></span>
-<span id="cb8-8"><a></a><span class="co"># 1. Identificar todas las pestañas</span></span>
-<span id="cb8-9"><a></a>pestanas <span class="ot">&lt;-</span> <span class="fu">excel_sheets</span>(<span class="st">"ventas_anuales.xlsx"</span>)</span>
-<span id="cb8-10"><a></a></span>
-<span id="cb8-11"><a></a><span class="co"># 2. Función para procesar cada pestaña</span></span>
-<span id="cb8-12"><a></a>procesar_pestana <span class="ot">&lt;-</span> <span class="cf">function</span>(sheet_name) {</span>
-<span id="cb8-13"><a></a>  <span class="co"># Leer los datos saltando encabezados irrelevantes</span></span>
-<span id="cb8-14"><a></a>  datos_crudos <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"ventas_anuales.xlsx"</span>, </span>
-<span id="cb8-15"><a></a>                             <span class="at">sheet =</span> sheet_name, </span>
-<span id="cb8-16"><a></a>                             <span class="at">skip =</span> <span class="dv">3</span>)</span>
-<span id="cb8-17"><a></a>  </span>
-<span id="cb8-18"><a></a>  <span class="co"># Limpiar nombres de columnas</span></span>
-<span id="cb8-19"><a></a>  datos_limpios <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(datos_crudos)</span>
-<span id="cb8-20"><a></a>  </span>
-<span id="cb8-21"><a></a>  <span class="co"># Eliminar filas de resumen</span></span>
-<span id="cb8-22"><a></a>  datos_filtrados <span class="ot">&lt;-</span> datos_limpios <span class="sc">%&gt;%</span></span>
-<span id="cb8-23"><a></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(codigo_producto), </span>
-<span id="cb8-24"><a></a>           <span class="sc">!</span><span class="fu">str_detect</span>(producto, <span class="st">"Total"</span>))</span>
-<span id="cb8-25"><a></a>  </span>
-<span id="cb8-26"><a></a>  <span class="co"># Agregar columna de mes</span></span>
-<span id="cb8-27"><a></a>  datos_filtrados <span class="sc">%&gt;%</span></span>
-<span id="cb8-28"><a></a>    <span class="fu">mutate</span>(<span class="at">mes =</span> sheet_name)</span>
-<span id="cb8-29"><a></a>}</span>
-<span id="cb8-30"><a></a></span>
-<span id="cb8-31"><a></a><span class="co"># 3. Aplicar la función a todas las pestañas y combinar</span></span>
-<span id="cb8-32"><a></a>datos_combinados <span class="ot">&lt;-</span> pestanas <span class="sc">%&gt;%</span></span>
-<span id="cb8-33"><a></a>  <span class="fu">map_dfr</span>(procesar_pestana)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="ejemplos-reales-caso-2---datos-gubernamentales" class="slide level2">
-<h2>Ejemplos reales: Caso 2 - Datos gubernamentales</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Problema: Reportes de presupuesto con encabezados</span></span>
-<span id="cb9-2"><a></a><span class="co"># compuestos y múltiples niveles jerárquicos</span></span>
-<span id="cb9-3"><a></a></span>
-<span id="cb9-4"><a></a><span class="co"># Solución:</span></span>
-<span id="cb9-5"><a></a><span class="co"># 1. Leer encabezados</span></span>
-<span id="cb9-6"><a></a>encabezados <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"presupuesto.xlsx"</span>, <span class="at">n_max =</span> <span class="dv">2</span>)</span>
-<span id="cb9-7"><a></a>encabezados_combinados <span class="ot">&lt;-</span> <span class="fu">paste</span>(encabezados[<span class="dv">1</span>, ], encabezados[<span class="dv">2</span>, ], <span class="at">sep =</span> <span class="st">"_"</span>)</span>
-<span id="cb9-8"><a></a>encabezados_combinados <span class="ot">&lt;-</span> <span class="fu">make.names</span>(encabezados_combinados)</span>
-<span id="cb9-9"><a></a></span>
-<span id="cb9-10"><a></a><span class="co"># 2. Leer datos con nuevos encabezados</span></span>
-<span id="cb9-11"><a></a>datos <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"presupuesto.xlsx"</span>, </span>
-<span id="cb9-12"><a></a>                    <span class="at">skip =</span> <span class="dv">2</span>, </span>
-<span id="cb9-13"><a></a>                    <span class="at">col_names =</span> encabezados_combinados)</span>
-<span id="cb9-14"><a></a></span>
-<span id="cb9-15"><a></a><span class="co"># 3. Extraer información jerárquica</span></span>
-<span id="cb9-16"><a></a>datos_procesados <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span></span>
-<span id="cb9-17"><a></a>  <span class="co"># Identificar niveles jerárquicos</span></span>
-<span id="cb9-18"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb9-19"><a></a>    <span class="at">nivel =</span> <span class="fu">case_when</span>(</span>
-<span id="cb9-20"><a></a>      <span class="sc">!</span><span class="fu">is.na</span>(codigo_nivel_1) <span class="sc">&amp;</span> <span class="fu">is.na</span>(codigo_nivel_2) <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb9-21"><a></a>      <span class="sc">!</span><span class="fu">is.na</span>(codigo_nivel_2) <span class="sc">&amp;</span> <span class="fu">is.na</span>(codigo_nivel_3) <span class="sc">~</span> <span class="dv">2</span>,</span>
-<span id="cb9-22"><a></a>      <span class="sc">!</span><span class="fu">is.na</span>(codigo_nivel_3) <span class="sc">~</span> <span class="dv">3</span>,</span>
-<span id="cb9-23"><a></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_real_</span></span>
-<span id="cb9-24"><a></a>    )</span>
-<span id="cb9-25"><a></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb9-26"><a></a>  <span class="co"># Llenado hacia abajo para categorías jerárquicas</span></span>
-<span id="cb9-27"><a></a>  <span class="fu">fill</span>(categoria_nivel_1) <span class="sc">%&gt;%</span></span>
-<span id="cb9-28"><a></a>  <span class="co"># Filtrar solo registros de nivel 3 (detalle)</span></span>
-<span id="cb9-29"><a></a>  <span class="fu">filter</span>(nivel <span class="sc">==</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="ejemplos-reales-caso-3---informes-médicos" class="slide level2">
-<h2>Ejemplos reales: Caso 3 - Informes médicos</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># Problema: Datos de pacientes con fechas en formatos </span></span>
-<span id="cb10-2"><a></a><span class="co"># inconsistentes y valores faltantes</span></span>
-<span id="cb10-3"><a></a></span>
-<span id="cb10-4"><a></a><span class="co"># Solución:</span></span>
-<span id="cb10-5"><a></a><span class="co"># 1. Leer los datos y estandarizar formatos de fecha</span></span>
-<span id="cb10-6"><a></a>datos_pacientes <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"pacientes.xlsx"</span>)</span>
-<span id="cb10-7"><a></a></span>
-<span id="cb10-8"><a></a>datos_estandarizados <span class="ot">&lt;-</span> datos_pacientes <span class="sc">%&gt;%</span></span>
-<span id="cb10-9"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb10-10"><a></a>    <span class="co"># Convertir fechas de texto a fecha</span></span>
-<span id="cb10-11"><a></a>    <span class="at">fecha_nacimiento =</span> <span class="fu">case_when</span>(</span>
-<span id="cb10-12"><a></a>      <span class="fu">str_detect</span>(fecha_nacimiento_raw, <span class="st">"/"</span>) <span class="sc">~</span> <span class="fu">dmy</span>(fecha_nacimiento_raw),</span>
-<span id="cb10-13"><a></a>      <span class="fu">str_detect</span>(fecha_nacimiento_raw, <span class="st">"-"</span>) <span class="sc">~</span> <span class="fu">ymd</span>(fecha_nacimiento_raw),</span>
-<span id="cb10-14"><a></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fu">as.Date</span>(<span class="fu">as.numeric</span>(fecha_nacimiento_raw), <span class="at">origin =</span> <span class="st">"1899-12-30"</span>)</span>
-<span id="cb10-15"><a></a>    ),</span>
-<span id="cb10-16"><a></a>    </span>
-<span id="cb10-17"><a></a>    <span class="co"># Calcular edad</span></span>
-<span id="cb10-18"><a></a>    <span class="at">edad =</span> <span class="fu">as.numeric</span>(<span class="fu">difftime</span>(<span class="fu">Sys.Date</span>(), fecha_nacimiento, <span class="at">units =</span> <span class="st">"days"</span>) <span class="sc">/</span> <span class="fl">365.25</span>),</span>
-<span id="cb10-19"><a></a>    </span>
-<span id="cb10-20"><a></a>    <span class="co"># Crear grupos de edad</span></span>
-<span id="cb10-21"><a></a>    <span class="at">grupo_edad =</span> <span class="fu">case_when</span>(</span>
-<span id="cb10-22"><a></a>      edad <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"Menor"</span>,</span>
-<span id="cb10-23"><a></a>      edad <span class="sc">&lt;</span> <span class="dv">65</span> <span class="sc">~</span> <span class="st">"Adulto"</span>,</span>
-<span id="cb10-24"><a></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Adulto mayor"</span></span>
-<span id="cb10-25"><a></a>    )</span>
-<span id="cb10-26"><a></a>  )</span>
-<span id="cb10-27"><a></a></span>
-<span id="cb10-28"><a></a><span class="co"># 2. Imputar valores faltantes en mediciones</span></span>
-<span id="cb10-29"><a></a>datos_completos <span class="ot">&lt;-</span> datos_estandarizados <span class="sc">%&gt;%</span></span>
-<span id="cb10-30"><a></a>  <span class="fu">group_by</span>(grupo_edad, sexo) <span class="sc">%&gt;%</span></span>
-<span id="cb10-31"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb10-32"><a></a>    <span class="at">peso =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(peso), <span class="fu">mean</span>(peso, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), peso),</span>
-<span id="cb10-33"><a></a>    <span class="at">altura =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(altura), <span class="fu">mean</span>(altura, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), altura)</span>
-<span id="cb10-34"><a></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb10-35"><a></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="ejemplo-real-veterinaria-continuación" class="slide level2">
+<h2>Ejemplo real: Veterinaria (continuación)</h2>
+<p>Funciones de <code>dplyr</code> para manejo de datos. Materiales útiles <a href="https://luisdva.github.io/R-biodiversidad-2025/materiales.html">aquí</a></p>
+<ul>
+<li><code>mutate</code> para crear columnas nuevas<br>
+</li>
+<li><code>str_detect</code> de stringr para buscar patrones en texto (detectar los indicadores de formato)</li>
+<li>Funciones join para juntar tablas</li>
+</ul>
 </section>
 <section id="recursos-útiles" class="slide level2">
 <h2>Recursos útiles</h2>
 <h3 id="paquetes-destacados">Paquetes destacados</h3>
 <ul>
-<li><code>readxl</code>, <code>openxlsx</code>: Importación/exportación de Excel</li>
+<li><code>readxl</code> Importar desde Excel</li>
 <li><code>googlesheets4</code>: Trabajo con Google Sheets</li>
-<li><code>tidyxl</code>, <code>unpivotr</code>: Manejo de hojas con formato complejo</li>
+<li><code>tidyxl</code>, <code>unpivotr</code>, <code>unheadr</code>: Manejo de hojas con formato</li>
 <li><code>janitor</code>: Limpieza de datos y nombres de columnas</li>
 <li><code>lubridate</code>: Manejo de fechas</li>
 <li><code>naniar</code>: Análisis de datos faltantes</li>
@@ -491,19 +421,16 @@ Luis D. Verde Arregoitia
 <ul>
 <li><a href="https://r4ds.hadley.nz/">R for Data Science (2e)</a></li>
 <li><a href="https://readxl.tidyverse.org/">Documentación de readxl</a></li>
-<li><a href="https://www.tidyverse.org/blog/2020/01/usethis-1-5-0/">Importando datos en tidyverse</a></li>
-<li><a href="https://datacarpentry.org/spreadsheets-socialsci/">Working with Spreadsheets</a></li>
-<li><a href="https://ycphs.github.io/openxlsx/">openxlsx Vignettes</a></li>
+<li><a href="https://datacarpentry.org/spreadsheets-socialsci/">Working with Spreadsheets, The Carpentries</a></li>
 </ul>
 </section>
 <section id="consejos-finales" class="slide level2">
 <h2>Consejos finales</h2>
 <ul>
-<li>Verificar siempre los datos importados (primeras y últimas filas)</li>
+<li>Verificar siempre los datos importados (en Excel y en data frame)</li>
 <li>Documentar el procesamiento de datos</li>
 <li>Utilizar funciones para tareas repetitivas</li>
 <li>Crear flujos de trabajo reproducibles</li>
-<li>Considerar la creación de paquetes para organizaciones</li>
 </ul>
 </section>
 <section id="discusión" class="slide level2">
@@ -515,12 +442,8 @@ Luis D. Verde Arregoitia
 <li>¿Qué temas les gustaría explorar con más profundidad?</li>
 </ul>
 </section>
-<section id="gracias-por-participar" class="slide level2">
-<h2>¡Gracias por participar!</h2>
-<p>Luis D. Verde Arregoitia<br>
-<a href="mailto:luis@liomys.mx">luis@liomys.mx</a></p>
-<p>Recursos adicionales disponibles en el sitio del curso:<br>
-<a href="./materiales.html">Materiales del curso</a></p>
+<section id="gracias-por-participar" class="title-slide slide level1 center">
+<h1>¡Gracias por participar!</h1>
 
 
 </section>
