@@ -40,7 +40,7 @@ Los desafíos más frecuentes al trabajar con hojas de cálculo incluyen:
 - Encabezados problemáticos
 - Disposiciones irregulares de datos
 - Valores faltantes o inconsistentes
-- Combinación de múltiples fuentes
+- Combinaciones de formatos (colores, negritas, etc.)
 
 ## Trabajando con fechas
 

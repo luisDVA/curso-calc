@@ -25,4 +25,5 @@ title: "Materiales del Curso"
 
 [[Archivos 4to encuentro](hojs/hojs.zip)]{style="font-size: 1.2rem; background-color: #fff0f3; padding: 1px;	border-radius: 6px; text-align: center;"}
 
+[[Script Limpieza Mascotas](mascotasdemo.R)]{style="font-size: 1.2rem; background-color: #ffff91; padding: 1px;	border-radius: 6px; text-align: center;"}
 

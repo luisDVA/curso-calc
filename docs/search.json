@@ -214,14 +214,14 @@
     "href": "materiales.html",
     "title": "Materiales del Curso",
     "section": "",
-    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\nEjemplos 3er encuentro\n\n\n\nProblemas comunes y ejemplos prácticos\nArchivos 4to encuentro"
+    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\nEjemplos 3er encuentro\n\n\n\nProblemas comunes y ejemplos prácticos\nArchivos 4to encuentro\nScript Limpieza Mascotas"
   },
   {
     "objectID": "materiales.html#presentaciones-y-archivos",
     "href": "materiales.html#presentaciones-y-archivos",
     "title": "Materiales del Curso",
     "section": "",
-    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\nEjemplos 3er encuentro\n\n\n\nProblemas comunes y ejemplos prácticos\nArchivos 4to encuentro"
+    "text": "Introducción y fundamentos\nEjemplos 1er encuentro\n\n\n\nListas, iteración y exportación\n\n\n\nArchivos en la nube y formato\nEjemplos 3er encuentro\n\n\n\nProblemas comunes y ejemplos prácticos\nArchivos 4to encuentro\nScript Limpieza Mascotas"
   },
   {
     "objectID": "examplesite/course.html",
@@ -550,7 +550,7 @@
     "href": "encuentro4.html#resolviendo-problemas-comunes",
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Resolviendo problemas comunes",
-    "text": "Resolviendo problemas comunes\nLos desafíos más frecuentes al trabajar con hojas de cálculo incluyen:\n\nFormatos de fecha inconsistentes\nEncabezados problemáticos\nDisposiciones irregulares de datos\nValores faltantes o inconsistentes\nCombinación de múltiples fuentes"
+    "text": "Resolviendo problemas comunes\nLos desafíos más frecuentes al trabajar con hojas de cálculo incluyen:\n\nFormatos de fecha inconsistentes\nEncabezados problemáticos\nDisposiciones irregulares de datos\nValores faltantes o inconsistentes\nCombinaciones de formatos (colores, negritas, etc.)"
   },
   {
     "objectID": "encuentro4.html#trabajando-con-fechas",
@@ -1482,5 +1482,12 @@
     "title": "R para el tratamiento de Hojas de Cálculo",
     "section": "Ejemplo real: Veterinaria (continuación)",
     "text": "Ejemplo real: Veterinaria (continuación)\nFunciones de dplyr para manejo de datos. Materiales útiles aquí\n\nmutate para crear columnas nuevas\n\nstr_detect de stringr para buscar patrones en texto (detectar los indicadores de formato)"
+  },
+  {
+    "objectID": "encuentro4.html",
+    "href": "encuentro4.html",
+    "title": "R para el tratamiento de Hojas de Cálculo",
+    "section": "",
+    "text": "Introducción a hojas de cálculo y buenas prácticas\nListas e iteración para trabajar con múltiples archivos\nImportar y exportar de datos\nTrabajo con archivos en la nube\nArchivos con formato de celda"
   }
 ]
